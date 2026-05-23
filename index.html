@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DayOff — Daily Brief</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; background: #FAF8F4; color: #2C2A26; font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 80px; }
+.hd { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 0.5px solid #D7D2C7; padding-bottom: 18px; margin-bottom: 28px; }
+.hd-l h1 { margin: 0 0 4px; font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: #1A1814; }
+.hd-l p { margin: 0; font-size: 13px; color: #7A746A; }
+.hd-r { text-align: right; font-size: 12px; color: #9B958A; }
+.hd-r .live { display: inline-flex; align-items: center; gap: 6px; }
+.hd-r .dot { width: 6px; height: 6px; border-radius: 50%; background: #76A85C; display: inline-block; }
+.sec-h { display: flex; align-items: baseline; justify-content: space-between; margin: 36px 0 14px; }
+.sec-h h2 { margin: 0; font-size: 14px; font-weight: 500; color: #1A1814; letter-spacing: 0.04em; text-transform: uppercase; }
+.sec-h .sub { font-size: 12px; color: #9B958A; }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.kpi { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 8px; padding: 14px 16px; }
+.kpi .l { font-size: 11px; color: #9B958A; text-transform: uppercase; letter-spacing: 0.05em; }
+.kpi .v { font-size: 22px; font-weight: 500; color: #1A1814; margin-top: 4px; line-height: 1.1; }
+.kpi .d { font-size: 11px; color: #7A746A; margin-top: 4px; }
+.kpi .d.up { color: #5C7A3E; }
+.kpi .d.down { color: #A8483A; }
+.chart-card { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 8px; padding: 18px 20px; margin-top: 14px; }
+.chart-card h3 { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: #4A463E; }
+.chart-wrap { position: relative; height: 240px; }
+.obs { background: #FFFDF8; border-left: 2px solid #B89A6D; border-radius: 0 8px 8px 0; padding: 18px 22px; }
+.obs h3 { margin: 0 0 10px; font-size: 13px; font-weight: 500; color: #6B5B3F; text-transform: uppercase; letter-spacing: 0.04em; }
+.obs ul { margin: 0; padding-left: 18px; }
+.obs li { margin: 8px 0; color: #2C2A26; }
+.tbl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tbl-card { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 8px; padding: 16px 18px; }
+.tbl-card h3 { margin: 0 0 10px; font-size: 13px; font-weight: 500; color: #4A463E; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 12px; }
+.tbl th { text-align: left; font-weight: 500; color: #9B958A; padding: 6px 6px 6px 0; border-bottom: 0.5px solid #E5DFD2; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+.tbl td { padding: 8px 6px 8px 0; border-bottom: 0.5px solid #F1ECE2; }
+.tbl td:first-child { color: #2C2A26; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tbl td.num { text-align: right; font-variant-numeric: tabular-nums; color: #4A463E; }
+.tbl tr:last-child td { border-bottom: none; }
+.brand-tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; background: #EFE7D8; color: #6B5B3F; margin-right: 6px; vertical-align: middle; letter-spacing: 0.04em; font-weight: 500; }
+.brand-tag.meta { background: #E8E3F0; color: #5C4F7A; }
+.brand-tag.google { background: #DDE6E0; color: #3F5E4A; }
+footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; font-size: 11px; color: #9B958A; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 720px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .tbl-grid { grid-template-columns: 1fr; }
+  .wrap { padding: 20px 18px 60px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hd">
+    <div class="hd-l">
+      <h1>DayOff — Daily Brief</h1>
+      <p>Vendredi 22 mai 2026 · données arrêtées au 21/05 (J-1)</p>
+    </div>
+    <div class="hd-r">
+      <div class="live"><span class="dot"></span> Données Adspirer</div>
+      <div style="margin-top: 4px;">Snapshot 22/05 · 19h00</div>
+    </div>
+  </div>
+
+  <div class="sec-h">
+    <h2><span class="brand-tag google">Google</span> Performance</h2>
+    <span class="sub">15 → 21 mai · 7 jours</span>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 91</div><div class="d down">vs € 179 (J-2)</div></div>
+    <div class="kpi"><div class="l">Clics J-1</div><div class="v">82</div><div class="d down">vs 306 (J-2)</div></div>
+    <div class="kpi"><div class="l">Conv 7j</div><div class="v">6</div><div class="d">€ 950 dépensés sur 7j</div></div>
+    <div class="kpi"><div class="l">ROAS 30j</div><div class="v">7,31x</div><div class="d up">Top: Day Off Brand 12,7x</div></div>
+  </div>
+
+  <div class="chart-card">
+    <h3>Spend quotidien 7j — Google vs Meta</h3>
+    <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Évolution du spend quotidien Google vs Meta sur 7 jours"></canvas></div>
+  </div>
+
+  <div class="sec-h">
+    <h2><span class="brand-tag meta">Meta</span> Performance</h2>
+    <span class="sub">activée 20/05 · 1 jour de data</span>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 25,58</div><div class="d">3 ad sets actifs</div></div>
+    <div class="kpi"><div class="l">Clics sortants</div><div class="v">338</div><div class="d">438 clics totaux</div></div>
+    <div class="kpi"><div class="l">CTR</div><div class="v">4,38%</div><div class="d up">benchmark Meta = 1,5%</div></div>
+    <div class="kpi"><div class="l">Reach</div><div class="v">7 904</div><div class="d">Freq 1,27</div></div>
+  </div>
+
+  <div class="sec-h">
+    <h2>Observations stratégiques</h2>
+    <span class="sub">lecture du jour</span>
+  </div>
+  <div class="obs">
+    <h3>Ce qu'il faut retenir</h3>
+    <ul>
+      <li><strong>Meta démarre fort.</strong> CTR 4,38% sur Cold Advantage+ (vs benchmark 1-1,5%) et CPC outbound 0,08€ — signal d'audience qualifiée. Fenêtre pour scaler progressivement le Cold de 20→30€/j dès lundi si la perf tient.</li>
+      <li><strong>Google maîtrisé après négatifs.</strong> Spend en baisse de 187€ → 91€ entre J-2 et J-1 (-51%) suite aux 6 négatifs appliqués lundi, tout en conservant 2 conv/jour. Qualité préservée, budget tenu.</li>
+      <li><strong>Brand domine le ROAS.</strong> "Day Off Brand" porte 14 des 20 conversions à 12,7x ROAS. C'est notre levier dominant — ne pas le sous-budgéter, jamais.</li>
+      <li><strong>Alerte underperforming.</strong> Ad group "Location salle séminaire" = 137€ dépensés, 0 conversion sur 7j. Action lundi via agent Search Terms : revoir keywords ou pause.</li>
+    </ul>
+  </div>
+
+  <div class="sec-h">
+    <h2>Détail par campagne</h2>
+    <span class="sub">7 derniers jours</span>
+  </div>
+  <div class="tbl-grid">
+    <div class="tbl-card">
+      <h3><span class="brand-tag google">Google</span> Top ad groups</h3>
+      <table class="tbl">
+        <thead><tr><th>Ad group</th><th class="num">Clics</th><th class="num">Spend</th><th class="num">Conv</th></tr></thead>
+        <tbody>
+          <tr><td title="Groupe d'annonces Day Off Brand">Day Off Brand</td><td class="num">54</td><td class="num">€ 89</td><td class="num">1</td></tr>
+          <tr><td title="Location salle séminaire">Location salle séminaire</td><td class="num">59</td><td class="num">€ 137</td><td class="num">0</td></tr>
+          <tr><td title="Remarketing — Tous visiteurs">Remarketing — Tous visiteurs</td><td class="num">13</td><td class="num">€ 43</td><td class="num">0</td></tr>
+          <tr><td title="WOOM devient Day Off">WOOM devient Day Off</td><td class="num">17</td><td class="num">€ 17</td><td class="num">1</td></tr>
+          <tr><td title="Lieux DayOff">Lieux DayOff</td><td class="num">15</td><td class="num">€ 14</td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-card">
+      <h3><span class="brand-tag meta">Meta</span> Ad sets</h3>
+      <table class="tbl">
+        <thead><tr><th>Ad set</th><th class="num">Clics</th><th class="num">Spend</th><th class="num">CTR</th></tr></thead>
+        <tbody>
+          <tr><td title="Cold — Advantage+ Audience FR">Cold — Advantage+ FR</td><td class="num">404</td><td class="num">€ 23,84</td><td class="num">4,41%</td></tr>
+          <tr><td title="Retargeting — Visiteurs & Customer Match">Retargeting</td><td class="num">26</td><td class="num">€ 1,45</td><td class="num">4,52%</td></tr>
+          <tr><td title="Lookalike 1% Customer Match">Lookalike 1%</td><td class="num">8</td><td class="num">€ 0,29</td><td class="num">3,84%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <div>DayOff Daily Brief · data Adspirer · charte calme, élégant, sobre</div>
+    <div>Mis à jour automatiquement lun-ven 8h30</div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+const dates = ['15 mai', '16 mai', '17 mai', '18 mai', '19 mai', '20 mai', '21 mai'];
+const gSpend = [127, 101, 95, 170, 187, 179, 91];
+const mSpend = [0, 0, 0, 0, 0, 0, 26];
+
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      { label: 'Google', data: gSpend, borderColor: '#5C7A6E', backgroundColor: 'rgba(92,122,110,0.08)', fill: true, tension: 0.35, pointRadius: 3, pointBackgroundColor: '#5C7A6E', borderWidth: 2 },
+      { label: 'Meta', data: mSpend, borderColor: '#8C7AB5', backgroundColor: 'rgba(140,122,181,0.08)', fill: true, tension: 0.35, pointRadius: 3, pointBackgroundColor: '#8C7AB5', borderWidth: 2 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 14, font: { size: 12 }, color: '#4A463E' } },
+      tooltip: { callbacks: { label: (ctx) => ctx.dataset.label + ': € ' + ctx.parsed.y } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { color: '#9B958A', font: { size: 11 }, callback: (v) => '€ ' + v }, grid: { color: '#EFEADD' } },
+      x: { ticks: { color: '#9B958A', font: { size: 11 } }, grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html>
