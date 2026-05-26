@@ -11,7 +11,7 @@
       "action_payload": {"manual": true, "context": "tracking_anomaly"},
       "severity": "high",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779784664.757659",
       "validated_at": null,
       "applied_at": null
     },
@@ -26,7 +26,7 @@
       "action_payload": {"ad_group_name": "Location salle séminaire", "campaign_id": "23749882446"},
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779784664.757659",
       "validated_at": null,
       "applied_at": null
     },
@@ -41,7 +41,7 @@
       "action_payload": {"negatives": ["location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"], "level": "campaign", "match_type": "PHRASE"},
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779784664.757659",
       "validated_at": null,
       "applied_at": null
     },
@@ -56,7 +56,7 @@
       "action_payload": {"ad_set_id": "120244275704530784", "new_daily_budget_eur": 30},
       "severity": "low",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779784664.757659",
       "validated_at": null,
       "applied_at": null
     }
