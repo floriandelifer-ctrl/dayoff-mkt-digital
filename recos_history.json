@@ -10,10 +10,11 @@
       "reversible": false,
       "action_payload": {"manual": true, "context": "tracking_anomaly"},
       "severity": "high",
-      "status": "en_attente",
+      "status": "validee",
       "slack_ts": "1779784664.757659",
-      "validated_at": null,
-      "applied_at": null
+      "validated_at": "2026-05-26T10:45:00+02:00",
+      "applied_at": null,
+      "note": "Validée par Florian — investigation manuelle. Probable conversion lag (à confirmer sous 7-10j)."
     },
     {
       "id": "2026-05-26-002",
@@ -23,12 +24,13 @@
       "title": "Pauser ad group Location salle séminaire",
       "why": "145€ dépensés sur 30j pour 0 conversion. Ad group hors brand qui draine du budget sans retour.",
       "reversible": true,
-      "action_payload": {"ad_group_name": "Location salle séminaire", "campaign_id": "23749882446"},
+      "action_payload": {"ad_group_id": "203888309708", "ad_group_name": "Location salle séminaire", "campaign_id": "23749882446"},
       "severity": "medium",
-      "status": "en_attente",
+      "status": "appliquee",
       "slack_ts": "1779784664.757659",
-      "validated_at": null,
-      "applied_at": null
+      "validated_at": "2026-05-26T10:45:00+02:00",
+      "applied_at": "2026-05-26T10:52:00+02:00",
+      "apply_result": "Ad group 203888309708 PAUSED via Adspirer API"
     },
     {
       "id": "2026-05-26-003",
@@ -36,29 +38,31 @@
       "type": "negative_keyword",
       "channel": "google",
       "title": "Ajouter 3 négatifs Google (310€ pour 0 conv)",
-      "why": "Trois mots-clés cumulent 310€ de spend sur 30j pour 0 conversion : 'location salle séminaire Paris' (BROAD), 'organiser team building Paris' (PHRASE), 'salle de séminaire à louer Paris' (EXACT).",
+      "why": "Trois mots-clés cumulent 310€ de spend sur 30j pour 0 conversion : 'location salle séminaire Paris', 'organiser team building Paris', 'salle de séminaire à louer Paris'.",
       "reversible": true,
-      "action_payload": {"negatives": ["location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"], "level": "campaign", "match_type": "PHRASE"},
+      "action_payload": {"negatives": ["location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"], "level": "campaign", "match_type": "PHRASE", "campaign_id": "23749882446"},
       "severity": "medium",
-      "status": "en_attente",
+      "status": "appliquee",
       "slack_ts": "1779784664.757659",
-      "validated_at": null,
-      "applied_at": null
+      "validated_at": "2026-05-26T10:45:00+02:00",
+      "applied_at": "2026-05-26T10:52:00+02:00",
+      "apply_result": "3 negatives added to campaign 23749882446 (Search Intentions Fortes) en PHRASE"
     },
     {
       "id": "2026-05-26-004",
       "date": "2026-05-26",
       "type": "budget",
       "channel": "meta",
-      "title": "Scaler Meta Cold Advantage+ : 20€ → 30€/jour",
-      "why": "CTR 4,62% sur 5 jours et 2 305 clics. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. Réversible si la perf chute.",
+      "title": "Scaler Meta Cold Advantage+ : 20€ → 30€/jour (via budget campagne CBO)",
+      "why": "CTR 4,62% sur 5 jours et 2 305 clics. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. CBO allouera auto ~90% à Cold.",
       "reversible": true,
-      "action_payload": {"ad_set_id": "120244275704530784", "new_daily_budget_eur": 30},
+      "action_payload": {"campaign_id": "120244274929310784", "new_daily_budget_eur": 30, "note": "Budget changé au niveau campagne (CBO) car ad set-level budget impossible en mode CBO"},
       "severity": "low",
-      "status": "en_attente",
+      "status": "appliquee",
       "slack_ts": "1779784664.757659",
-      "validated_at": null,
-      "applied_at": null
+      "validated_at": "2026-05-26T10:45:00+02:00",
+      "applied_at": "2026-05-26T10:52:00+02:00",
+      "apply_result": "Campaign 120244274929310784 daily_budget updated to 30 EUR via Adspirer API"
     }
   ]
 }
