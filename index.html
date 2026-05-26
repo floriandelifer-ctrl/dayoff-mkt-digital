@@ -34,12 +34,40 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .cmp-row .label .pill.m { background: #E8E3F0; color: #5C4F7A; }
 .cmp-row .val { font-weight: 500; color: #1A1814; font-variant-numeric: tabular-nums; }
 
-/* ROAS evolution */
+/* RECOS */
+.recos-card { background: #FFFDF8; border: 0.5px solid #E5DFD2; border-left: 3px solid #B89A6D; border-radius: 0 10px 10px 0; padding: 22px 26px; }
+.recos-card .recos-intro { font-size: 13px; color: #6B5B3F; margin: 0 0 18px; }
+.recos-card .recos-intro .slack-hint { display: inline-block; background: #ECE7DA; color: #6B5B3F; padding: 3px 9px; border-radius: 12px; font-size: 11px; margin-left: 8px; font-weight: 500; }
+.reco { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
+.reco:last-child { margin-bottom: 0; }
+.reco-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.reco-num { background: #F1ECE2; color: #6B5B3F; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 12px; flex-shrink: 0; }
+.reco-title { font-weight: 500; color: #1A1814; font-size: 14px; flex: 1; }
+.reco-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.reco-tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.03em; font-weight: 500; }
+.reco-tag.type-budget { background: #DDE6E0; color: #3F5E4A; }
+.reco-tag.type-negative { background: #FCE5DC; color: #8A3A22; }
+.reco-tag.type-pause { background: #FBE5E0; color: #A8483A; }
+.reco-tag.type-creative { background: #ECE7DA; color: #6B5B3F; }
+.reco-tag.type-investigate { background: #F2D9D5; color: #9C3A2E; }
+.reco-tag.channel-google { background: #E1EFE5; color: #3F5E4A; }
+.reco-tag.channel-meta { background: #E8E3F0; color: #5C4F7A; }
+.reco-tag.channel-global { background: #ECE7DA; color: #6B5B3F; }
+.reco-tag.severity-high { background: #FBE5E0; color: #A8483A; }
+.reco-why { font-size: 13px; color: #4A463E; margin: 4px 0 10px 38px; }
+.reco-status { margin-left: 38px; font-size: 12px; }
+.reco-status .pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-weight: 500; font-size: 11px; }
+.reco-status .pill.attente { background: #F1ECE2; color: #6B5B3F; }
+.reco-status .pill.validee { background: #DDE6E0; color: #3F5E4A; }
+.reco-status .pill.declinee { background: #FBE5E0; color: #A8483A; }
+.reco-status .pill.appliquee { background: #C9D6BD; color: #2E4A1F; }
+
+/* ROAS */
 .roas-card { background: linear-gradient(180deg, #FFFDF8 0%, #fff 100%); border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 22px 24px; }
 .roas-card h3 { margin: 0 0 6px; font-size: 14px; font-weight: 500; color: #1A1814; }
 .roas-card .sub { font-size: 12px; color: #9B958A; margin-bottom: 18px; }
 .roas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
-.roas-week { text-align: center; padding: 14px 10px; border-radius: 8px; position: relative; transition: transform 0.2s; }
+.roas-week { text-align: center; padding: 14px 10px; border-radius: 8px; }
 .roas-week.boom { background: #E1EFE5; border: 0.5px solid #B2D8BA; }
 .roas-week.good { background: #ECEFE7; border: 0.5px solid #C9D6BD; }
 .roas-week.warn { background: #FCF0DC; border: 0.5px solid #E5C998; }
@@ -54,7 +82,6 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .roas-legend span { display: inline-flex; align-items: center; gap: 5px; }
 .roas-legend .dot { width: 10px; height: 10px; border-radius: 50%; }
 
-/* KPI GRID */
 .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .kpi { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 8px; padding: 14px 16px; }
 .kpi .l { font-size: 11px; color: #9B958A; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -67,7 +94,6 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .chart-card h3 { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: #4A463E; }
 .chart-wrap { position: relative; height: 250px; }
 
-/* Top ads */
 .ads-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .ad-card { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
 .ad-card .ad-rank { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.65); color: #fff; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 500; z-index: 2; }
@@ -76,7 +102,6 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .ad-card .ad-rank.bronze { background: #B57E47; }
 .ad-card .ad-img-wrap { position: relative; width: 100%; padding-top: 56.25%; background: #F1ECE2; overflow: hidden; }
 .ad-card .ad-img-wrap img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-.ad-card .ad-img-wrap .placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #9B958A; font-size: 11px; }
 .ad-card .ad-body { padding: 14px 16px; flex: 1; display: flex; flex-direction: column; }
 .ad-card .ad-headline { font-size: 13px; font-weight: 500; color: #1A1814; margin: 0 0 4px; }
 .ad-card .ad-loc { font-size: 11px; color: #7A746A; margin: 0 0 12px; }
@@ -111,11 +136,9 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; font-size: 11px; color: #9B958A; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
 @media (max-width: 720px) {
-  .cmp { grid-template-columns: 1fr; }
+  .cmp, .roas-grid, .ads-grid { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
   .tbl-grid { grid-template-columns: 1fr; }
-  .roas-grid { grid-template-columns: repeat(2, 1fr); }
-  .ads-grid { grid-template-columns: 1fr; }
   .wrap { padding: 20px 18px 60px; }
 }
 </style>
@@ -126,11 +149,11 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   <div class="hd">
     <div class="hd-l">
       <h1>DayOff — Daily Brief</h1>
-      <p>Dimanche 24 mai 2026 · données arrêtées au 23/05 (J-1)</p>
+      <p>Mardi 26 mai 2026 · données arrêtées au 25/05 (J-1)</p>
     </div>
     <div class="hd-r">
       <div class="live"><span class="dot"></span> Données Adspirer</div>
-      <div style="margin-top: 4px;">Snapshot 24/05 · matin</div>
+      <div style="margin-top: 4px;">Snapshot 26/05 · matin</div>
     </div>
   </div>
 
@@ -141,31 +164,101 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   </div>
   <div class="cmp">
     <div class="cmp-card now">
-      <div class="period">Hier <span class="badge">23/05 · J-1</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 57</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">164</div></div>
+      <div class="period">Hier <span class="badge">25/05 · J-1</span></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 60</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">160</div></div>
       <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">0</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 28</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Clics out.</div><div class="val">≈ 380</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,82%</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 30,65</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Clics out.</div><div class="val">≈ 530</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,23%</div></div>
     </div>
     <div class="cmp-card week">
-      <div class="period">Cette semaine <span class="badge">17/05 → 23/05 · 7j</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 844</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">3 135</div></div>
+      <div class="period">Cette semaine <span class="badge">19/05 → 25/05 · 7j</span></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 671</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">1 951</div></div>
       <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">8</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>ROAS</div><div class="val">7,70x</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 89,91</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,84%</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>ROAS</div><div class="val">~9,7x</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 153</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,58%</div></div>
     </div>
     <div class="cmp-card month">
-      <div class="period">Mois (30j roulants) <span class="badge">24/04 → 23/05</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 2 390</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">3 977</div></div>
+      <div class="period">Mois (30j roulants) <span class="badge">25/04 → 25/05</span></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 2 493</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">4 273</div></div>
       <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">17</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>ROAS</div><div class="val">5,89x</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 89,91</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,84%</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill g">G</span>ROAS</div><div class="val">5,92x</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 153</div></div>
+      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,58%</div></div>
+    </div>
+  </div>
+
+  <!-- ACTIONS RECOMMANDÉES -->
+  <div class="sec-h">
+    <h2>📋 Actions recommandées du jour</h2>
+    <span class="sub">4 recos · validation via Slack</span>
+  </div>
+  <div class="recos-card">
+    <p class="recos-intro">Réagis sur le post Slack du matin avec ✅ pour valider ou ❌ pour décliner chaque reco. Les recos validées et réversibles sont appliquées automatiquement demain matin. <span class="slack-hint">posté dans #marketing-digital</span></p>
+
+    <div class="reco">
+      <div class="reco-head">
+        <div class="reco-num">1</div>
+        <div class="reco-title">🚨 Investiguer 0 conv Google sur 3 jours (23→25 mai)</div>
+        <div class="reco-tags">
+          <span class="reco-tag severity-high">critique</span>
+          <span class="reco-tag type-investigate">investigate</span>
+          <span class="reco-tag channel-google">google</span>
+        </div>
+      </div>
+      <div class="reco-why">3 jours consécutifs à 0 conversion alors que le spend (~150€) et le trafic (~450 clics) sont stables. Vérifier le suivi conversion (Google Tag), le formulaire de contact, et l'attribution.</div>
+      <div class="reco-status">
+        <span class="pill attente">⏳ En attente — action manuelle</span>
+      </div>
+    </div>
+
+    <div class="reco">
+      <div class="reco-head">
+        <div class="reco-num">2</div>
+        <div class="reco-title">⚠️ Pauser ad group "Location salle séminaire"</div>
+        <div class="reco-tags">
+          <span class="reco-tag type-pause">pause</span>
+          <span class="reco-tag channel-google">google</span>
+        </div>
+      </div>
+      <div class="reco-why">145€ dépensés sur 30j pour 0 conversion. Ad group hors brand qui draine du budget sans retour. Réversible : on peut le relancer à tout moment.</div>
+      <div class="reco-status">
+        <span class="pill attente">⏳ En attente — réversible</span>
+      </div>
+    </div>
+
+    <div class="reco">
+      <div class="reco-head">
+        <div class="reco-num">3</div>
+        <div class="reco-title">🚫 Ajouter 3 négatifs Google : "location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"</div>
+        <div class="reco-tags">
+          <span class="reco-tag type-negative">négatif</span>
+          <span class="reco-tag channel-google">google</span>
+        </div>
+      </div>
+      <div class="reco-why">Ces 3 mots-clés cumulent 310€ de spend sur 30j pour 0 conversion. Ils captent du trafic non-qualifié sur des termes "salle séminaire / team building" — exactement ce qu'on veut éviter pour la marque DayOff.</div>
+      <div class="reco-status">
+        <span class="pill attente">⏳ En attente — réversible</span>
+      </div>
+    </div>
+
+    <div class="reco">
+      <div class="reco-head">
+        <div class="reco-num">4</div>
+        <div class="reco-title">🎯 Scaler Meta Cold Advantage+ : 20€ → 30€/jour</div>
+        <div class="reco-tags">
+          <span class="reco-tag type-budget">budget</span>
+          <span class="reco-tag channel-meta">meta</span>
+        </div>
+      </div>
+      <div class="reco-why">CTR 4,62% sur 5 jours et 2 305 clics — l'audience qualifiée répond bien. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. Réversible si la perf chute.</div>
+      <div class="reco-status">
+        <span class="pill attente">⏳ En attente — réversible</span>
+      </div>
     </div>
   </div>
 
@@ -175,33 +268,33 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
     <span class="sub">la métrique qu'on regarde</span>
   </div>
   <div class="roas-card">
-    <h3>📈 L'histoire de la semaine — chute puis rebond</h3>
-    <div class="sub">Semaine -1 brutale (0,83x), puis correction post-négatifs Lundi 18/05 → rebond à 7,70x cette semaine</div>
+    <h3>📈 Le rebond se confirme</h3>
+    <div class="sub">Après la chute brutale de la semaine -1 (0,66x), les négatifs appliqués lundi 19/05 ont rétabli un ROAS estimé ~9,7x cette semaine.</div>
 
     <div class="roas-grid">
       <div class="roas-week good">
         <div class="emoji">💚</div>
         <div class="week">Sem. -3</div>
-        <div class="roas-val">5,58x</div>
-        <div class="meta">26 avr → 2 mai · <b>€ 403</b></div>
+        <div class="roas-val">6,39x</div>
+        <div class="meta">28 avr → 4 mai · <b>€ 430</b></div>
       </div>
       <div class="roas-week boom">
         <div class="emoji">🚀</div>
         <div class="week">Sem. -2</div>
-        <div class="roas-val">10,14x</div>
-        <div class="meta">3 → 9 mai · <b>€ 543</b></div>
+        <div class="roas-val">10,30x</div>
+        <div class="meta">5 → 11 mai · <b>€ 486</b></div>
       </div>
       <div class="roas-week alert">
         <div class="emoji">🔴</div>
         <div class="week">Sem. -1</div>
-        <div class="roas-val">0,83x</div>
-        <div class="meta">10 → 16 mai · <b>€ 600</b></div>
+        <div class="roas-val">0,66x</div>
+        <div class="meta">12 → 18 mai · <b>€ 758</b></div>
       </div>
-      <div class="roas-week good">
-        <div class="emoji">💚</div>
+      <div class="roas-week boom">
+        <div class="emoji">🚀</div>
         <div class="week">Cette sem.</div>
-        <div class="roas-val">7,70x</div>
-        <div class="meta">17 → 23 mai · <b>€ 844</b></div>
+        <div class="roas-val">~9,7x</div>
+        <div class="meta">19 → 25 mai · <b>€ 671</b></div>
       </div>
     </div>
 
@@ -218,13 +311,13 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   <!-- GOOGLE détaillé -->
   <div class="sec-h">
     <h2><span class="brand-tag google">Google</span> Performance détaillée</h2>
-    <span class="sub">7 jours · 17 → 23 mai</span>
+    <span class="sub">7 jours · 19 → 25 mai</span>
   </div>
   <div class="kpi-grid">
-    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 57</div><div class="d down">vs € 66 (J-2)</div></div>
-    <div class="kpi"><div class="l">Clics J-1</div><div class="v">164</div><div class="d up">vs 128 (J-2)</div></div>
-    <div class="kpi"><div class="l">Conv 7j</div><div class="v">8</div><div class="d">€ 844 dépensés</div></div>
-    <div class="kpi"><div class="l">ROAS 7j</div><div class="v">7,70x</div><div class="d up">Top: Day Off Brand 18,78x</div></div>
+    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 60</div><div class="d up">vs € 32 (J-2)</div></div>
+    <div class="kpi"><div class="l">Clics J-1</div><div class="v">160</div><div class="d up">vs 126 (J-2)</div></div>
+    <div class="kpi"><div class="l">Conv 7j</div><div class="v">8</div><div class="d down">aucune depuis 22/05</div></div>
+    <div class="kpi"><div class="l">ROAS 30j</div><div class="v">5,92x</div><div class="d down">vs 7,70x J-3</div></div>
   </div>
 
   <div class="chart-card">
@@ -235,13 +328,13 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   <!-- META détaillé -->
   <div class="sec-h">
     <h2><span class="brand-tag meta">Meta</span> Performance détaillée</h2>
-    <span class="sub">activée 21/05 · 3 jours de data</span>
+    <span class="sub">activée 21/05 · 5 jours de data</span>
   </div>
   <div class="kpi-grid">
-    <div class="kpi"><div class="l">Spend total</div><div class="v">€ 89,91</div><div class="d">sur 3 jours</div></div>
-    <div class="kpi"><div class="l">Clics sortants</div><div class="v">≈ 1 200</div><div class="d">1 503 clics totaux</div></div>
-    <div class="kpi"><div class="l">CTR moyen</div><div class="v">4,84%</div><div class="d up">+3x benchmark Meta</div></div>
-    <div class="kpi"><div class="l">CPC</div><div class="v">€ 0,06</div><div class="d up">excellent</div></div>
+    <div class="kpi"><div class="l">Spend total 7j</div><div class="v">€ 153</div><div class="d">≈ 30€/jour</div></div>
+    <div class="kpi"><div class="l">Clics sortants</div><div class="v">2 396</div><div class="d">2 602 clics totaux</div></div>
+    <div class="kpi"><div class="l">CTR moyen</div><div class="v">4,58%</div><div class="d up">3x benchmark Meta</div></div>
+    <div class="kpi"><div class="l">Reach 7j</div><div class="v">37 841</div><div class="d">Freq 1,50</div></div>
   </div>
 
   <!-- TOP ADS -->
@@ -261,9 +354,9 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
         <p class="ad-headline">Adresses confidentielles Paris &amp; Lyon</p>
         <p class="ad-loc">Cold — Advantage+ Audience FR</p>
         <div class="ad-metrics">
-          <div class="ad-metric"><div class="v">4,97%</div><div class="l">CTR</div></div>
-          <div class="ad-metric"><div class="v">1 248</div><div class="l">Clics</div></div>
-          <div class="ad-metric"><div class="v">€ 77</div><div class="l">Spend</div></div>
+          <div class="ad-metric"><div class="v">4,62%</div><div class="l">CTR</div></div>
+          <div class="ad-metric"><div class="v">2 305</div><div class="l">Clics</div></div>
+          <div class="ad-metric"><div class="v">€ 139</div><div class="l">Spend</div></div>
         </div>
       </div>
     </div>
@@ -278,9 +371,9 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
         <p class="ad-headline">La Blanchisserie — Haut Marais</p>
         <p class="ad-loc">Loft 165 m² avec terrasse</p>
         <div class="ad-metrics">
-          <div class="ad-metric"><div class="v">4,46%</div><div class="l">CTR</div></div>
-          <div class="ad-metric"><div class="v">155</div><div class="l">Clics</div></div>
-          <div class="ad-metric"><div class="v">€ 6,93</div><div class="l">Spend</div></div>
+          <div class="ad-metric"><div class="v">4,32%</div><div class="l">CTR</div></div>
+          <div class="ad-metric"><div class="v">175</div><div class="l">Clics</div></div>
+          <div class="ad-metric"><div class="v">€ 7,81</div><div class="l">Spend</div></div>
         </div>
       </div>
     </div>
@@ -295,9 +388,9 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
         <p class="ad-headline">La Carrosserie — Lyon 6e</p>
         <p class="ad-loc">265 m² · jusqu'à 80 personnes</p>
         <div class="ad-metrics">
-          <div class="ad-metric"><div class="v">4,06%</div><div class="l">CTR</div></div>
-          <div class="ad-metric"><div class="v">55</div><div class="l">Clics</div></div>
-          <div class="ad-metric"><div class="v">€ 3,53</div><div class="l">Spend</div></div>
+          <div class="ad-metric"><div class="v">4,37%</div><div class="l">CTR</div></div>
+          <div class="ad-metric"><div class="v">72</div><div class="l">Clics</div></div>
+          <div class="ad-metric"><div class="v">€ 4,15</div><div class="l">Spend</div></div>
         </div>
       </div>
     </div>
@@ -305,7 +398,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   </div>
 
   <div class="ads-insight">
-    <strong>💡 Lecture créative :</strong> les 3 ads top sont des <strong>images</strong> (pas encore de vidéo dans le mix). L'image "collection" (#1) capte le volume grâce à un message large ("6 maisons à vivre Paris & Lyon"), tandis que les ads par lieu spécifique (#2 Blanchisserie, #3 Carrosserie) gardent un CTR proche (4,06-4,46%) sur des audiences plus chaudes. → <strong>Recommandation</strong> : produire d'autres ads par lieu (L'Imprimerie, La Réserve) qui sont peu diffusés, et tester vidéo 9:16 dès que Faten livre les Reels.
+    <strong>💡 Lecture créative :</strong> les top 3 restent les mêmes que dimanche, avec le Cold "Adresses confidentielles" qui domine massivement (139€ vs 7,81€). Aucune vidéo dans le mix encore — toujours en attente des Reels 9:16 Faten. Recommandation : produire des variantes pour <strong>L'Imprimerie</strong> (CTR 1,94% en sous-diffusion) et <strong>La Réserve</strong> (qui n'a quasiment pas tourné).
   </div>
 
   <!-- OBSERVATIONS -->
@@ -316,17 +409,17 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
   <div class="obs">
     <h3>Ce qu'il faut retenir</h3>
     <ul>
-      <li><strong>🚀 Rebond ROAS confirmé.</strong> Après une semaine -1 catastrophique (0,83x, 600€ pour 1 conv), les négatifs appliqués lundi 18/05 ont rétabli la qualité : ROAS cette semaine 7,70x avec 8 conversions et un Day Off Brand qui pousse 18,78x. La correction marche.</li>
-      <li><strong>Meta tient sa promesse avec le volume.</strong> CTR 4,84% sur 3 jours et 1 503 clics, CPC à 0,06€ — c'est 3x meilleur que le benchmark Meta sur Traffic. La courbe d'apprentissage est positive, on peut scaler Cold Advantage+ de 20→30€/j dès lundi.</li>
-      <li><strong>Ads par lieu spécifique sous-exploités.</strong> Blanchisserie et Carrosserie performent en CTR mais avec très peu de spend (6,93€ et 3,53€). Produire des variantes pour L'Imprimerie + La Réserve + Étiquetterie augmenterait la diversité créative sans perte de qualité.</li>
-      <li><strong>Pas encore de vidéo Meta.</strong> Les 10 ads actuels sont 100% images. Une fois les vidéos pitchs Guillaume (carré + vertical) déployées via les ad sets, on aura le signal créatif manquant — probable boost de CTR + engagement Reels.</li>
+      <li><strong>🚨 Anomalie de tracking Google.</strong> 3 jours consécutifs (23, 24, 25 mai) à 0 conversion alors que le trafic est stable (160 clics/jour, 60€/jour). Soit le formulaire ne convertit plus, soit le pixel/tag a un souci. À investiguer en priorité (cf reco #1).</li>
+      <li><strong>🚀 Rebond ROAS confirmé sur la semaine.</strong> Estimé à ~9,7x sur 19-25 mai vs 0,66x la semaine précédente. Les négatifs appliqués lundi 19/05 ont massivement filtré le trafic non-qualifié.</li>
+      <li><strong>Meta tient sa promesse avec le volume.</strong> Spend stable à 30€/jour, CTR 4,58%, 2 600 clics cumulés en 5 jours. CPC outbound 0,06€. Fenêtre confirmée pour scaler Cold Advantage+ (cf reco #4).</li>
+      <li><strong>3 négatifs urgents Google.</strong> "Location salle séminaire Paris", "organiser team building Paris" et "salle de séminaire à louer Paris" — 310€ dépensés sur 30j sans aucune conversion. Action prioritaire (cf reco #3).</li>
     </ul>
   </div>
 
   <!-- DETAIL CAMPAGNES -->
   <div class="sec-h">
     <h2>Détail par campagne</h2>
-    <span class="sub">7 derniers jours · 17 → 23 mai</span>
+    <span class="sub">7 derniers jours · 19 → 25 mai</span>
   </div>
   <div class="tbl-grid">
     <div class="tbl-card">
@@ -334,11 +427,11 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
       <table class="tbl">
         <thead><tr><th>Campagne</th><th class="num">Spend</th><th class="num">Conv</th><th class="num">ROAS</th></tr></thead>
         <tbody>
-          <tr><td>Day Off Brand</td><td class="num">€ 67</td><td class="num">4</td><td class="num">18,78x</td></tr>
-          <tr><td>DayOff — Search Intentions Fortes</td><td class="num">€ 281</td><td class="num">2</td><td class="num">2,8x</td></tr>
-          <tr><td>WOOM devient Day Off</td><td class="num">€ 17</td><td class="num">1</td><td class="num">8,2x</td></tr>
-          <tr><td>PMax V2</td><td class="num">€ 478</td><td class="num">1</td><td class="num">0,9x</td></tr>
-          <tr><td>Location salle séminaire</td><td class="num">€ 23</td><td class="num">0</td><td class="num">—</td></tr>
+          <tr><td>Day Off Brand</td><td class="num">€ 112</td><td class="num">1</td><td class="num">10,34x</td></tr>
+          <tr><td>WOOM devient Day Off</td><td class="num">€ 17</td><td class="num">1</td><td class="num">~8x</td></tr>
+          <tr><td>DayOff — Search Intentions Fortes</td><td class="num">€ 280</td><td class="num">5</td><td class="num">~5x</td></tr>
+          <tr><td>PMax V2</td><td class="num">€ 220</td><td class="num">1</td><td class="num">~1,8x</td></tr>
+          <tr><td>Location salle séminaire</td><td class="num">€ 42</td><td class="num">0</td><td class="num">—</td></tr>
         </tbody>
       </table>
     </div>
@@ -347,9 +440,9 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
       <table class="tbl">
         <thead><tr><th>Ad set</th><th class="num">Clics</th><th class="num">Spend</th><th class="num">CTR</th></tr></thead>
         <tbody>
-          <tr><td title="Cold — Advantage+ Audience FR">Cold — Advantage+ FR</td><td class="num">1 411</td><td class="num">€ 87,90</td><td class="num">4,86%</td></tr>
-          <tr><td title="Retargeting — Visiteurs & Customer Match">Retargeting</td><td class="num">85</td><td class="num">€ 1,75</td><td class="num">4,52%</td></tr>
-          <tr><td title="Lookalike 1% Customer Match">Lookalike 1%</td><td class="num">7</td><td class="num">€ 0,26</td><td class="num">2,62%</td></tr>
+          <tr><td title="Cold — Advantage+ Audience FR">Cold — Advantage+ FR</td><td class="num">2 555</td><td class="num">€ 150,88</td><td class="num">4,58%</td></tr>
+          <tr><td title="Retargeting — Visiteurs & Customer Match">Retargeting</td><td class="num">37</td><td class="num">€ 1,85</td><td class="num">4,77%</td></tr>
+          <tr><td title="Lookalike 1% Customer Match">Lookalike 1%</td><td class="num">10</td><td class="num">€ 0,34</td><td class="num">2,80%</td></tr>
         </tbody>
       </table>
     </div>
@@ -364,10 +457,9 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; f
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
 <script>
-// Spend 7j Google vs Meta
-const dates = ['17 mai', '18 mai', '19 mai', '20 mai', '21 mai', '22 mai', '23 mai'];
-const gSpend = [95, 170, 187, 179, 91, 66, 57];
-const mSpend = [0, 0, 0, 0, 26, 36, 28];
+const dates = ['19 mai', '20 mai', '21 mai', '22 mai', '23 mai', '24 mai', '25 mai'];
+const gSpend = [187, 179, 91, 66, 57, 32, 60];
+const mSpend = [0, 0, 26, 36, 28, 33, 31];
 
 new Chart(document.getElementById('trendChart'), {
   type: 'line',
@@ -391,9 +483,8 @@ new Chart(document.getElementById('trendChart'), {
   }
 });
 
-// ROAS hebdo
 const roasWeeks = ['Sem. -3', 'Sem. -2', 'Sem. -1', 'Cette sem.'];
-const roasVals = [5.58, 10.14, 0.83, 7.70];
+const roasVals = [6.39, 10.30, 0.66, 9.70];
 const roasColors = roasVals.map(v => {
   if (v >= 10) return '#76A85C';
   if (v >= 5) return '#B2D8BA';
@@ -405,27 +496,13 @@ new Chart(document.getElementById('roasChart'), {
   type: 'bar',
   data: {
     labels: roasWeeks,
-    datasets: [{
-      label: 'ROAS',
-      data: roasVals,
-      backgroundColor: roasColors,
-      borderRadius: 6,
-      borderSkipped: false,
-      barThickness: 60,
-    }]
+    datasets: [{ label: 'ROAS', data: roasVals, backgroundColor: roasColors, borderRadius: 6, borderSkipped: false, barThickness: 60 }]
   },
   options: {
     responsive: true, maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: (ctx) => 'ROAS: ' + ctx.parsed.y + 'x' } }
-    },
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => 'ROAS: ' + ctx.parsed.y + 'x' } } },
     scales: {
-      y: {
-        beginAtZero: true,
-        ticks: { color: '#9B958A', font: { size: 11 }, callback: (v) => v + 'x' },
-        grid: { color: '#EFEADD' }
-      },
+      y: { beginAtZero: true, ticks: { color: '#9B958A', font: { size: 11 }, callback: (v) => v + 'x' }, grid: { color: '#EFEADD' } },
       x: { ticks: { color: '#7A746A', font: { size: 12 } }, grid: { display: false } }
     }
   }
