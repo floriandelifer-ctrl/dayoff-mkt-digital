@@ -63,6 +63,35 @@
       "validated_at": "2026-05-26T10:45:00+02:00",
       "applied_at": "2026-05-26T10:52:00+02:00",
       "apply_result": "Campaign 120244274929310784 daily_budget updated to 30 EUR via Adspirer API"
+    },
+    {
+      "id": "2026-05-27-001",
+      "date": "2026-05-27",
+      "type": "create_campaign",
+      "channel": "meta",
+      "title": "🚀 Pivot Meta : créer campagne Lead Gen Advantage+ en parallèle (15€/j)",
+      "why": "La campagne Trafic actuelle (CTR 4,58%, 2 600 clics) ne tracke aucun lead car objectif Trafic. Pour mesurer le vrai impact Meta, créer une 2e campagne en mode 'Leads' optimisée pour l'event pixel Lead. Budget 15€/j sécurisé, 14j learning phase, décision scale le 17/06.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_objective": "OUTCOME_LEADS",
+        "campaign_name": "DayOff — Lead Gen Cold FR — Juin 2026",
+        "daily_budget_eur": 15,
+        "optimization_event": "Lead",
+        "ad_set_audience": "Advantage+ Audience FR (réutiliser le ciblage Cold actuel)",
+        "ads_creative_ids": ["120244275705820784", "120244275728930784", "120244275711010784"],
+        "attribution_window": "7d_click_1d_view",
+        "cta": "LEARN_MORE",
+        "landing_page": "https://dayoff.space/contact",
+        "initial_status": "PAUSED",
+        "execution_method": "L'agent crée via Adspirer après réaction ✅ de Florian. Florian active manuellement après review en UI."
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "pre_staged": true,
+      "pre_staged_note": "Reco pré-stagée par Florian le 26/05 soir. À poster automatiquement dans le brief du 27/05 matin."
     }
   ]
 }
