@@ -98,7 +98,7 @@
       },
       "severity": "high",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779895919.268619",
       "validated_at": null,
       "applied_at": null
     },
@@ -120,7 +120,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779895919.268619",
       "validated_at": null,
       "applied_at": null
     },
@@ -142,7 +142,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779895919.268619",
       "validated_at": null,
       "applied_at": null
     },
@@ -160,7 +160,7 @@
       },
       "severity": "low",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779895919.268619",
       "validated_at": null,
       "applied_at": null
     },
@@ -178,7 +178,7 @@
       },
       "severity": "low",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779895919.268619",
       "validated_at": null,
       "applied_at": null
     }
