@@ -8,7 +8,10 @@
       "title": "Investiguer 0 conv Google sur 3 jours (23→25 mai)",
       "why": "3 jours consécutifs à 0 conversion alors que le spend (~150€) et le trafic (~450 clics) sont stables. Vérifier le suivi conversion (Google Tag), le formulaire de contact, et l'attribution.",
       "reversible": false,
-      "action_payload": {"manual": true, "context": "tracking_anomaly"},
+      "action_payload": {
+        "manual": true,
+        "context": "tracking_anomaly"
+      },
       "severity": "high",
       "status": "validee",
       "slack_ts": "1779784664.757659",
@@ -24,7 +27,11 @@
       "title": "Pauser ad group Location salle séminaire",
       "why": "145€ dépensés sur 30j pour 0 conversion. Ad group hors brand qui draine du budget sans retour.",
       "reversible": true,
-      "action_payload": {"ad_group_id": "203888309708", "ad_group_name": "Location salle séminaire", "campaign_id": "23749882446"},
+      "action_payload": {
+        "ad_group_id": "203888309708",
+        "ad_group_name": "Location salle séminaire",
+        "campaign_id": "23749882446"
+      },
       "severity": "medium",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
@@ -40,7 +47,16 @@
       "title": "Ajouter 3 négatifs Google (310€ pour 0 conv)",
       "why": "Trois mots-clés cumulent 310€ de spend sur 30j pour 0 conversion : 'location salle séminaire Paris', 'organiser team building Paris', 'salle de séminaire à louer Paris'.",
       "reversible": true,
-      "action_payload": {"negatives": ["location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"], "level": "campaign", "match_type": "PHRASE", "campaign_id": "23749882446"},
+      "action_payload": {
+        "negatives": [
+          "location salle séminaire Paris",
+          "organiser team building Paris",
+          "salle de séminaire à louer Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
       "severity": "medium",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
@@ -56,13 +72,115 @@
       "title": "Scaler Meta Cold Advantage+ : 20€ → 30€/jour (via budget campagne CBO)",
       "why": "CTR 4,62% sur 5 jours et 2 305 clics. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. CBO allouera auto ~90% à Cold.",
       "reversible": true,
-      "action_payload": {"campaign_id": "120244274929310784", "new_daily_budget_eur": 30, "note": "Budget changé au niveau campagne (CBO) car ad set-level budget impossible en mode CBO"},
+      "action_payload": {
+        "campaign_id": "120244274929310784",
+        "new_daily_budget_eur": 30,
+        "note": "Budget changé au niveau campagne (CBO) car ad set-level budget impossible en mode CBO"
+      },
       "severity": "low",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
       "validated_at": "2026-05-26T10:45:00+02:00",
       "applied_at": "2026-05-26T10:52:00+02:00",
       "apply_result": "Campaign 120244274929310784 daily_budget updated to 30 EUR via Adspirer API"
+    },
+    {
+      "id": "2026-05-27-001",
+      "date": "2026-05-27",
+      "type": "investigate",
+      "channel": "google",
+      "title": "0 conversion Google depuis 4 jours (23→26 mai)",
+      "why": "Le pattern d'hier se prolonge : 4 jours consécutifs à 0 conversion (23, 24, 25, 26 mai) malgré un spend stable (~62€/jour) et un CTR honorable (3,1% à 4,0%). Si aucune conversion ne remonte d'ici 48h, vérifier manuellement le Tag Google et l'attribution dans Google Ads UI.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "tracking_anomaly_persistent"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-27-002",
+      "date": "2026-05-27",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "Ajouter 'salle séminaire Paris' PHRASE en négatif",
+      "why": "Ce mot-clé en PHRASE cumule 229€ sur Sem.-3 et 175€ sur Sem.-2 (404€ au total, 0 conv). Différent du négatif ajouté hier ('location salle séminaire Paris'). Drain budgétaire récurrent sur la campagne Search Intentions Fortes.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "salle séminaire Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-27-003",
+      "date": "2026-05-27",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "Ajouter 'Dayoff' BROAD en négatif (laisser EXACT)",
+      "why": "Le mot-clé 'Dayoff' en BROAD a généré 169€/0 conv sur Sem.-2. Le brand est déjà bien couvert par les versions EXACT ('day off', 'dayoff', 'dayoff paris') qui convertissent. Le BROAD draine du trafic mal qualifié.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "Dayoff"
+        ],
+        "level": "campaign",
+        "match_type": "BROAD",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-27-004",
+      "date": "2026-05-27",
+      "type": "creative",
+      "channel": "meta",
+      "title": "Diversifier les créatives Cold Meta (concentration 90% sur 1 ad)",
+      "why": "L'ad 'Adresses confidentielles Paris & Lyon' capte 163€ sur les 181€ du total Meta (90%). Les variantes Blanchisserie et Carrosserie n'ont chacune que ~5-11€. Risque de fatigue créative à mesure que le budget grandit. Produire 2-3 variantes au format identique pour les lieux phares.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "creative_diversification"
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-27-005",
+      "date": "2026-05-27",
+      "type": "scale",
+      "channel": "meta",
+      "title": "Observer 48h avant nouveau scaling Meta (30€/j déjà appliqué hier)",
+      "why": "Le passage à 30€/j est entré en vigueur hier (26 mai). CTR maintenu à 3,83% sur la journée — solide mais en très légère baisse vs 5,14% du 23 mai. Avant un nouveau palier, laisser 48h pour observer la stabilité de la perf au nouveau budget.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "observation_window"
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
     }
   ]
 }
