@@ -8,13 +8,16 @@
       "title": "Investiguer 0 conv Google sur 3 jours (23→25 mai)",
       "why": "3 jours consécutifs à 0 conversion alors que le spend (~150€) et le trafic (~450 clics) sont stables. Vérifier le suivi conversion (Google Tag), le formulaire de contact, et l'attribution.",
       "reversible": false,
-      "action_payload": {"manual": true, "context": "tracking_anomaly"},
+      "action_payload": {
+        "manual": true,
+        "context": "tracking_anomaly"
+      },
       "severity": "high",
       "status": "validee",
       "slack_ts": "1779784664.757659",
       "validated_at": "2026-05-26T10:45:00+02:00",
       "applied_at": null,
-      "note": "Validée par Florian — investigation manuelle. Probable conversion lag (à confirmer sous 7-10j)."
+      "note": "Validée par Florian — investigation manuelle. Probable conversion lag (à confirmer sous 7-10j). Update 28/05 : 1 conv enregistrée le 27/05 → lag confirmé, tracking OK."
     },
     {
       "id": "2026-05-26-002",
@@ -24,7 +27,11 @@
       "title": "Pauser ad group Location salle séminaire",
       "why": "145€ dépensés sur 30j pour 0 conversion. Ad group hors brand qui draine du budget sans retour.",
       "reversible": true,
-      "action_payload": {"ad_group_id": "203888309708", "ad_group_name": "Location salle séminaire", "campaign_id": "23749882446"},
+      "action_payload": {
+        "ad_group_id": "203888309708",
+        "ad_group_name": "Location salle séminaire",
+        "campaign_id": "23749882446"
+      },
       "severity": "medium",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
@@ -40,7 +47,16 @@
       "title": "Ajouter 3 négatifs Google (310€ pour 0 conv)",
       "why": "Trois mots-clés cumulent 310€ de spend sur 30j pour 0 conversion : 'location salle séminaire Paris', 'organiser team building Paris', 'salle de séminaire à louer Paris'.",
       "reversible": true,
-      "action_payload": {"negatives": ["location salle séminaire Paris", "organiser team building Paris", "salle de séminaire à louer Paris"], "level": "campaign", "match_type": "PHRASE", "campaign_id": "23749882446"},
+      "action_payload": {
+        "negatives": [
+          "location salle séminaire Paris",
+          "organiser team building Paris",
+          "salle de séminaire à louer Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
       "severity": "medium",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
@@ -56,7 +72,11 @@
       "title": "Scaler Meta Cold Advantage+ : 20€ → 30€/jour (via budget campagne CBO)",
       "why": "CTR 4,62% sur 5 jours et 2 305 clics. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. CBO allouera auto ~90% à Cold.",
       "reversible": true,
-      "action_payload": {"campaign_id": "120244274929310784", "new_daily_budget_eur": 30, "note": "Budget changé au niveau campagne (CBO) car ad set-level budget impossible en mode CBO"},
+      "action_payload": {
+        "campaign_id": "120244274929310784",
+        "new_daily_budget_eur": 30,
+        "note": "Budget changé au niveau campagne (CBO) car ad set-level budget impossible en mode CBO"
+      },
       "severity": "low",
       "status": "appliquee",
       "slack_ts": "1779784664.757659",
@@ -66,11 +86,11 @@
     },
     {
       "id": "2026-05-27-001",
-      "date": "2026-05-27",
+      "date": "2026-05-28",
       "type": "create_campaign",
       "channel": "meta",
       "title": "🚀 Pivot Meta : créer campagne Lead Gen Advantage+ en parallèle (15€/j)",
-      "why": "La campagne Trafic actuelle (CTR 4,58%, 2 600 clics) ne tracke aucun lead car objectif Trafic. Pour mesurer le vrai impact Meta, créer une 2e campagne en mode 'Leads' optimisée pour l'event pixel Lead. Budget 15€/j sécurisé, 14j learning phase, décision scale le 17/06.",
+      "why": "La campagne Trafic actuelle (210€, 3 591 clics sur 7j) ne tracke aucun lead car objectif Trafic. Pour mesurer le vrai impact Meta, créer une 2e campagne en mode 'Leads' optimisée pour l'event pixel Lead. Budget 15€/j sécurisé, 14j learning phase, décision scale le 17/06.",
       "reversible": true,
       "action_payload": {
         "campaign_objective": "OUTCOME_LEADS",
@@ -78,7 +98,11 @@
         "daily_budget_eur": 15,
         "optimization_event": "Lead",
         "ad_set_audience": "Advantage+ Audience FR (réutiliser le ciblage Cold actuel)",
-        "ads_creative_ids": ["120244275705820784", "120244275728930784", "120244275711010784"],
+        "ads_creative_ids": [
+          "120244275705820784",
+          "120244275728930784",
+          "120244275711010784"
+        ],
         "attribution_window": "7d_click_1d_view",
         "cta": "LEARN_MORE",
         "landing_page": "https://dayoff.space/contact",
@@ -91,7 +115,67 @@
       "validated_at": null,
       "applied_at": null,
       "pre_staged": true,
-      "pre_staged_note": "Reco pré-stagée par Florian le 26/05 soir. À poster automatiquement dans le brief du 27/05 matin."
+      "pre_staged_note": "Reco pré-stagée par Florian le 26/05 soir. Promue au brief du 28/05 (skip 27/05)."
+    },
+    {
+      "id": "2026-05-28-001",
+      "date": "2026-05-28",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "Sécuriser tracking pixel Lead avant pivot Lead Gen",
+      "why": "Pré-requis du pivot : la campagne Lead Gen ne peut s'optimiser que si l'event 'Lead' est bien déclenché sur dayoff.space/contact après submit form. Vérifier (1) que Meta Pixel + Conversions API sont installés, (2) que l'event 'Lead' fire bien après submit (Events Manager > Test Events), (3) que le paramètre value est setup pour le ROAS.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "pixel_lead_event_verification",
+        "owner": "Florian",
+        "blocking_for": "2026-05-27-001"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-28-002",
+      "date": "2026-05-28",
+      "type": "investigate",
+      "channel": "google",
+      "title": "Scaler budget Day Off Brand (ROAS 10x / 12 conv sur 30j)",
+      "why": "Campagne Day Off Brand = top performer sur 30j : 12 conversions, ROAS 10,01x, CTR 9,85%. Sur 7j ROAS s'envole à 17,1x. Budget probablement plafonné. Action manuelle Florian : vérifier IS (impression share) lost to budget, et augmenter de 30 à 50% le budget si IS lost > 20%.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "scale_brand",
+        "owner": "Florian",
+        "note": "Brand Day Off touché uniquement avec validation explicite — reco manuelle."
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-28-003",
+      "date": "2026-05-28",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "Produire variantes créatives Imprimerie + Réserve (lieux sous-exploités)",
+      "why": "Sur 30j Meta, L'Imprimerie cumule 0,21€ de spend, La Réserve 0,00€. Algorithme CBO ne pousse pas ces ads (probable learning insuffisant ou hook image faible). Produire 2 variantes par lieu (1 image lifestyle, 1 image détail) et relancer pour rebalancer la distribution budget.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "creative_production",
+        "owner": "Florian + Margot",
+        "lieux": ["Imprimerie", "Réserve"]
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
     }
   ]
 }
