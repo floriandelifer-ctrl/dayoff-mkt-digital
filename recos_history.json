@@ -111,7 +111,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779985771.741219",
       "validated_at": null,
       "applied_at": null,
       "pre_staged": true,
@@ -133,7 +133,7 @@
       },
       "severity": "high",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779985771.741219",
       "validated_at": null,
       "applied_at": null
     },
@@ -153,7 +153,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779985771.741219",
       "validated_at": null,
       "applied_at": null
     },
@@ -169,11 +169,14 @@
         "manual": true,
         "context": "creative_production",
         "owner": "Florian + Margot",
-        "lieux": ["Imprimerie", "Réserve"]
+        "lieux": [
+          "Imprimerie",
+          "Réserve"
+        ]
       },
       "severity": "low",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1779985771.741219",
       "validated_at": null,
       "applied_at": null
     }
