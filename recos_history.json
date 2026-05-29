@@ -106,7 +106,7 @@
       "action_payload": {"manual": true, "context": "activate_lead_gen_campaign", "campaign_id": "120244859896090784"},
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1780039727.993229",
       "validated_at": null,
       "applied_at": null
     },
@@ -121,7 +121,7 @@
       "action_payload": {"negatives": ["team building entreprise Paris", "location salle conférence Paris", "lieu atypique Paris"], "level": "campaign", "match_type": "PHRASE", "campaign_id": "23749882446"},
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1780039727.993229",
       "validated_at": null,
       "applied_at": null
     },
@@ -136,7 +136,7 @@
       "action_payload": {"manual": true, "context": "roas_weekly_drop_monitoring"},
       "severity": "low",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1780039727.993229",
       "validated_at": null,
       "applied_at": null
     }
