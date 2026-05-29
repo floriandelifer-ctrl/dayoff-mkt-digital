@@ -10,10 +10,11 @@
       "reversible": false,
       "action_payload": {"manual": true, "context": "tracking_anomaly"},
       "severity": "high",
-      "status": "validee",
+      "status": "appliquee",
       "slack_ts": "1779784664.757659",
       "validated_at": "2026-05-26T10:45:00+02:00",
-      "applied_at": null,
+      "applied_at": "2026-05-29T08:30:00+02:00",
+      "apply_result": "Conv tracking confirmé OK. 1 conv le 27/05, 1 conv le 28/05. Le creux 23-25 mai correspondait à un lag d'attribution naturel + cycle B2B (long week-end Ascension).",
       "note": "Validée par Florian — investigation manuelle. Probable conversion lag (à confirmer sous 7-10j)."
     },
     {
@@ -69,7 +70,7 @@
       "date": "2026-05-27",
       "type": "create_campaign",
       "channel": "meta",
-      "title": "🚀 Pivot Meta : créer campagne Lead Gen Advantage+ en parallèle (15€/j)",
+      "title": "Pivot Meta : créer campagne Lead Gen Advantage+ en parallèle (15€/j)",
       "why": "La campagne Trafic actuelle (CTR 4,58%, 2 600 clics) ne tracke aucun lead car objectif Trafic. Pour mesurer le vrai impact Meta, créer une 2e campagne en mode 'Leads' optimisée pour l'event pixel Lead. Budget 15€/j sécurisé, 14j learning phase, décision scale le 17/06.",
       "reversible": true,
       "action_payload": {
@@ -83,7 +84,7 @@
         "cta": "LEARN_MORE",
         "landing_page": "https://dayoff.space/contact",
         "initial_status": "PAUSED",
-        "execution_method": "L'agent crée via Adspirer après réaction ✅ de Florian. Florian active manuellement après review en UI."
+        "execution_method": "L'agent crée via Adspirer après réaction de Florian. Florian active manuellement après review en UI."
       },
       "severity": "medium",
       "status": "appliquee",
@@ -93,6 +94,51 @@
       "apply_result": "Campagne Meta Lead Gen créée en PAUSED — Campaign ID 120244859896090784, Ad Set ID 120244859896320784, Ad ID 120244859898040784. Budget 15€/j CBO, Cold Advantage+ FR 25-65, optimisée pour event pixel Lead, CTA GET_QUOTE → dayoff.space/contact. Florian active manuellement après review UI Meta.",
       "pre_staged": true,
       "pre_staged_note": "Reco pré-stagée le 26/05 soir, exécutée le même soir (accélération cadence vs publication demain matin)."
+    },
+    {
+      "id": "2026-05-29-001",
+      "date": "2026-05-29",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "Activer la campagne Meta Lead Gen (créée le 26/05, toujours en PAUSED)",
+      "why": "La campagne Lead Gen 'DayOff — Lead Gen Cold FR — Juin 2026' (ID 120244859896090784) attend ton OK depuis 3 jours. Tant qu'elle reste en PAUSED, on continue à mesurer Meta uniquement sur le Trafic (0 conv pixel attribuée). Activer après review rapide en UI pour démarrer la learning phase 14j.",
+      "reversible": true,
+      "action_payload": {"manual": true, "context": "activate_lead_gen_campaign", "campaign_id": "120244859896090784"},
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-29-002",
+      "date": "2026-05-29",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "Ajouter 3 nouveaux négatifs Google (76€ / 0 conv sur 30j)",
+      "why": "Trois nouveaux mots-clés se sont révélés improductifs sur les 30 derniers jours : 'team building entreprise Paris' EXACT (28€, QS 1.2), 'location salle conférence Paris' EXACT (25€, QS 1.0) et 'lieu atypique Paris' BROAD (23€, QS 5). Aucun lead. Bloquer en PHRASE pour préserver le budget.",
+      "reversible": true,
+      "action_payload": {"negatives": ["team building entreprise Paris", "location salle conférence Paris", "lieu atypique Paris"], "level": "campaign", "match_type": "PHRASE", "campaign_id": "23749882446"},
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-05-29-003",
+      "date": "2026-05-29",
+      "type": "investigate",
+      "channel": "google",
+      "title": "Surveiller chute ROAS Google : 6,32x (sem-2) → 3,03x (sem-1)",
+      "why": "Le ROAS hebdomadaire a chuté de 52 % entre la semaine du 15-21/05 (6,32x, 6 conv) et celle du 22-28/05 (3,03x, 4 conv) pour un spend équivalent (~500€/sem). La marque Day Off Brand tient (ROAS 7x), mais les groupes Search hors brand absorbent davantage. Ne pas réagir tant que sem 29/05-04/06 ne confirme pas la tendance.",
+      "reversible": false,
+      "action_payload": {"manual": true, "context": "roas_weekly_drop_monitoring"},
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
     }
   ]
 }
