@@ -3,271 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Brief DayOff — 29 mai 2026</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<title>Daily Brief DayOff — Lundi 1 juin 2026</title>
 <style>
-  :root{
-    --bg:#FAF8F4;--card:#fff;--border:#E5DFD2;--text:#1A1814;--muted:#6E6655;
-    --g:#5C7A6E;--m:#8C7AB5;--ok:#3F8F5C;--warn:#C18A2E;--bad:#B24A3A;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.5;font-size:15px}
-  .wrap{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
-  header{margin-bottom:32px;border-bottom:0.5px solid var(--border);padding-bottom:20px}
-  h1{font-size:24px;font-weight:600;margin:0 0 6px;letter-spacing:-0.01em}
-  .subtitle{color:var(--muted);font-size:13px;margin:0}
-  h2{font-size:17px;font-weight:600;margin:32px 0 14px;letter-spacing:-0.005em}
-  h3{font-size:14px;font-weight:600;margin:0 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em}
-  .grid{display:grid;gap:14px}
-  .grid-3{grid-template-columns:repeat(3,1fr)}
-  .grid-4{grid-template-columns:repeat(4,1fr)}
-  .grid-2{grid-template-columns:1fr 1fr}
-  .card{background:var(--card);border:0.5px solid var(--border);border-radius:10px;padding:18px}
-  .kpi .v{font-size:24px;font-weight:600;margin:2px 0 4px}
-  .kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-  .kpi .d{font-size:12px;color:var(--muted)}
-  .g-accent{border-left:3px solid var(--g)}
-  .m-accent{border-left:3px solid var(--m)}
-  .reco{background:var(--card);border:0.5px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
-  .reco .icon{font-size:22px;flex-shrink:0;line-height:1}
-  .reco .body{flex:1}
-  .reco .t{font-weight:600;font-size:14.5px;margin-bottom:6px}
-  .reco .w{font-size:13.5px;color:#3a342a;margin-bottom:8px}
-  .reco .meta{font-size:11.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
-  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:500;letter-spacing:0.02em}
-  .pill-attente{background:#FAEFD9;color:#7a5a1f}
-  .pill-validee{background:#D8EBDC;color:#2e6b42}
-  .pill-appliquee{background:#E5DFD2;color:#5a523f}
-  .pill-declinee{background:#F0DCD7;color:#7a3525}
-  .roas-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:0.5px solid var(--border)}
-  .roas-row:last-child{border-bottom:none}
-  .roas-row .lbl{font-weight:500}
-  .roas-row .val{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
-  table{width:100%;border-collapse:collapse;font-size:13px}
-  th,td{padding:9px 10px;text-align:left;border-bottom:0.5px solid var(--border)}
-  th{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:#FBF7EF}
-  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-  .top-ad{background:var(--card);border:0.5px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
-  .top-ad img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#f0ece4}
-  .top-ad .meta{padding:12px 14px}
-  .top-ad .hl{font-weight:600;font-size:13.5px;margin-bottom:6px;line-height:1.35}
-  .top-ad .stats{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
-  .obs li{margin-bottom:8px;font-size:14px}
-  .obs{padding-left:20px;margin:0}
-  footer{margin-top:48px;padding-top:18px;border-top:0.5px solid var(--border);font-size:12px;color:var(--muted);text-align:center}
-  .chart-wrap{position:relative;height:280px}
-  @media(max-width:720px){
-    .grid-3,.grid-4,.grid-2{grid-template-columns:1fr}
-    .wrap{padding:24px 16px 48px}
-    h1{font-size:21px}
-    .chart-wrap{height:240px}
-  }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#f3f4f6; color:#111827; line-height:1.5; }
+.container { max-width:1100px; margin:0 auto; padding:24px; }
+header { background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:white; padding:32px 24px; border-radius:12px; margin-bottom:24px; }
+header h1 { font-size:28px; margin-bottom:8px; }
+header .date { font-size:14px; opacity:0.8; }
+header .url { font-size:12px; opacity:0.6; margin-top:8px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-bottom:24px; }
+.kpi { background:white; padding:20px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.kpi-label { font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color:#6b7280; margin-bottom:8px; font-weight:600; }
+.kpi-value { font-size:24px; font-weight:700; color:#111827; }
+.kpi-sub { font-size:12px; color:#6b7280; margin-top:4px; }
+.kpi-alert { border-left:4px solid #dc2626; background:#fef2f2; }
+.kpi-warn { border-left:4px solid #f59e0b; }
+.kpi-good { border-left:4px solid #10b981; }
+section { background:white; padding:24px; border-radius:12px; margin-bottom:24px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+section h2 { font-size:18px; margin-bottom:16px; color:#111827; border-bottom:2px solid #f3f4f6; padding-bottom:8px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th, td { padding:10px 12px; text-align:left; border-bottom:1px solid #f3f4f6; }
+th { background:#f9fafb; font-weight:600; color:#374151; font-size:12px; text-transform:uppercase; letter-spacing:0.3px; }
+.top-ad { display:flex; gap:16px; padding:16px; background:#fafafa; border-radius:8px; }
+.top-ad-info { flex:1; }
+.top-ad h3 { font-size:15px; margin-bottom:8px; }
+.top-ad-metrics { display:flex; gap:16px; font-size:12px; color:#6b7280; }
+.top-ad-metrics strong { color:#111827; }
+footer { text-align:center; padding:24px; color:#6b7280; font-size:12px; }
+.section-subtitle { font-size:12px; color:#6b7280; margin-bottom:12px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Daily Brief — Vendredi 29 mai 2026</h1>
-    <p class="subtitle">Données arrêtées au J-1 (28 mai). Mise à jour automatique 8h30 du lun. au ven.</p>
-  </header>
+<div class="container">
 
-  <h2>Vue d'ensemble</h2>
-  <div class="grid grid-3">
-    <div class="card kpi">
-      <div class="l">Hier · 28 mai</div>
-      <div class="v">112 €</div>
-      <div class="d">Google 85,98 € · 1 conv &nbsp;|&nbsp; Meta 26,42 € · 419 clics</div>
-    </div>
-    <div class="card kpi">
-      <div class="l">Cette semaine · 22→28 mai</div>
-      <div class="v">708 €</div>
-      <div class="d">Google 495,81 € · 4 conv · ROAS 3,03x &nbsp;|&nbsp; Meta 211,70 € · 3 574 clics</div>
-    </div>
-    <div class="card kpi">
-      <div class="l">Mois · 30 jours roulants</div>
-      <div class="v">2 864 €</div>
-      <div class="d">Google 2 626,60 € · 19 conv · ROAS 6,00x &nbsp;|&nbsp; Meta 237,39 €</div>
-    </div>
-  </div>
+<header>
+    <h1>🌅 Daily Brief DayOff</h1>
+    <div class="date">Lundi 1 juin 2026</div>
+    <div class="url">https://floriandelifer-ctrl.github.io/dayoff-mkt-digital/</div>
+</header>
 
-  <h2>📋 Actions recommandées du jour</h2>
-  <div class="reco">
-    <div class="icon">⏰</div>
-    <div class="body">
-      <div class="t">Activer la campagne Meta Lead Gen (créée le 26/05, toujours en PAUSED)</div>
-      <div class="w">La campagne <em>DayOff — Lead Gen Cold FR — Juin 2026</em> (ID 120244859896090784) attend ton OK depuis 3 jours. Tant qu'elle reste en PAUSED, on continue à mesurer Meta uniquement sur le Trafic (0 conv pixel attribuée). Activation manuelle en UI Meta pour démarrer la learning phase de 14 jours.</div>
-      <div class="meta"><span class="pill pill-attente">En attente</span> · Sévérité medium · Action manuelle Florian · Channel Meta</div>
+<section>
+    <h2>Vue d'ensemble</h2>
+    <div class="kpis">
+        <div class="kpi">
+            <div class="kpi-label">Google · Hier</div>
+            <div class="kpi-value">39.93 €</div>
+            <div class="kpi-sub">0 conversion</div>
+        </div>
+        <div class="kpi">
+            <div class="kpi-label">Meta · Hier</div>
+            <div class="kpi-value">17.98 €</div>
+            <div class="kpi-sub">340 clics · CTR 4,33 %</div>
+        </div>
+        <div class="kpi kpi-warn">
+            <div class="kpi-label">ROAS Google · Sem -1</div>
+            <div class="kpi-value">3.07x</div>
+            <div class="kpi-sub">Sem -2 : 8,32x · chute confirmée</div>
+        </div>
+        <div class="kpi kpi-alert">
+            <div class="kpi-label">⚠️ Meta Lead Gen</div>
+            <div class="kpi-value">PAUSED</div>
+            <div class="kpi-sub">J+4 · 0 impression · activation toujours en attente</div>
+        </div>
     </div>
-  </div>
-  <div class="reco">
-    <div class="icon">🚫</div>
-    <div class="body">
-      <div class="t">Ajouter 3 nouveaux négatifs Google (76 € / 0 conv sur 30j)</div>
-      <div class="w">Trois nouveaux mots-clés improductifs sur les 30 derniers jours : <code>team building entreprise Paris</code> EXACT (28 €, QS 1,2), <code>location salle conférence Paris</code> EXACT (25 €, QS 1,0) et <code>lieu atypique Paris</code> BROAD (23 €, QS 5). Bloquer en PHRASE pour préserver le budget de la campagne Search Intentions Fortes.</div>
-      <div class="meta"><span class="pill pill-attente">En attente</span> · Sévérité medium · Réversible · Channel Google</div>
-    </div>
-  </div>
-  <div class="reco">
-    <div class="icon">👀</div>
-    <div class="body">
-      <div class="t">Surveiller chute ROAS Google : 6,32x (sem -2) → 3,03x (sem -1)</div>
-      <div class="w">Le ROAS hebdomadaire a chuté de 52 % entre la semaine du 15-21/05 (6,32x, 6 conv) et celle du 22-28/05 (3,03x, 4 conv) pour un spend équivalent (~500 €/sem). La marque Day Off Brand tient (ROAS 7x sur 7j). Ne pas réagir tant que la semaine 29/05-04/06 ne confirme pas la tendance.</div>
-      <div class="meta"><span class="pill pill-attente">En attente</span> · Sévérité low · Surveillance Florian · Channel Google</div>
-    </div>
-  </div>
-  <div class="reco" style="opacity:0.7">
-    <div class="icon">✅</div>
-    <div class="body">
-      <div class="t">Investiguer 0 conv Google 23→25 mai (clôturée)</div>
-      <div class="w">Tracking confirmé OK. 1 conv le 27/05, 1 conv le 28/05. Le creux 23-25/05 correspondait à un lag d'attribution naturel + cycle B2B (long week-end Ascension).</div>
-      <div class="meta"><span class="pill pill-appliquee">Appliquée</span> · Validée 26/05 · Clôturée 29/05</div>
-    </div>
-  </div>
+</section>
 
-  <h2>Évolution ROAS Google — 4 semaines glissantes</h2>
-  <div class="card">
-    <div class="roas-row"><span class="lbl">Sem. -3 · 8→14 mai</span><span class="val">1,10x 🔴</span></div>
-    <div class="roas-row"><span class="lbl">Sem. -2 · 15→21 mai</span><span class="val">6,32x 💚</span></div>
-    <div class="roas-row"><span class="lbl">Sem. -1 · 22→28 mai</span><span class="val">3,03x ⚠️</span></div>
-    <div class="roas-row"><span class="lbl">Mois roulant · 30j</span><span class="val">6,00x 💚</span></div>
-  </div>
+<section>
+    <h2>📊 Performance hebdo Google</h2>
+    <table>
+        <thead><tr><th>Période</th><th>Spend</th><th>Clics</th><th>Conversions</th><th>ROAS</th></tr></thead>
+        <tbody>
+<tr><td>Sem -3 (11-17/05)</td><td>684.12 €</td><td>929</td><td>1</td><td style="color:#dc2626;font-weight:600">0.73x</td></tr>
+<tr><td>Sem -2 (18-24/05)</td><td>781.08 €</td><td>2623</td><td>8</td><td style="color:#10b981;font-weight:600">8.32x</td></tr>
+<tr><td>Sem -1 (25-31/05)</td><td>487.93 €</td><td>707</td><td>3</td><td style="color:#f59e0b;font-weight:600">3.07x</td></tr>
 
-  <h2>Google Ads — détail</h2>
-  <div class="grid grid-4">
-    <div class="card kpi g-accent">
-      <div class="l">Spend 7j</div>
-      <div class="v">495,81 €</div>
-      <div class="d">889 clics · CTR 3,05%</div>
-    </div>
-    <div class="card kpi g-accent">
-      <div class="l">Conv 7j</div>
-      <div class="v">4</div>
-      <div class="d">CPA 123,95 €</div>
-    </div>
-    <div class="card kpi g-accent">
-      <div class="l">CPC moyen</div>
-      <div class="v">0,56 €</div>
-      <div class="d">Sur 7 jours</div>
-    </div>
-    <div class="card kpi g-accent">
-      <div class="l">Top campagne</div>
-      <div class="v">10,6x</div>
-      <div class="d">Day Off Brand · ROAS 30j</div>
-    </div>
-  </div>
+        </tbody>
+    </table>
+    <p class="section-subtitle" style="margin-top:12px">30 derniers jours : 2550 € · 17 conv · ROAS 5.49x · CPA 150 €</p>
+</section>
 
-  <h2>Spend quotidien — Google vs Meta (7 derniers jours)</h2>
-  <div class="card"><div class="chart-wrap"><canvas id="spendChart"></canvas></div></div>
-
-  <h2>Meta Ads — détail</h2>
-  <div class="grid grid-4">
-    <div class="card kpi m-accent">
-      <div class="l">Spend 7j</div>
-      <div class="v">211,70 €</div>
-      <div class="d">3 574 clics</div>
-    </div>
-    <div class="card kpi m-accent">
-      <div class="l">CTR moyen</div>
-      <div class="v">4,38%</div>
-      <div class="d">Outbound 4,11%</div>
-    </div>
-    <div class="card kpi m-accent">
-      <div class="l">CPC moyen</div>
-      <div class="v">0,06 €</div>
-      <div class="d">Très efficace en clics</div>
-    </div>
-    <div class="card kpi m-accent">
-      <div class="l">Conversions</div>
-      <div class="v">0</div>
-      <div class="d">Campagne Trafic — Lead Gen en attente d'activation</div>
-    </div>
-  </div>
-
-  <h2>🏆 Top 3 ads Meta — 30 jours</h2>
-  <div class="grid grid-3">
+<section>
+    <h2>🏆 Top créative Meta — 7 derniers jours</h2>
     <div class="top-ad">
-      <img src="https://res.cloudinary.com/dt730fp5h/image/upload/v1779651456/dayoff/brief/top_ad_1.jpg" alt="Adresses confidentielles Paris &amp; Lyon">
-      <div class="meta">
-        <div class="hl">Adresses confidentielles Paris &amp; Lyon</div>
-        <div class="stats"><span>215,36 €</span><span>3 554 clics</span><span>CTR 4,44%</span></div>
-      </div>
+        <div class="top-ad-info">
+            <h3>Adresses confidentielles Paris & Lyon</h3>
+            <p style="font-size:13px;color:#6b7280;margin-bottom:8px">Cold — Advantage+ Audience FR · CTA SEE_DETAILS</p>
+            <div class="top-ad-metrics">
+                <span>CTR <strong>4.50 %</strong></span>
+                <span>Spend <strong>260 €</strong></span>
+                <span>Clics <strong>4381</strong></span>
+                <span>CPC <strong>0,06 €</strong></span>
+            </div>
+        </div>
     </div>
-    <div class="top-ad">
-      <img src="https://res.cloudinary.com/dt730fp5h/image/upload/v1779651460/dayoff/brief/top_ad_2.jpg" alt="La Blanchisserie — Haut Marais">
-      <div class="meta">
-        <div class="hl">La Blanchisserie — Haut Marais</div>
-        <div class="stats"><span>14,87 €</span><span>328 clics</span><span>CTR 3,90%</span></div>
-      </div>
+</section>
+
+<section>
+    <h2>📋 Actions recommandées du jour (3)</h2>
+    <p class="section-subtitle">Réagis ✅ / ❌ sur le post Slack #marketing-digital pour valider ou décliner.</p>
+
+    <div style="border-left:4px solid #dc2626;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">📘 🚨 Lead Gen Meta toujours PAUSED à J+4 — débloquer la diffusion</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-06-01</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">Campagne Lead Gen 'DayOff — Lead Gen Cold FR — Juin 2026' (ID 120244859896090784) créée le 28/05, toujours en PAUSED 4 jours plus tard. 0 impression / 0€ spend. La reco d'activation du 29/05 n'a reçu aucune réaction. Tant qu'elle ne tourne pas, Meta ne mesure rien d'autre que le Trafic (0 conv pixel attribuée sur 4 888 clics / 30j). Chaque jour de retard = -€20 de signal Lead historique pour entraîner l'algo.</p>
+        
     </div>
-    <div class="top-ad">
-      <img src="https://res.cloudinary.com/dt730fp5h/image/upload/v1779651464/dayoff/brief/top_ad_3.jpg" alt="La Carrosserie — Lyon 6e">
-      <div class="meta">
-        <div class="hl">La Carrosserie — Lyon 6e</div>
-        <div class="stats"><span>4,54 €</span><span>76 clics</span><span>CTR 4,23%</span></div>
-      </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Chute ROAS Google se confirme : sem -2 8,32x → sem -1 3,07x (-63 %)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-06-01</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">La tendance signalée vendredi (29/05) s'aggrave. ROAS hebdo : sem -3 (11-17/05) 0,73x · sem -2 (18-24/05) 8,32x · sem -1 (25-31/05) 3,07x. Spend stable (~500€/sem), conv chute de 8 → 3. Day Off Brand reste solide (11 conv sur 30j / 1 251€ / ROAS 8,88x). Cause probable : volatilité Search hors-brand + 3 négatifs proposés le 29/05 pas encore validés. Décision sous 7j si tendance persiste : repasser à 2,07x sem -1.</p>
+        
     </div>
-  </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Renvoi des 3 négatifs Google du 29/05 (76€ / 0 conv toujours actifs)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-06-01</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">Reco 2026-05-29-002 toujours en_attente : `team building entreprise Paris` EXACT (28€, QS 1,2), `location salle conférence Paris` EXACT (25€, QS 1,0), `lieu atypique Paris` BROAD (23€, QS 5). Aucun lead. À noter : 'team building entreprise Paris' a généré 1 conv ces 7j (43€) → en EXACT le Search Intentions Fortes le travaille bien. Adapter le périmètre : bloquer en PHRASE uniquement les 2 autres (53€ pour 0 conv).</p>
+        
+    </div>
+</section>
 
-  <h2>Observations stratégiques</h2>
-  <div class="card">
-    <ul class="obs">
-      <li><strong>Conv tracking Google clôturé.</strong> Le creux 23→25/05 (0 conv) s'est résolu : 1 conv le 27/05, 1 le 28/05. Lag d'attribution naturel sur cycle B2B, pas de bug pixel — l'investigation peut être archivée.</li>
-      <li><strong>ROAS hebdo en baisse mais marge intacte sur le mois.</strong> Sem. -1 à 3,03x vs 6,32x la semaine précédente, mais le 30j tient à 6,00x. À surveiller sur la semaine 29/05→04/06 avant toute action.</li>
-      <li><strong>Cold Advantage+ porte 91 % du spend Meta.</strong> 211,70 € sur la semaine concentrés sur Cold (3 556 clics, CTR 4,38%). Le pivot Lead Gen reste la prochaine étape pour mesurer le signal réel — la campagne est créée et n'attend qu'une activation.</li>
-      <li><strong>Day Off Brand tient le compte.</strong> ROAS 10,61x sur 30j, 13 conv. C'est le seul ad group converti hors WOOM redirect. Surveiller l'impression share lost to budget pour décider d'un scale.</li>
-    </ul>
-  </div>
+<section>
+    <h2>⏳ Recos en attente précédentes (3)</h2>
+    <p class="section-subtitle">Encore non traitées — réagis sur les posts Slack correspondants.</p>
 
-  <h2>Détail par campagne — Google</h2>
-  <div class="card" style="padding:0;overflow:hidden">
-  <table>
-    <thead><tr><th>Campagne</th><th class="num">Spend 30j</th><th class="num">Conv</th><th class="num">CPA</th><th class="num">CTR</th><th class="num">ROAS</th></tr></thead>
-    <tbody>
-      <tr><td>Day Off Brand</td><td class="num">≈ 200 €</td><td class="num">13</td><td class="num">15,38 €</td><td class="num">9,72%</td><td class="num">10,61x</td></tr>
-      <tr><td>Search Intentions Fortes</td><td class="num">≈ 850 €</td><td class="num">2</td><td class="num">425 €</td><td class="num">5,5%</td><td class="num">1,8x</td></tr>
-      <tr><td>PMax Lieux DayOff</td><td class="num">≈ 1 200 €</td><td class="num">3</td><td class="num">400 €</td><td class="num">2,8%</td><td class="num">3,1x</td></tr>
-      <tr><td>Remarketing</td><td class="num">≈ 160 €</td><td class="num">0</td><td class="num">—</td><td class="num">6,3%</td><td class="num">0x</td></tr>
-      <tr><td>WOOM devient Day Off</td><td class="num">≈ 17 €</td><td class="num">1</td><td class="num">16,83 €</td><td class="num">6,54%</td><td class="num">3,2x</td></tr>
-    </tbody>
-  </table>
-  </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">📘 Activer la campagne Meta Lead Gen (créée le 26/05, toujours en PAUSED)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-29</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">La campagne Lead Gen 'DayOff — Lead Gen Cold FR — Juin 2026' (ID 120244859896090784) attend ton OK depuis 3 jours. Tant qu'elle reste en PAUSED, on continue à mesurer Meta uniquement sur le Trafic (0 conv pixel attribuée). Activer après review rapide en UI pour démarrer la learning phase 14j.</p>
+        
+    </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Ajouter 3 nouveaux négatifs Google (76€ / 0 conv sur 30j)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-29</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">Trois nouveaux mots-clés se sont révélés improductifs sur les 30 derniers jours : 'team building entreprise Paris' EXACT (28€, QS 1.2), 'location salle conférence Paris' EXACT (25€, QS 1.0) et 'lieu atypique Paris' BROAD (23€, QS 5). Aucun lead. Bloquer en PHRASE pour préserver le budget.</p>
+        
+    </div>
+    <div style="border-left:4px solid #10b981;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Surveiller chute ROAS Google : 6,32x (sem-2) → 3,03x (sem-1)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">EN ATTENTE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-29</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">Le ROAS hebdomadaire a chuté de 52 % entre la semaine du 15-21/05 (6,32x, 6 conv) et celle du 22-28/05 (3,03x, 4 conv) pour un spend équivalent (~500€/sem). La marque Day Off Brand tient (ROAS 7x), mais les groupes Search hors brand absorbent davantage. Ne pas réagir tant que sem 29/05-04/06 ne confirme pas la tendance.</p>
+        
+    </div>
+</section>
 
-  <h2>Détail par campagne — Meta</h2>
-  <div class="card" style="padding:0;overflow:hidden">
-  <table>
-    <thead><tr><th>Campagne</th><th class="num">Spend</th><th class="num">Clics</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">Conv</th></tr></thead>
-    <tbody>
-      <tr><td>DayOff — Trafic Destinations — Mai 2026</td><td class="num">211,70 €</td><td class="num">3 574</td><td class="num">4,38%</td><td class="num">0,06 €</td><td class="num">0</td></tr>
-      <tr><td>DayOff — Lead Gen Cold FR — Juin 2026 (PAUSED)</td><td class="num">— €</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-    </tbody>
-  </table>
-  </div>
+<section>
+    <h2>✅ Recos récemment appliquées (5)</h2>
 
-  <footer>
-    Daily Brief automatisé · Données via Google Ads &amp; Meta Ads API · Visuels via Cloudinary · Réactions Slack lues à 8h30 le lendemain
-  </footer>
+    <div style="border-left:4px solid #dc2626;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Investiguer 0 conv Google sur 3 jours (23→25 mai)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">APPLIQUÉE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-26</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">3 jours consécutifs à 0 conversion alors que le spend (~150€) et le trafic (~450 clics) sont stables. Vérifier le suivi conversion (Google Tag), le formulaire de contact, et l'attribution.</p>
+        <div style="margin-top:8px;padding:8px;background:#f0fdf4;border-left:3px solid #10b981;font-size:12px;color:#065f46"><strong>Résultat :</strong> Conv tracking confirmé OK. 1 conv le 27/05, 1 conv le 28/05. Le creux 23-25 mai correspondait à un lag d'attribution naturel + cycle B2B (long week-end Ascension).</div>
+    </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Pauser ad group Location salle séminaire</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">APPLIQUÉE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-26</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">145€ dépensés sur 30j pour 0 conversion. Ad group hors brand qui draine du budget sans retour.</p>
+        <div style="margin-top:8px;padding:8px;background:#f0fdf4;border-left:3px solid #10b981;font-size:12px;color:#065f46"><strong>Résultat :</strong> Ad group 203888309708 PAUSED via Adspirer API</div>
+    </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">🔍 Ajouter 3 négatifs Google (310€ pour 0 conv)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">APPLIQUÉE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-26</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">Trois mots-clés cumulent 310€ de spend sur 30j pour 0 conversion : 'location salle séminaire Paris', 'organiser team building Paris', 'salle de séminaire à louer Paris'.</p>
+        <div style="margin-top:8px;padding:8px;background:#f0fdf4;border-left:3px solid #10b981;font-size:12px;color:#065f46"><strong>Résultat :</strong> 3 negatives added to campaign 23749882446 (Search Intentions Fortes) en PHRASE</div>
+    </div>
+    <div style="border-left:4px solid #10b981;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">📘 Scaler Meta Cold Advantage+ : 20€ → 30€/jour (via budget campagne CBO)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">APPLIQUÉE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-26</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">CTR 4,62% sur 5 jours et 2 305 clics. Au prix actuel (0,06€/clic), +10€/jour génère ~165 clics supplémentaires. CBO allouera auto ~90% à Cold.</p>
+        <div style="margin-top:8px;padding:8px;background:#f0fdf4;border-left:3px solid #10b981;font-size:12px;color:#065f46"><strong>Résultat :</strong> Campaign 120244274929310784 daily_budget updated to 30 EUR via Adspirer API</div>
+    </div>
+    <div style="border-left:4px solid #f59e0b;background:white;padding:16px;margin-bottom:12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+            <h3 style="margin:0;font-size:15px;color:#111827;flex:1">📘 Pivot Meta : créer campagne Lead Gen Advantage+ en parallèle (15€/j)</h3>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600">APPLIQUÉE</span>
+                <span style="font-size:11px;color:#6b7280">2026-05-27</span>
+            </div>
+        </div>
+        <p style="margin:8px 0 0;font-size:13px;color:#4b5563;line-height:1.5">La campagne Trafic actuelle (CTR 4,58%, 2 600 clics) ne tracke aucun lead car objectif Trafic. Pour mesurer le vrai impact Meta, créer une 2e campagne en mode 'Leads' optimisée pour l'event pixel Lead. Budget 15€/j sécurisé, 14j learning phase, décision scale le 17/06.</p>
+        <div style="margin-top:8px;padding:8px;background:#f0fdf4;border-left:3px solid #10b981;font-size:12px;color:#065f46"><strong>Résultat :</strong> Campagne Meta Lead Gen créée en PAUSED — Campaign ID 120244859896090784, Ad Set ID 120244859896320784, Ad ID 120244859898040784. Budget 15€/j CBO, Cold Advantage+ FR 25-65, optimisée pour event pixel Lead, CTA GET_QUOTE → dayoff.space/contact. Florian active manuellement après review UI Meta.</div>
+    </div>
+</section>
+
+<footer>
+    Daily Brief automatique — DayOff · Généré le Lundi 1 juin 2026 à 8h30<br>
+    <a href="https://github.com/floriandelifer-ctrl/dayoff-mkt-digital" style="color:#6b7280">github.com/floriandelifer-ctrl/dayoff-mkt-digital</a>
+</footer>
+
 </div>
-
-<script>
-const ctx = document.getElementById('spendChart').getContext('2d');
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['22 mai','23 mai','24 mai','25 mai','26 mai','27 mai','28 mai'],
-    datasets: [
-      {label:'Google', data:[65.57,57.02,32.36,59.77,102.36,92.74,85.98], borderColor:'#5C7A6E', backgroundColor:'rgba(92,122,110,0.08)', tension:0.3, borderWidth:2, pointRadius:3, fill:true},
-      {label:'Meta', data:[35.98,28.24,32.51,30.87,28.39,29.29,26.42], borderColor:'#8C7AB5', backgroundColor:'rgba(140,122,181,0.08)', tension:0.3, borderWidth:2, pointRadius:3, fill:true}
-    ]
-  },
-  options: {
-    responsive:true, maintainAspectRatio:false,
-    plugins:{legend:{position:'bottom', labels:{font:{size:12}, color:'#6E6655'}}},
-    scales:{
-      y:{beginAtZero:true, ticks:{callback:v=>v+' €', color:'#6E6655'}, grid:{color:'#EFEAE0'}},
-      x:{ticks:{color:'#6E6655'}, grid:{display:false}}
-    }
-  }
-});
-</script>
 </body>
 </html>
