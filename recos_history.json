@@ -133,10 +133,11 @@
         "campaign_id": "120244859896090784"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "appliquee",
       "slack_ts": "1780039727.993229",
-      "validated_at": null,
-      "applied_at": null
+      "validated_at": "2026-06-03T08:30:00+02:00",
+      "applied_at": "2026-06-02T19:30:00+02:00",
+      "apply_result": "Campagne Lead Gen 120244859896090784 ACTIVATÉE par Florian le 02/06. Premier signal : 26,49€ spend, 110 clicks, 3 290 imp, CTR 3,34%, 0 lead à J+1 (learning phase en cours)."
     },
     {
       "id": "2026-05-29-002",
@@ -195,10 +196,11 @@
         "days_paused": 4
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780298001.386179",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "apply_result": "Caduque : Lead Gen activée le 02/06 (cf reco 2026-05-29-001). Escalation plus nécessaire."
     },
     {
       "id": "2026-06-01-002",
@@ -238,6 +240,89 @@
       "severity": "medium",
       "status": "en_attente",
       "slack_ts": "1780298001.386179",
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-03-001",
+      "date": "2026-06-03",
+      "type": "monitor",
+      "channel": "meta",
+      "title": "💚 Lead Gen Meta a démarré le 02/06 — surveiller jusqu'à J+5 (07/06)",
+      "why": "Diffusion lancée hier (110 clicks, 3 290 imp, CTR 3,34%, CPC 0,24€). 0 lead capté à J+1 — c'est normal en learning phase. Décision scale/ajuster prévue le 07/06 (J+5) selon CPL et ratio clic→lead.",
+      "reversible": true,
+      "action_payload": {
+        "manual": true,
+        "context": "lead_gen_incubation_monitoring",
+        "campaign_id": "120244859896090784",
+        "decision_date": "2026-06-07"
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-03-002",
+      "date": "2026-06-03",
+      "type": "investigate",
+      "channel": "google",
+      "title": "🚨 Google : 4 jours consécutifs à 0 conv (30/05→02/06) pour 252€ de spend",
+      "why": "Aucune conversion depuis le 30/05. Spend cumulé 4 jours = 252,67€ (35,37 + 39,93 + 82,58 + 94,79€). Sem-1 finit à ROAS 3,07x (vs sem-2 8,32x). Hypothèses : (1) lag d'attribution post-pont Ascension, (2) tracking GTM cassé, (3) volatilité Search hors-brand. Action : vérifier Google Tag Assistant en live + checker formulaire dayoff.space/contact + comparer avec leads CRM internes.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "google_zero_conv_streak_investigation",
+        "days_without_conv": 4,
+        "cumulative_spend_eur": 252.67
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-03-003",
+      "date": "2026-06-03",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 Renvoi 3ème fois : 2 négatifs Google (53€/0 conv) — version finale",
+      "why": "Recos 2026-05-29-002 et 2026-06-01-003 toujours sans réaction depuis 5 jours. Pendant ce temps : 53€ supplémentaires gaspillés. Ajusté : on bloque uniquement 'location salle conférence Paris' EXACT (29€ ces 7j, QS 1,0) et 'organiser team building Paris' PHRASE (23€ ces 7j) en PHRASE. 'team building entreprise Paris' EXACT a converti 1 fois, on le garde.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "location salle conférence Paris",
+          "organiser team building Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-03-004",
+      "date": "2026-06-03",
+      "type": "investigate",
+      "channel": "google",
+      "title": "📊 Match types : PHRASE = 0% CVR pour 512€/30j — auditer les 4 mots-clés PHRASE",
+      "why": "Sur 30j : EXACT 24 mots-clés 542€ → 7 conv (2,7% CVR) · BROAD 14 mots-clés 966€ → 9 conv (1,6%) · PHRASE 4 mots-clés 512€ → 0 conv (0%). Les PHRASE coûtent autant qu'EXACT mais ne convertissent jamais. Action : identifier les 4 PHRASE actifs et décider pause/conversion en EXACT. Probable inclus 'salle séminaire Paris' (180 clicks, 405€, 0 conv en 30j).",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "match_type_audit_phrase",
+        "phrase_total_spend_eur": 512.62,
+        "phrase_total_conv": 0
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
       "validated_at": null,
       "applied_at": null
     }
