@@ -18,8 +18,7 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .sec-h { display: flex; align-items: baseline; justify-content: space-between; margin: 36px 0 14px; }
 .sec-h h2 { margin: 0; font-size: 14px; font-weight: 500; color: #1A1814; letter-spacing: 0.04em; text-transform: uppercase; }
 .sec-h .sub { font-size: 12px; color: #9B958A; }
-
-.alert-card { background: #FBE5E0; border: 0.5px solid #E5A99A; border-left: 4px solid #A8483A; border-radius: 0 10px 10px 0; padding: 20px 24px; margin-bottom: 28px; }
+.alert-card { background: #FBE5E0; border: 0.5px solid #E5A99A; border-left: 4px solid #A8483A; border-radius: 0 10px 10px 0; padding: 20px 24px; margin-bottom: 16px; }
 .alert-card.win { background: #E1EFE5; border-color: #9CC5A2; border-left-color: #3F5E4A; }
 .alert-card.win .a-title { color: #2E4A1F; }
 .alert-card.win .a-title .pill { background: #3F5E4A; }
@@ -29,266 +28,178 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", In
 .alert-card p { margin: 0 0 10px; color: #4A1F12; font-size: 13px; line-height: 1.6; }
 .alert-card ul { margin: 8px 0 0 0; padding-left: 20px; color: #4A1F12; }
 .alert-card li { margin: 6px 0; font-size: 13px; }
-
-.cmp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.cmp-card { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 18px 20px; }
-.cmp-card .period { font-size: 11px; color: #9B958A; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-.cmp-card .period .badge { background: #F1ECE2; color: #6B5B3F; padding: 2px 8px; border-radius: 10px; font-size: 10px; letter-spacing: 0.04em; }
-.cmp-card.now .period .badge { background: #E1EFE5; color: #3F5E4A; }
-.cmp-card.week .period .badge { background: #EAEBED; color: #5C5F66; }
-.cmp-card.month .period .badge { background: #ECE7DA; color: #6B5B3F; }
-.cmp-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid #F1ECE2; font-size: 13px; align-items: baseline; }
-.cmp-row:last-child { border-bottom: none; }
-.cmp-row .label { color: #7A746A; font-size: 12px; }
-.cmp-row .label .pill { display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 3px; margin-right: 5px; letter-spacing: 0.04em; vertical-align: 1px; font-weight: 500; }
-.cmp-row .label .pill.g { background: #DDE6E0; color: #3F5E4A; }
-.cmp-row .label .pill.m { background: #E8E3F0; color: #5C4F7A; }
-.cmp-row .val { font-weight: 500; color: #1A1814; font-variant-numeric: tabular-nums; }
-
-.lead-gen-status { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 18px 22px; margin-bottom: 20px; }
-.lead-gen-status h3 { margin: 0 0 6px; font-size: 14px; font-weight: 500; color: #1A1814; }
-.lead-gen-status .lg-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 12px; }
-.lead-gen-status .lg-tile { padding: 10px 12px; background: #FBE5E0; border-radius: 6px; text-align: center; }
-.lead-gen-status .lg-tile.zero { background: #FBE5E0; }
-.lead-gen-status .lg-tile.ok { background: #E1EFE5; }
-.lead-gen-status .lg-tile .l { font-size: 10px; color: #6B5B3F; text-transform: uppercase; letter-spacing: 0.05em; }
-.lead-gen-status .lg-tile .v { font-size: 16px; font-weight: 500; color: #2E4A1F; margin-top: 4px; font-variant-numeric: tabular-nums; }
-.lead-gen-status .lg-tile.zero .v { color: #6B1E0E; }
-.lead-gen-status .lg-note { font-size: 12px; color: #7A746A; margin-top: 12px; font-style: italic; }
-
-.brand-tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.05em; font-weight: 500; vertical-align: 2px; margin-right: 6px; text-transform: uppercase; }
-.brand-tag.google { background: #DDE6E0; color: #3F5E4A; }
-.brand-tag.meta { background: #E8E3F0; color: #5C4F7A; }
-
-.recos-card { background: #FFFDF8; border: 0.5px solid #E5DFD2; border-left: 3px solid #B89A6D; border-radius: 0 10px 10px 0; padding: 22px 26px; }
-.recos-card .recos-intro { font-size: 13px; color: #6B5B3F; margin: 0 0 18px; }
-.recos-card .recos-intro .slack-hint { display: inline-block; background: #ECE7DA; color: #6B5B3F; padding: 3px 9px; border-radius: 12px; font-size: 11px; margin-left: 8px; font-weight: 500; }
-.reco { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
-.reco.critical { border-left: 4px solid #A8483A; background: #FFFBFA; }
-.reco.win { border-left: 4px solid #3F5E4A; background: #FAFFFA; }
-.reco-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
-.reco-num { background: #F1ECE2; color: #6B5B3F; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 12px; flex-shrink: 0; }
-.reco-num.crit { background: #A8483A; color: #fff; }
-.reco-num.win { background: #3F5E4A; color: #fff; }
-.reco-title { font-weight: 500; color: #1A1814; font-size: 14px; flex: 1; }
-.reco-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.reco-tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.03em; font-weight: 500; }
-.reco-tag.severity-high { background: #FBE5E0; color: #A8483A; }
-.reco-tag.severity-low { background: #E1EFE5; color: #3F5E4A; }
-.reco-tag.type-budget { background: #DDE6E0; color: #3F5E4A; }
-.reco-tag.type-restructure { background: #EFE7D8; color: #6B5B3F; }
-.reco-tag.type-monitor { background: #EAEBED; color: #5C5F66; }
-.reco-tag.type-negative { background: #FBE5E0; color: #A8483A; }
-.reco-tag.type-investigate { background: #ECE7DA; color: #6B5B3F; }
-.reco-tag.channel-meta { background: #E8E3F0; color: #5C4F7A; }
-.reco-tag.channel-google { background: #E1EFE5; color: #3F5E4A; }
-.reco-why { font-size: 13px; color: #4A463E; margin: 4px 0 10px 38px; }
-.reco-status { margin-left: 38px; font-size: 12px; }
-.reco-status .pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-weight: 500; font-size: 11px; }
-.reco-status .pill.attente { background: #F1ECE2; color: #6B5B3F; }
-.reco-status .pill.urgent { background: #FBE5E0; color: #A8483A; }
-.reco-status .pill.validee { background: #DDE6E0; color: #3F5E4A; }
-.reco-status .pill.appliquee { background: #C9D6BD; color: #2E4A1F; }
-
-.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.kpi { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 8px; padding: 14px 16px; }
-.kpi .l { font-size: 11px; color: #9B958A; text-transform: uppercase; letter-spacing: 0.05em; }
-.kpi .v { font-size: 22px; font-weight: 500; color: #1A1814; margin-top: 4px; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.kpi .d { font-size: 11px; color: #7A746A; margin-top: 4px; }
-.kpi .d.up { color: #5C7A3E; }
-.kpi .d.down { color: #A8483A; }
-
-.obs { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 20px 24px; }
-.obs h3 { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: #1A1814; letter-spacing: 0.02em; }
-.obs ul { margin: 0; padding-left: 20px; }
-.obs li { margin: 8px 0; font-size: 13px; color: #4A463E; line-height: 1.55; }
-
-@media (max-width: 720px) {
-  .wrap { padding: 20px 18px 60px; }
-  .cmp { grid-template-columns: 1fr; }
-  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-  .lead-gen-status .lg-grid { grid-template-columns: repeat(3, 1fr); }
-}
+.cmp { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.cmp-card { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 18px; }
+.cmp-card .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #9B958A; margin-bottom: 8px; }
+.cmp-card .val { font-size: 26px; font-weight: 500; color: #1A1814; letter-spacing: -0.01em; }
+.cmp-card .val .u { font-size: 14px; color: #9B958A; font-weight: 400; }
+.cmp-card .sub { font-size: 12px; color: #7A746A; margin-top: 5px; }
+.cmp-card .chg { font-size: 12px; margin-top: 7px; font-weight: 500; }
+.chg.up { color: #3F5E4A; } .chg.down { color: #A8483A; } .chg.flat { color: #9B958A; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 20px 22px; }
+.panel h3 { margin: 0 0 14px; font-size: 13px; font-weight: 600; color: #1A1814; }
+.panel h3 .tag { font-weight: 400; color: #9B958A; font-size: 11px; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th { text-align: left; font-weight: 500; color: #9B958A; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; padding: 0 8px 8px 0; border-bottom: 0.5px solid #EDE8DD; }
+td { padding: 9px 8px 9px 0; border-bottom: 0.5px solid #F2EEE5; color: #3A372F; }
+td.num, th.num { text-align: right; }
+tr:last-child td { border-bottom: none; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin: 9px 0; }
+.bar-row .nm { width: 130px; font-size: 12px; color: #3A372F; flex-shrink: 0; }
+.bar-track { flex: 1; height: 7px; background: #F0EBE0; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; }
+.bar-row .amt { width: 78px; text-align: right; font-size: 12px; color: #6B655A; flex-shrink: 0; }
+.reco { background: #fff; border: 0.5px solid #E5DFD2; border-radius: 10px; padding: 16px 18px; margin-bottom: 11px; display: flex; gap: 14px; }
+.reco .n { width: 26px; height: 26px; border-radius: 50%; background: #2C2A26; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+.reco.high .n { background: #A8483A; } .reco.win-r .n { background: #3F5E4A; }
+.reco .r-body { flex: 1; }
+.reco .r-title { font-size: 13.5px; font-weight: 500; color: #1A1814; margin-bottom: 4px; }
+.reco .r-why { font-size: 12.5px; color: #6B655A; line-height: 1.55; }
+.reco .r-meta { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 10px; background: #F0EBE0; color: #7A746A; }
+.chip.sev-high { background: #F3D6CF; color: #8A3322; } .chip.sev-medium { background: #F2E6CB; color: #8A6A22; } .chip.sev-low { background: #E1EFE5; color: #3F5E4A; }
+.chip.rev { background: #E4ECF2; color: #3A5A78; }
+.ft { margin-top: 40px; padding-top: 16px; border-top: 0.5px solid #D7D2C7; font-size: 11.5px; color: #9B958A; text-align: center; }
+@media (max-width: 760px){ .cmp{grid-template-columns:repeat(2,1fr);} .cols{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <div class="hd">
     <div class="hd-l">
-      <h1>DayOff — Daily Brief</h1>
-      <p>Mercredi 3 juin 2026 · données arrêtées au 02/06 (J-1)</p>
+      <h1>DayOff · Daily Brief</h1>
+      <p>Jeudi 4 juin 2026 · Marketing digital — Google Ads &amp; Meta</p>
     </div>
     <div class="hd-r">
-      <div class="live"><span class="dot"></span> Données Adspirer</div>
-      <div style="margin-top: 4px;">Snapshot 03/06 · matin</div>
+      <div class="live"><span class="dot"></span> Données au 03/06/2026</div>
+      <div style="margin-top:4px;">Généré 8h30 · auto</div>
     </div>
   </div>
 
-  <!-- WIN LEAD GEN -->
-  <div class="alert-card win">
-    <div class="a-title">
-      💚 Lead Gen Meta a démarré — fin de l'incubation <span class="pill">Win</span>
-    </div>
-    <p>La campagne <strong>DayOff — Lead Gen Cold FR — Mai-Juin 2026</strong> a commencé à diffuser hier (<strong>02/06</strong>) après activation manuelle. Premier signal solide en 24h : <strong>110 clicks, 3 290 impressions, CTR 3,34%, CPC 0,24€</strong>. 0 lead capté à J+1 — c'est normal en learning phase.</p>
-    <p><strong>Prochaine décision le 07/06 (J+5)</strong> : selon CPL et ratio clic→lead, soit on scale (Trafic → Lead Gen), soit on ajuste (élargir audience / changer CTA).</p>
-  </div>
-
-  <!-- LEAD GEN STATUS -->
-  <div class="sec-h">
-    <h2>🆕 Statut Meta Lead Gen</h2>
-    <span class="sub">démarrage 02/06 · J+1</span>
-  </div>
-  <div class="lead-gen-status">
-    <h3>DayOff — Lead Gen Cold FR — Mai-Juin 2026</h3>
-    <div class="lg-grid">
-      <div class="lg-tile ok"><div class="l">Statut</div><div class="v">ACTIVE</div></div>
-      <div class="lg-tile ok"><div class="l">Spend</div><div class="v">€ 26,49</div></div>
-      <div class="lg-tile ok"><div class="l">Impressions</div><div class="v">3 290</div></div>
-      <div class="lg-tile ok"><div class="l">Clics</div><div class="v">110</div></div>
-      <div class="lg-tile zero"><div class="l">Leads</div><div class="v">0</div></div>
-    </div>
-    <p class="lg-note">Learning phase Meta en cours. CPL non significatif tant que &lt; 5 events Lead captés. Re-check critique : 07/06.</p>
-  </div>
-
-  <!-- VUE D'ENSEMBLE -->
-  <div class="sec-h">
-    <h2>Vue d'ensemble — 3 périodes</h2>
-    <span class="sub">Hier · cette semaine · 30j roulants</span>
-  </div>
-  <div class="cmp">
-    <div class="cmp-card now">
-      <div class="period">Hier <span class="badge">02/06 · mar</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 94,79</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">84</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">0</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 39,00</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Clics</div><div class="val">389</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,49%</div></div>
-    </div>
-    <div class="cmp-card week">
-      <div class="period">7 derniers jours <span class="badge">27/05→02/06</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 503</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">601</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">3</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 155</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Clics</div><div class="val">2 459</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,46%</div></div>
-    </div>
-    <div class="cmp-card month">
-      <div class="period">30j roulants <span class="badge">03/05→02/06</span></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Spend</div><div class="val">€ 2 684</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Clics</div><div class="val">4 735</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>Conv</div><div class="val">17</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill g">G</span>ROAS</div><div class="val">5,22x</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>Spend</div><div class="val">€ 336</div></div>
-      <div class="cmp-row"><div class="label"><span class="pill m">M</span>CTR</div><div class="val">4,45%</div></div>
-    </div>
-  </div>
-
-  <!-- ACTIONS RECOMMANDÉES -->
-  <div class="sec-h">
-    <h2>📋 Actions recommandées du jour</h2>
-    <span class="sub">4 nouvelles · 4 anciennes toujours en attente · validation Slack</span>
-  </div>
-  <div class="recos-card">
-    <p class="recos-intro">Réagis sur le post Slack du matin avec ✅ pour valider ou ❌ pour décliner. Les recos validées et réversibles sont appliquées automatiquement. <span class="slack-hint">#marketing-digital</span></p>
-
-    <div class="reco win">
-      <div class="reco-head">
-        <div class="reco-num win">1</div>
-        <div class="reco-title">💚 Lead Gen Meta a démarré le 02/06 — surveiller jusqu'à J+5 (07/06)</div>
-        <div class="reco-tags">
-          <span class="reco-tag severity-low">info</span>
-          <span class="reco-tag type-monitor">monitor</span>
-          <span class="reco-tag channel-meta">meta</span>
-        </div>
-      </div>
-      <div class="reco-why">Diffusion lancée hier (110 clicks, 3 290 imp, CTR 3,34%, CPC 0,24€). 0 lead capté à J+1 — normal en learning phase. Décision scale/ajuster prévue le 07/06.</div>
-      <div class="reco-status"><span class="pill validee">✅ Surveillance en cours</span></div>
-    </div>
-
-    <div class="reco critical">
-      <div class="reco-head">
-        <div class="reco-num crit">2</div>
-        <div class="reco-title">🚨 Google : 4 jours consécutifs à 0 conv (30/05→02/06) pour 253€ de spend</div>
-        <div class="reco-tags">
-          <span class="reco-tag severity-high">critique</span>
-          <span class="reco-tag type-investigate">investigate</span>
-          <span class="reco-tag channel-google">google</span>
-        </div>
-      </div>
-      <div class="reco-why">Aucune conv depuis 30/05. Spend cumulé 4j = 252,67€ (35,37 + 39,93 + 82,58 + 94,79). Sem-1 finit à ROAS 3,07x (vs 8,32x sem-2). Hypothèses : (1) lag d'attribution post-pont Ascension, (2) tracking GTM cassé, (3) volatilité Search hors-brand. À vérifier : Google Tag Assistant en live + formulaire dayoff.space/contact + leads CRM internes.</div>
-      <div class="reco-status"><span class="pill urgent">⏳ Action manuelle urgente</span></div>
-    </div>
-
-    <div class="reco">
-      <div class="reco-head">
-        <div class="reco-num">3</div>
-        <div class="reco-title">🚧 Renvoi 3ème fois : 2 négatifs Google (53€/0 conv ces 7j) — version finale</div>
-        <div class="reco-tags">
-          <span class="reco-tag type-negative">négatifs</span>
-          <span class="reco-tag channel-google">google</span>
-        </div>
-      </div>
-      <div class="reco-why">Reco proposée le 29/05 puis 01/06, sans réaction. Ajusté : on bloque uniquement `location salle conférence Paris` EXACT (29€/7j, QS 1,0) et `organiser team building Paris` PHRASE (23€/7j) en PHRASE. `team building entreprise Paris` EXACT a converti 1 fois ces 7j → on le garde.</div>
-      <div class="reco-status"><span class="pill attente">⏳ En attente — réversible</span></div>
-    </div>
-
-    <div class="reco">
-      <div class="reco-head">
-        <div class="reco-num">4</div>
-        <div class="reco-title">📊 PHRASE = 0% CVR pour 513€/30j — auditer les 4 mots-clés PHRASE</div>
-        <div class="reco-tags">
-          <span class="reco-tag type-investigate">audit</span>
-          <span class="reco-tag channel-google">google</span>
-        </div>
-      </div>
-      <div class="reco-why">Sur 30j : EXACT 24 mots-clés / 542€ → 7 conv (2,7% CVR) · BROAD 14 mots-clés / 966€ → 9 conv (1,6%) · PHRASE 4 mots-clés / 513€ → 0 conv (0%). Les PHRASE coûtent autant qu'EXACT mais ne convertissent jamais. À identifier (probable : `salle séminaire Paris` PHRASE = 180 clicks / 405€ / 0 conv en 30j) et décider pause ou conversion en EXACT.</div>
-      <div class="reco-status"><span class="pill attente">⏳ Action manuelle — analyse</span></div>
-    </div>
-  </div>
-
-  <!-- GOOGLE -->
-  <div class="sec-h">
-    <h2><span class="brand-tag google">Google</span> Performance — 7j (27/05→02/06)</h2>
-    <span class="sub">3 conv · 4 jours à 0 conv consécutifs</span>
-  </div>
-  <div class="kpi-grid">
-    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 94,79</div><div class="d up">vs € 82,58 (J-2)</div></div>
-    <div class="kpi"><div class="l">Clics J-1</div><div class="v">84</div><div class="d down">vs 78 (J-2)</div></div>
-    <div class="kpi"><div class="l">Conv 7j</div><div class="v">3</div><div class="d down">€ 503 / sem</div></div>
-    <div class="kpi"><div class="l">ROAS 30j</div><div class="v">5,22x</div><div class="d down">vs 5,49x sem -1</div></div>
-  </div>
-
-  <!-- META -->
-  <div class="sec-h">
-    <h2><span class="brand-tag meta">Meta</span> Performance — 7j (27/05→02/06)</h2>
-    <span class="sub">Trafic stable · Lead Gen démarre</span>
-  </div>
-  <div class="kpi-grid">
-    <div class="kpi"><div class="l">Spend J-1</div><div class="v">€ 39,00</div><div class="d up">vs € 13,38 (J-2)</div></div>
-    <div class="kpi"><div class="l">Clics J-1</div><div class="v">389</div><div class="d up">vs 271 (J-2)</div></div>
-    <div class="kpi"><div class="l">CTR 7j</div><div class="v">4,46%</div><div class="d">stable</div></div>
-    <div class="kpi"><div class="l">Top ad CTR</div><div class="v">4,49%</div><div class="d">Adresses confidentielles</div></div>
-  </div>
-
-  <!-- OBSERVATIONS -->
-  <div class="sec-h">
-    <h2>Observations stratégiques</h2>
-    <span class="sub">lecture du jour</span>
-  </div>
-  <div class="obs">
-    <h3>Ce qu'il faut retenir</h3>
+  <div class="alert-card">
+    <div class="a-title"><span class="pill">Alerte</span> Google : 5 jours consécutifs à 0 conversion</div>
+    <p>Aucune conversion depuis le 30/05 (30/05 → 03/06), pour <strong>315&nbsp;€</strong> de spend cumulé. En parallèle, le ROAS hebdomadaire s'effondre : <strong>5,45x → 4,00x → 2,11x</strong> sur trois semaines, conversions 4&nbsp;→&nbsp;5&nbsp;→&nbsp;2 à spend stable.</p>
     <ul>
-      <li><strong>💚 Lead Gen est lancée.</strong> Après 5 jours en PAUSED, Florian a activé hier soir (02/06). Premier signal solide : 3,34% CTR sur 110 clicks. Patience jusqu'au 07/06 (J+5) — c'est la durée typique d'incubation Meta avant que l'algo trouve son audience cible.</li>
-      <li><strong>🚨 4 jours sans conv Google — pas anodin.</strong> 252€ dépensés depuis le 30/05 sans aucune conversion attribuée. Soit lag (déjà observé fin mai), soit tracking cassé. Vérifier en priorité aujourd'hui via Google Tag Assistant et comparer aux leads CRM.</li>
-      <li><strong>📊 PHRASE = 0% CVR sur 30j.</strong> 513€ gaspillés sur 4 mots-clés PHRASE qui ne convertissent jamais, alors qu'EXACT performe à 2,7% (le mieux des 3 match types). Levier d'optimisation évident — à traiter.</li>
-      <li><strong>Day Off Brand reste solide.</strong> 11 conv sur 30j à 8,40x ROAS. C'est le seul groupe de conv régulier — toutes les autres conv viennent en pointillé. À continuer de protéger.</li>
-      <li><strong>4 recos en attente depuis 5j.</strong> Vendredi 29/05 + lundi 01/06 sans aucune réaction Slack. Ajusté aujourd'hui en version finale (reco #3). Si toujours pas de signal demain, application automatique pour les versions réversibles.</li>
+      <li>Priorité absolue : vérifier le tracking (Google Tag Assistant live + formulaire dayoff.space/contact + leads CRM).</li>
+      <li>Si tracking OK → problème d'efficacité du Search hors-brand (négatifs + audit PHRASE ci-dessous).</li>
     </ul>
   </div>
 
+  <div class="alert-card win">
+    <div class="a-title"><span class="pill">Lead Gen</span> Meta Lead Gen ACTIVE depuis le 02/06 · J+2</div>
+    <p>Diffusion saine : <strong>51,36&nbsp;€</strong> spend · 5&nbsp;414 impressions · 184 clics · CTR 3,4&nbsp;% · CPC 0,29&nbsp;€ · <strong>0 lead capté</strong> (normal en learning phase). Aucune anomalie de diffusion. Décision scale/ajuster le <strong>07/06 (J+5)</strong>.</p>
+  </div>
+
+  <div class="sec-h"><h2>Vue d'ensemble — hier (03/06)</h2><span class="sub">vs jour précédent</span></div>
+  <div class="cmp">
+    <div class="cmp-card">
+      <div class="lbl">Google · spend</div>
+      <div class="val">62,70<span class="u"> €</span></div>
+      <div class="sub">51 clics · CTR 4,65 %</div>
+      <div class="chg down">0 conversion (5e jour)</div>
+    </div>
+    <div class="cmp-card">
+      <div class="lbl">Meta · spend</div>
+      <div class="val">48,90<span class="u"> €</span></div>
+      <div class="sub">326 clics · CTR 1,61 %</div>
+      <div class="chg flat">incl. campagne Vidéos Reels</div>
+    </div>
+    <div class="cmp-card">
+      <div class="lbl">ROAS Google · 30j</div>
+      <div class="val">4,97<span class="u"> x</span></div>
+      <div class="sub">16 conv · 2 714 € · 30j</div>
+      <div class="chg down">sem-1 à 2,11x 🔻</div>
+    </div>
+    <div class="cmp-card">
+      <div class="lbl">Lead Gen Meta</div>
+      <div class="val">0<span class="u"> lead</span></div>
+      <div class="sub">51 € · 184 clics · J+2</div>
+      <div class="chg flat">⏳ incubation</div>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>Tendances</h2><span class="sub">7 derniers jours · 28/05 → 03/06</span></div>
+  <div class="cols">
+    <div class="panel">
+      <h3>Google Ads — conversions / jour <span class="tag">spend €</span></h3>
+      <table>
+        <thead><tr><th>Date</th><th class="num">Spend</th><th class="num">Clics</th><th class="num">Conv</th></tr></thead>
+        <tbody>
+          <tr><td>28/05</td><td class="num">85,98 €</td><td class="num">81</td><td class="num">1</td></tr>
+          <tr><td>29/05</td><td class="num">72,19 €</td><td class="num">54</td><td class="num">1</td></tr>
+          <tr><td>30/05</td><td class="num">35,37 €</td><td class="num">83</td><td class="num">0</td></tr>
+          <tr><td>31/05</td><td class="num">39,93 €</td><td class="num">107</td><td class="num">0</td></tr>
+          <tr><td>01/06</td><td class="num">82,58 €</td><td class="num">78</td><td class="num">0</td></tr>
+          <tr><td>02/06</td><td class="num">94,79 €</td><td class="num">84</td><td class="num">0</td></tr>
+          <tr><td>03/06</td><td class="num">62,70 €</td><td class="num">51</td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h3>ROAS Google hebdomadaire <span class="tag">tendance baissière</span></h3>
+      <div class="bar-row"><div class="nm">Sem-3 · 14-20/05</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#76A85C;"></div></div><div class="amt">5,45x</div></div>
+      <div class="bar-row"><div class="nm">Sem-2 · 21-27/05</div><div class="bar-track"><div class="bar-fill" style="width:73%;background:#C9A227;"></div></div><div class="amt">4,00x</div></div>
+      <div class="bar-row"><div class="nm">Sem-1 · 28/05-03/06</div><div class="bar-track"><div class="bar-fill" style="width:39%;background:#A8483A;"></div></div><div class="amt">2,11x</div></div>
+      <h3 style="margin-top:20px;">Meta — 7 jours <span class="tag">3 campagnes actives</span></h3>
+      <table>
+        <thead><tr><th>Campagne</th><th class="num">Spend</th><th class="num">Clics</th><th class="num">CTR</th></tr></thead>
+        <tbody>
+          <tr><td>Trafic Destinations</td><td class="num">114,46 €</td><td class="num">2 098</td><td class="num">4,48 %</td></tr>
+          <tr><td>Lead Gen Cold FR</td><td class="num">51,36 €</td><td class="num">184</td><td class="num">3,40 %</td></tr>
+          <tr><td>Vidéos Reels &amp; Stories</td><td class="num">8,74 €</td><td class="num">6</td><td class="num">0,05 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>Top créa Meta</h2><span class="sub">30 jours</span></div>
+  <div class="panel">
+    <div class="bar-row"><div class="nm" style="width:230px;">Adresses confidentielles Paris &amp; Lyon</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#5E7C8B;"></div></div><div class="amt">4,5 % · 294 €</div></div>
+    <div class="bar-row"><div class="nm" style="width:230px;">La Blanchisserie — Haut Marais</div><div class="bar-track"><div class="bar-fill" style="width:92%;background:#5E7C8B;"></div></div><div class="amt">4,1 % · 24 €</div></div>
+    <div class="bar-row"><div class="nm" style="width:230px;">La Carrosserie — Lyon 6e</div><div class="bar-track"><div class="bar-fill" style="width:98%;background:#5E7C8B;"></div></div><div class="amt">4,4 % · 5 €</div></div>
+    <div class="bar-row"><div class="nm" style="width:230px;">Demandez votre devis DayOff (Lead Gen)</div><div class="bar-track"><div class="bar-fill" style="width:76%;background:#76A85C;"></div></div><div class="amt">3,4 % · 51 €</div></div>
+  </div>
+
+  <div class="sec-h"><h2>Actions recommandées du jour</h2><span class="sub">réagis ✅ / ❌ sur Slack</span></div>
+
+  <div class="reco high">
+    <div class="n">1</div>
+    <div class="r-body">
+      <div class="r-title">🚨 Google : 5 jours à 0 conv (30/05→03/06) + ROAS en chute libre</div>
+      <div class="r-why">Escalation de la reco du 03/06 sans réaction. Streak 4→5 jours, 315 € cumulés. ROAS hebdo 5,45x → 4,00x → 2,11x. Priorité : vérifier le tracking GTM aujourd'hui ; si OK, le problème est l'efficacité Search hors-brand.</div>
+      <div class="r-meta"><span class="chip sev-high">Severity high</span><span class="chip">Investigation</span><span class="chip">Google</span></div>
+    </div>
+  </div>
+
+  <div class="reco">
+    <div class="n">2</div>
+    <div class="r-body">
+      <div class="r-title">🚧 4e renvoi : 2 négatifs Google (53 €/0 conv)</div>
+      <div class="r-why">Bloquer en PHRASE « location salle conférence Paris » (QS 1,0) et « organiser team building Paris » (108 €/30j, 0 conv). « team building entreprise Paris » EXACT garde sa conv → exclu.</div>
+      <div class="r-meta"><span class="chip sev-medium">Severity medium</span><span class="chip rev">Réversible</span><span class="chip">Négatifs</span></div>
+    </div>
+  </div>
+
+  <div class="reco">
+    <div class="n">3</div>
+    <div class="r-body">
+      <div class="r-title">📊 Pauser le mot-clé PHRASE « salle séminaire Paris » (405 €/0 conv · 30j)</div>
+      <div class="r-why">Les 4 mots-clés PHRASE = 513 €/30j → 0 conv (0 % CVR) vs EXACT 2,7 % / BROAD 1,6 %. Le pire : « salle séminaire Paris » (180 clics, 3 296 imp, 405 €, 0 conv). Action réversible : pause.</div>
+      <div class="r-meta"><span class="chip sev-medium">Severity medium</span><span class="chip rev">Réversible</span><span class="chip">Mot-clé</span></div>
+    </div>
+  </div>
+
+  <div class="reco win-r">
+    <div class="n">4</div>
+    <div class="r-body">
+      <div class="r-title">💚 Lead Gen Meta J+2 — incubation normale, décision 07/06</div>
+      <div class="r-why">51,36 € · 184 clics · CTR 3,4 % · CPC 0,29 € · 0 lead à J+2. Diffusion saine, pas d'anomalie. On garde le cap jusqu'au point de décision du 07/06 (J+5) : CPL et ratio clic→lead.</div>
+      <div class="r-meta"><span class="chip sev-low">Severity low</span><span class="chip rev">Réversible</span><span class="chip">Meta · monitoring</span></div>
+    </div>
+  </div>
+
+  <div class="ft">DayOff Daily Brief · données Google Ads &amp; Meta via Adspirer · recos historisées dans recos_history.json · généré automatiquement chaque matin (lun-ven 8h30)</div>
 </div>
 </body>
 </html>
