@@ -354,10 +354,11 @@
         ]
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780556405.726769",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Sans réaction Slack — ré-émise/escaladée dans le brief du 05/06/2026."
     },
     {
       "id": "2026-06-04-002",
@@ -377,10 +378,11 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780556405.726769",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Sans réaction Slack — ré-émise/escaladée dans le brief du 05/06/2026."
     },
     {
       "id": "2026-06-04-003",
@@ -398,10 +400,11 @@
         "spend_30d_eur": 404.94
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780556405.726769",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Sans réaction Slack — ré-émise/escaladée dans le brief du 05/06/2026."
     },
     {
       "id": "2026-06-04-004",
@@ -418,8 +421,92 @@
         "decision_date": "2026-06-07"
       },
       "severity": "low",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780556405.726769",
+      "validated_at": null,
+      "applied_at": null,
+      "caduque_note": "Sans réaction Slack — ré-émise/escaladée dans le brief du 05/06/2026."
+    },
+    {
+      "id": "2026-06-05-001",
+      "date": "2026-06-05",
+      "type": "investigate",
+      "channel": "google",
+      "title": "🚨 Google : 6 jours consécutifs à 0 conv (30/05→04/06, ~403 €) — escalation J6",
+      "why": "Streak passé de 5 à 6 jours sans une seule conversion (30/05 0€35,37 · 31/05 39,93 · 01/06 82,58 · 02/06 94,79 · 03/06 62,70 · 04/06 88,00 = ~403 €). ROAS hebdo en chute libre (5,45x→4,00x→2,11x). Priorité absolue : Google Tag Assistant live + formulaire dayoff.space/contact + recoupement leads CRM. Si tracking OK → efficacité Search hors-brand.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "google_zero_conv_streak_investigation",
+        "days_without_conv": 6,
+        "cumulative_spend_eur": 403.37
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": "1780666090.675509",
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-05-002",
+      "date": "2026-06-05",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 5e renvoi : 2 négatifs Google (53 €/0 conv)",
+      "why": "Reco renvoyée 5 fois. `location salle conférence Paris` EXACT (QS 1,0, 54,57€/0 conv) et `organiser team building Paris` PHRASE (105,83€/0 conv). `team building entreprise Paris` EXACT convertit → conservé. Bloquer en PHRASE.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "location salle conférence Paris",
+          "organiser team building Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1780666090.675509",
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-05-003",
+      "date": "2026-06-05",
+      "type": "pause_keyword",
+      "channel": "google",
+      "title": "📊 2e renvoi : pauser PHRASE `salle séminaire Paris` (405 €/0 conv 30j)",
+      "why": "Les 4 mots-clés PHRASE = 513€/30j → 0 conv (0% CVR) vs EXACT 2,7% / BROAD 1,6%. Le pire : `salle séminaire Paris` = 150 clics, ~2 965 imp, 334,84€ (PHRASE) — sur 30j cumulé ~405€, 0 conv. Action réversible.",
+      "reversible": true,
+      "action_payload": {
+        "keyword": "salle séminaire Paris",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446",
+        "action": "pause"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1780666090.675509",
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-05-004",
+      "date": "2026-06-05",
+      "type": "monitor",
+      "channel": "meta",
+      "title": "💚 Lead Gen Meta J+3 : 85,81 €/230 clics/0 lead — incubation, décision 07/06",
+      "why": "Diffusion saine depuis activation 02/06 : 85,81€ spend, 7 918 imp, 230 clics, CTR 2,9%, CPC 0,37€. 0 lead. Point de vigilance : click→lead = 0%. Si toujours 0 lead le 07/06 (J+5), élargir audience (Paris 25km, 22-65) ou basculer optimisation sur LANDING_PAGE_VIEWS.",
+      "reversible": true,
+      "action_payload": {
+        "manual": true,
+        "context": "lead_gen_incubation_monitoring",
+        "campaign_id": "120244859896090784",
+        "decision_date": "2026-06-07"
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": "1780666090.675509",
       "validated_at": null,
       "applied_at": null
     }
