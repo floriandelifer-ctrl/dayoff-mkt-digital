@@ -51,7 +51,7 @@ td.r, th.r { text-align: right; }
   <div class="hd">
     <div class="hd-l">
       <h1>DayOff — Daily Brief</h1>
-      <p>Vendredi 5 juin 2026 · Marketing digital (Google Ads + Meta Ads)</p>
+      <p>Lundi 8 juin 2026 · Marketing digital (Google Ads + Meta Ads)</p>
     </div>
     <div class="hd-r">
       <div class="live"><span class="dot"></span> données 7j · MAJ auto 8h30</div>
@@ -59,19 +59,19 @@ td.r, th.r { text-align: right; }
     </div>
   </div>
 
-  <div class="sec-h"><h2>Vue d'ensemble</h2><span class="sub">7 derniers jours · 29/05 → 04/06</span></div>
+  <div class="sec-h"><h2>Vue d'ensemble</h2><span class="sub">7 derniers jours · 01/06 → 07/06</span></div>
   <div class="grid">
-    <div class="kpi"><div class="lbl">Google · spend 30j</div><div class="val">2 671 €</div><div class="sub">16 conv · ROAS 5,05x</div></div>
-    <div class="kpi bad"><div class="lbl">Google · streak 0 conv</div><div class="val tag0">6 jours</div><div class="sub">30/05 → 04/06 · ~403 €</div></div>
-    <div class="kpi warn"><div class="lbl">Google · ROAS hebdo</div><div class="val">~2,1x</div><div class="sub down">▼ 5,45x → 4,00x → 2,11x</div></div>
-    <div class="kpi"><div class="lbl">Meta · spend 7j</div><div class="val">218 €</div><div class="sub">2 231 clics · CTR moy 2,5 %</div></div>
-    <div class="kpi good"><div class="lbl">Lead Gen · statut</div><div class="val" style="font-size:18px;">ACTIVE J+3</div><div class="sub">85,81 € · 7 918 imp · 0 lead</div></div>
+    <div class="kpi"><div class="lbl">Google · spend 30j</div><div class="val">2 443 €</div><div class="sub">12 conv · ROAS 3,48x</div></div>
+    <div class="kpi bad"><div class="lbl">Google · streak 0 conv</div><div class="val tag0">9 jours</div><div class="sub">30/05 → 07/06 · ~472 €</div></div>
+    <div class="kpi warn"><div class="lbl">Google · spend/jour</div><div class="val">8,9 €</div><div class="sub down">▼ 82 € (01/06) → 8,9 € (07/06)</div></div>
+    <div class="kpi"><div class="lbl">Meta · spend 7j</div><div class="val">358 €</div><div class="sub">2 444 clics · 3 campagnes actives</div></div>
+    <div class="kpi bad"><div class="lbl">Lead Gen · J+6</div><div class="val" style="font-size:18px;">325 clics → 0 lead</div><div class="sub">159,79 € · CTR 2,58 % · décision dépassée</div></div>
   </div>
 
   <div class="sec-h"><h2>Alerte prioritaire</h2></div>
   <div class="alert-card">
-    <h3>🚨 Google : 6 jours consécutifs à 0 conversion (30/05 → 04/06)</h3>
-    <p>~403 € de spend sans une seule conversion, alors que le trafic reste stable. ROAS hebdomadaire en chute libre (5,45x → 4,00x → 2,11x). Hypothèses : (1) lag d'attribution post-pont, (2) tracking GTM cassé, (3) volatilité Search hors-brand. Action prioritaire : Google Tag Assistant en live + test du formulaire dayoff.space/contact + recoupement avec les leads CRM internes.</p>
+    <h3>🚨 Deux canaux à 0 conversion simultanément — présomption tracking / formulaire</h3>
+    <p>Google enchaîne 9 jours consécutifs à 0 conversion (30/05 → 07/06, ~472 €) et Meta Lead Gen totalise 325 clics → 0 lead depuis son activation le 02/06. Que les deux canaux soient à zéro en même temps, avec un trafic sain des deux côtés (CTR Google 2,5–10 %, Meta 2,6 %), pointe vers une cause commune plutôt qu'un hasard : suivi conversion cassé (Google Tag + pixel Meta event Lead) ou formulaire <code>dayoff.space/contact</code> non fonctionnel. À investiguer en priorité absolue avant toute optimisation : Tag Assistant en live, Meta Pixel Helper, test de soumission du formulaire, recoupement avec les leads CRM.</p>
   </div>
 
   <div class="sec-h"><h2>Actions recommandées du jour</h2><span class="sub">réagis ✅ / ❌ sur Slack #marketing-digital</span></div>
@@ -79,63 +79,72 @@ td.r, th.r { text-align: right; }
   <div class="reco">
     <div class="num">1</div>
     <div>
-      <h3>Google : 6 jours consécutifs à 0 conv — escalation J6 <span class="badge b-high">high</span></h3>
-      <p>Streak 5→6 jours, ~403 € sans conversion. Priorité absolue : vérifier le tracking (Tag Assistant + formulaire de contact + leads CRM). Si tracking OK → c'est l'efficacité du Search hors-brand (cf. recos 2 & 3).</p>
-      <div class="meta">investigate · google · non réversible · en attente</div>
+      <h3>Deux canaux à 0 simultanément — tester tracking &amp; formulaire <span class="badge b-high">high</span></h3>
+      <p>Google 9j à 0 conv + Meta Lead Gen 325 clics → 0 lead. Cause commune probable. Checks : Google Tag Assistant live · Meta Pixel Helper (event Lead) · soumission test <code>dayoff.space/contact</code> · recoupement leads CRM 30/05→07/06.</p>
+      <div class="meta">investigate · cross-canal · non réversible · en attente</div>
     </div>
   </div>
   <div class="reco">
     <div class="num">2</div>
     <div>
-      <h3>5ᵉ renvoi : 2 négatifs Google (53 €/0 conv) <span class="badge b-med">medium</span></h3>
-      <p>Bloquer en PHRASE <code>location salle conférence Paris</code> (QS 1,0) et <code>organiser team building Paris</code> (105 €/30j, 0 conv). <code>team building entreprise Paris</code> EXACT convertit → conservé.</p>
-      <div class="meta">negative_keyword · google · réversible · en attente</div>
+      <h3>Bascule Lead Gen Meta — J+6, 159 €/325 clics/0 lead <span class="badge b-high">high</span></h3>
+      <p>CPC sortant 0,60 € (10x le Trafic), click→lead 0 % sur 325 clics. Point de décision du 07/06 dépassé. Basculer <code>optimization_goal → LANDING_PAGE_VIEWS</code> OU élargir (Paris 25 km + 22-65) + 2e ad set Customer Match direct. Réversible. À traiter après la reco 1 (si tracking cassé, corriger d'abord).</p>
+      <div class="meta">optimize · meta · réversible · en attente</div>
     </div>
   </div>
   <div class="reco">
     <div class="num">3</div>
     <div>
-      <h3>2ᵉ renvoi : pauser le PHRASE <code>salle séminaire Paris</code> (405 €/0 conv 30j) <span class="badge b-med">medium</span></h3>
-      <p>Les 4 mots-clés PHRASE = 513 €/30j → 0 conv (0 % CVR) vs EXACT 2,7 % / BROAD 1,6 %. Le pire : <code>salle séminaire Paris</code> = 150 clics, ~2 965 imp, 335 € (PHRASE), 0 conv. Action réversible.</p>
+      <h3>3ᵉ renvoi : pauser le PHRASE <code>salle séminaire Paris</code> (215 €/0 conv 30j) <span class="badge b-med">medium</span></h3>
+      <p>PHRASE = 352,90 €/30j → 0 conv (0 % CVR) vs EXACT 1,95 % / BROAD 0,79 %. Le pire : <code>salle séminaire Paris</code> = 91 clics, 1 944 imp, 214,98 €, QS 5, 0 conv. Action réversible.</p>
       <div class="meta">pause_keyword · google · réversible · en attente</div>
     </div>
   </div>
   <div class="reco">
     <div class="num">4</div>
     <div>
-      <h3>Lead Gen Meta J+3 — incubation normale, décision 07/06 <span class="badge b-low">low</span></h3>
-      <p>85,81 € · 230 clics · CTR 2,9 % · CPC 0,37 € · 0 lead. Diffusion saine. Vigilance : click→lead = 0 %. Si toujours 0 lead le 07/06 (J+5), élargir l'audience (Paris 25 km, 22-65) ou basculer l'optimisation sur LANDING_PAGE_VIEWS.</p>
-      <div class="meta">monitor · meta · réversible · décision 07/06</div>
+      <h3>6ᵉ renvoi : 2 négatifs Google (196 €/0 conv) <span class="badge b-med">medium</span></h3>
+      <p>Bloquer en PHRASE <code>location salle conférence Paris</code> (EXACT, QS 1,5, 65,56 €) et <code>organiser team building Paris</code> (PHRASE, 130,59 €). <code>team building entreprise Paris</code> EXACT convertit → conservé. Réversible.</p>
+      <div class="meta">negative_keyword · google · réversible · en attente</div>
+    </div>
+  </div>
+  <div class="reco">
+    <div class="num">5</div>
+    <div>
+      <h3>Google : spend en chute -89 % en 7j — throttling ? <span class="badge b-low">low</span></h3>
+      <p>Spend quotidien 82,58 € (01/06) → 8,88 € (07/06), impressions 2 471 → 174. La campagne perd en éligibilité/volume. Causes possibles : budget/billing, bid strategy en réapprentissage après les négatifs, baisse de Quality Score. À vérifier en parallèle du tracking.</p>
+      <div class="meta">investigate · google · non réversible · en attente</div>
     </div>
   </div>
 
-  <div class="sec-h"><h2>Google Ads — perfs clés</h2><span class="sub">30j · ROAS 5,05x</span></div>
+  <div class="sec-h"><h2>Google Ads — perfs clés</h2><span class="sub">30j · 2 443 € · 12 conv · ROAS 3,48x</span></div>
   <table>
     <thead><tr><th>Ad group / mot-clé</th><th class="r">Clics</th><th class="r">Coût</th><th class="r">Conv</th><th class="r">CTR</th></tr></thead>
     <tbody>
-      <tr><td>Day Off Brand (campagne)</td><td class="r">—</td><td class="r">—</td><td class="r">10</td><td class="r">9,4 %</td></tr>
-      <tr><td>Team building / cohésion</td><td class="r">15</td><td class="r">40,74 €</td><td class="r">1</td><td class="r">6,9 %</td></tr>
-      <tr><td>Groupe WOOM devient Day Off</td><td class="r">17</td><td class="r">16,83 €</td><td class="r">1</td><td class="r">6,5 %</td></tr>
-      <tr><td>day off l imprimerie (EXACT)</td><td class="r">43</td><td class="r">72,71 €</td><td class="r">3</td><td class="r">32,1 %</td></tr>
-      <tr><td>salle séminaire Paris (PHRASE)</td><td class="r">150</td><td class="r tag0">334,84 €</td><td class="r tag0">0</td><td class="r">5,1 %</td></tr>
-      <tr><td>organiser team building Paris (PHRASE)</td><td class="r">40</td><td class="r tag0">105,83 €</td><td class="r tag0">0</td><td class="r">9,1 %</td></tr>
-      <tr><td>location salle conférence Paris (EXACT)</td><td class="r">20</td><td class="r tag0">54,57 €</td><td class="r tag0">0</td><td class="r">9,1 %</td></tr>
+      <tr><td>Day Off Brand (campagne)</td><td class="r">—</td><td class="r">—</td><td class="r">7</td><td class="r">9,0 %</td></tr>
+      <tr><td>day off l imprimerie (EXACT)</td><td class="r">55</td><td class="r">93,06 €</td><td class="r">3</td><td class="r">28,4 %</td></tr>
+      <tr><td>lieu événement entreprise Paris (BROAD)</td><td class="r">16</td><td class="r">42,68 €</td><td class="r">1</td><td class="r">3,3 %</td></tr>
+      <tr><td>Team building / cohésion</td><td class="r">18</td><td class="r">49,64 €</td><td class="r">1</td><td class="r">7,6 %</td></tr>
+      <tr><td>salle séminaire Paris (PHRASE)</td><td class="r">91</td><td class="r tag0">214,98 €</td><td class="r tag0">0</td><td class="r">4,7 %</td></tr>
+      <tr><td>organiser team building Paris (PHRASE)</td><td class="r">48</td><td class="r tag0">130,59 €</td><td class="r tag0">0</td><td class="r">9,0 %</td></tr>
+      <tr><td>location salle conférence Paris (EXACT)</td><td class="r">24</td><td class="r tag0">65,56 €</td><td class="r tag0">0</td><td class="r">7,9 %</td></tr>
     </tbody>
   </table>
+  <p style="font-size:12px;color:#7A746A;margin-top:10px;">Match types 30j : <strong>EXACT</strong> 1,95 % CVR (6 conv / 651 €) · <strong>BROAD</strong> 0,79 % (4 conv / 875 €) · <strong>PHRASE</strong> 0 % (0 conv / 353 €).</p>
 
-  <div class="sec-h"><h2>Meta Ads — campagnes</h2><span class="sub">7j · 218 € · 0 conv pixel</span></div>
+  <div class="sec-h"><h2>Meta Ads — campagnes</h2><span class="sub">7j · 358 € · 0 conv pixel</span></div>
   <table>
     <thead><tr><th>Campagne</th><th>Objectif</th><th class="r">Imp.</th><th class="r">Clics</th><th class="r">Spend</th><th class="r">CTR</th></tr></thead>
     <tbody>
-      <tr><td>Trafic Destinations</td><td>Trafic</td><td class="r">41 063</td><td class="r">1 975</td><td class="r">102,41 €</td><td class="r">4,81 %</td></tr>
-      <tr><td>Lead Gen Cold FR</td><td>Leads</td><td class="r">7 918</td><td class="r">230</td><td class="r">85,81 €</td><td class="r">2,90 %</td></tr>
-      <tr><td>Vidéos Reels &amp; Stories</td><td>Awareness</td><td class="r">41 127</td><td class="r">26</td><td class="r">29,91 €</td><td class="r">0,06 %</td></tr>
+      <tr><td>Trafic Destinations</td><td>Trafic</td><td class="r">45 204</td><td class="r">2 052</td><td class="r">104,84 €</td><td class="r">4,54 %</td></tr>
+      <tr><td>Lead Gen Cold FR</td><td>Leads</td><td class="r">12 587</td><td class="r">325</td><td class="r tag0">159,79 €</td><td class="r">2,58 %</td></tr>
+      <tr><td>Vidéos Reels &amp; Stories</td><td>Awareness</td><td class="r">128 983</td><td class="r">67</td><td class="r">93,41 €</td><td class="r">0,05 %</td></tr>
     </tbody>
   </table>
-  <p style="font-size:12px;color:#7A746A;margin-top:10px;">Top ad Meta : <strong>"Adresses confidentielles Paris &amp; Lyon"</strong> · 4,74 % CTR · 33 520 imp · 85,50 €.</p>
+  <p style="font-size:12px;color:#7A746A;margin-top:10px;">Lead Gen : CPC sortant 0,60 € (vs 0,06 € Trafic), 0 lead à J+6 → reco 2. Vidéos Reels &amp; Stories (notoriété, lancée 01/06) : 129 k imp pour 67 clics — diffusion normale pour un objectif Awareness, mais ~13 €/j à surveiller.</p>
 
   <div class="foot">
-    DayOff Daily Brief · généré automatiquement le 05/06/2026 · lecture seule sur Google &amp; Meta (aucune action exécutée sans validation ✅).
+    DayOff Daily Brief · généré automatiquement le 08/06/2026 · lecture seule sur Google &amp; Meta (aucune action exécutée sans validation ✅).
     Recos historisées dans <code>recos_history.json</code>. Canal : #marketing-digital.
   </div>
 </div>
