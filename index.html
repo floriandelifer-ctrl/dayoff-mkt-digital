@@ -3,150 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DayOff — Daily Brief</title>
+<title>DayOff Marketing Digital — Dashboard</title>
 <style>
-:root { color-scheme: light; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; background: #FAF8F4; color: #2C2A26; font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 28px 32px 80px; }
-.hd { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 0.5px solid #D7D2C7; padding-bottom: 18px; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
-.hd-l h1 { margin: 0 0 4px; font-size: 24px; font-weight: 500; letter-spacing: -0.01em; color: #1A1814; }
-.hd-l p { margin: 0; font-size: 13px; color: #7A746A; }
-.hd-r { text-align: right; font-size: 12px; color: #9B958A; }
-.hd-r .live { display: inline-flex; align-items: center; gap: 6px; }
-.hd-r .dot { width: 6px; height: 6px; border-radius: 50%; background: #76A85C; display: inline-block; }
-.sec-h { display: flex; align-items: baseline; justify-content: space-between; margin: 36px 0 14px; }
-.sec-h h2 { margin: 0; font-size: 14px; font-weight: 500; color: #1A1814; letter-spacing: 0.04em; text-transform: uppercase; }
-.sec-h .sub { font-size: 12px; color: #9B958A; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
-.kpi { background: #FFFFFF; border: 0.5px solid #E4DFD5; border-radius: 10px; padding: 16px 18px; }
-.kpi .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #9B958A; margin-bottom: 6px; }
-.kpi .val { font-size: 26px; font-weight: 500; color: #1A1814; letter-spacing: -0.02em; }
-.kpi .sub { font-size: 12px; color: #7A746A; margin-top: 4px; }
-.kpi.warn { background: #FBF2E0; border-color: #E8CF9A; }
-.kpi.bad { background: #FBE5E0; border-color: #E5A99A; }
-.kpi.good { background: #ECF3E6; border-color: #BED3A8; }
-.up { color: #4F8A3A; } .down { color: #B0503F; }
-.alert-card { background: #FBE5E0; border: 0.5px solid #E5A99A; border-left: 4px solid #A8483A; border-radius: 10px; padding: 16px 20px; margin-bottom: 14px; }
-.alert-card h3 { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: #7A2A1E; }
-.alert-card p { margin: 0; font-size: 13px; color: #5C463F; }
-.reco { background: #FFFFFF; border: 0.5px solid #E4DFD5; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; display: flex; gap: 14px; }
-.reco .num { font-size: 13px; font-weight: 600; color: #9B958A; min-width: 22px; }
-.reco h3 { margin: 0 0 6px; font-size: 14px; font-weight: 600; color: #1A1814; }
-.reco p { margin: 0; font-size: 13px; color: #5F594F; }
-.badge { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
-.b-high { background: #F4D3CC; color: #8A3122; } .b-med { background: #F4E6C5; color: #876213; } .b-low { background: #DCEBD0; color: #4F7A36; }
-.reco .meta { font-size: 11px; color: #9B958A; margin-top: 7px; }
-table { width: 100%; border-collapse: collapse; background: #FFF; border: 0.5px solid #E4DFD5; border-radius: 10px; overflow: hidden; font-size: 13px; }
-th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: #9B958A; font-weight: 500; padding: 10px 14px; border-bottom: 0.5px solid #E4DFD5; background: #FCFAF6; }
-td { padding: 9px 14px; border-bottom: 0.5px solid #F0ECE3; }
-tr:last-child td { border-bottom: none; }
-td.r, th.r { text-align: right; }
-.tag0 { color: #B0503F; font-weight: 600; }
-.foot { margin-top: 48px; padding-top: 18px; border-top: 0.5px solid #D7D2C7; font-size: 11px; color: #9B958A; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;background:#fafaf7;color:#1a1a1a;line-height:1.6;padding:32px 24px;max-width:1280px;margin:0 auto}
+h1{font-size:2.4rem;font-weight:600;letter-spacing:-0.5px;margin-bottom:8px;color:#1a1a1a}
+h2{font-size:1.4rem;font-weight:600;margin:48px 0 16px;color:#1a1a1a;padding-bottom:8px;border-bottom:1px solid #e8e6dc}
+h3{font-size:1.1rem;font-weight:600;margin:24px 0 12px;color:#3a3a3a}
+.subtitle{color:#777;font-size:0.95rem;margin-bottom:24px}
+.update-tag{display:inline-block;background:#1a1a1a;color:#fff;padding:4px 10px;border-radius:4px;font-size:0.78rem;font-weight:500;margin-left:8px}
+.live-tag{display:inline-block;background:#0a8060;color:#fff;padding:3px 8px;border-radius:3px;font-size:0.7rem;font-weight:600;margin-left:8px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.kpi-card{background:#fff;border:1px solid #e8e6dc;border-radius:8px;padding:20px;transition:transform 0.2s}
+.kpi-card:hover{transform:translateY(-2px)}
+.kpi-label{font-size:0.85rem;color:#777;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.kpi-value{font-size:2.2rem;font-weight:700;color:#1a1a1a;line-height:1}
+.kpi-detail{font-size:0.85rem;color:#555;margin-top:6px}
+.kpi-trend-up{color:#0a8060;font-weight:600}
+.kpi-trend-down{color:#c75a3e;font-weight:600}
+.kpi-trend-flat{color:#777}
+table{width:100%;border-collapse:collapse;margin:12px 0;background:#fff;border-radius:8px;overflow:hidden;border:1px solid #e8e6dc}
+th{background:#f5f3ea;text-align:left;padding:12px 16px;font-size:0.85rem;font-weight:600;color:#3a3a3a;text-transform:uppercase;letter-spacing:0.4px;border-bottom:1px solid #e8e6dc}
+td{padding:12px 16px;border-bottom:1px solid #f0eee5;font-size:0.95rem}
+tr:last-child td{border-bottom:none}
+tr:hover{background:#fafaf5}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.78rem;font-weight:500}
+.badge-active{background:#dff5ec;color:#0a8060}
+.badge-paused{background:#f5e8e2;color:#9c5e3e}
+.badge-learning{background:#eef0e6;color:#5a6b48}
+.badge-warning{background:#fdf3d4;color:#a07a18}
+.badge-success{background:#dff5ec;color:#0a8060}
+.section-meta{background:#fff;border:1px solid #e8e6dc;border-radius:8px;padding:24px;margin:16px 0}
+.section-meta-blue{border-left:4px solid #4267B2}
+.section-meta-yellow{border-left:4px solid #FBBC04}
+.section-meta-green{border-left:4px solid #0a8060}
+.section-meta-grey{border-left:4px solid #777}
+.recos-section{background:#fff;border:1px solid #e8e6dc;border-radius:8px;padding:24px;margin:20px 0}
+.reco-item{padding:14px 0;border-bottom:1px solid #f0eee5;display:flex;gap:14px;align-items:flex-start}
+.reco-item:last-child{border-bottom:none}
+.reco-priority{flex-shrink:0;width:60px;font-size:0.78rem;font-weight:700;padding:4px 8px;border-radius:4px;text-align:center;text-transform:uppercase;letter-spacing:0.4px}
+.priority-quick{background:#dff5ec;color:#0a8060}
+.priority-struct{background:#fdf3d4;color:#a07a18}
+.priority-strat{background:#e3eafe;color:#3a5cb4}
+.reco-content{flex:1}
+.reco-title{font-weight:600;font-size:0.98rem;color:#1a1a1a;margin-bottom:4px}
+.reco-desc{color:#555;font-size:0.9rem}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px}
+.link-card{background:#fff;border:1px solid #e8e6dc;border-radius:8px;padding:18px;text-decoration:none;color:#1a1a1a;transition:all 0.2s;display:block}
+.link-card:hover{border-color:#1a1a1a;transform:translateY(-2px)}
+.link-icon{font-size:1.6rem;margin-bottom:8px;display:block}
+.link-title{font-weight:600;font-size:0.95rem;margin-bottom:4px;color:#1a1a1a}
+.link-desc{font-size:0.85rem;color:#777}
+.note{background:#fdf3d4;border-left:3px solid #a07a18;padding:14px 16px;margin:20px 0;font-size:0.92rem;color:#3a3a3a;border-radius:4px}
+.note strong{color:#1a1a1a}
+.footer{margin-top:64px;padding-top:24px;border-top:1px solid #e8e6dc;color:#777;font-size:0.85rem;text-align:center}
+@media(max-width:640px){body{padding:20px 14px}h1{font-size:1.8rem}.kpi-value{font-size:1.8rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hd">
-    <div class="hd-l">
-      <h1>DayOff — Daily Brief</h1>
-      <p>Lundi 8 juin 2026 · Marketing digital (Google Ads + Meta Ads)</p>
-    </div>
-    <div class="hd-r">
-      <div class="live"><span class="dot"></span> données 7j · MAJ auto 8h30</div>
-      <div style="margin-top:4px;">Source : Adspirer (cache nightly + live tail)</div>
-    </div>
-  </div>
 
-  <div class="sec-h"><h2>Vue d'ensemble</h2><span class="sub">7 derniers jours · 01/06 → 07/06</span></div>
-  <div class="grid">
-    <div class="kpi"><div class="lbl">Google · spend 30j</div><div class="val">2 443 €</div><div class="sub">12 conv · ROAS 3,48x</div></div>
-    <div class="kpi bad"><div class="lbl">Google · streak 0 conv</div><div class="val tag0">9 jours</div><div class="sub">30/05 → 07/06 · ~472 €</div></div>
-    <div class="kpi warn"><div class="lbl">Google · spend/jour</div><div class="val">8,9 €</div><div class="sub down">▼ 82 € (01/06) → 8,9 € (07/06)</div></div>
-    <div class="kpi"><div class="lbl">Meta · spend 7j</div><div class="val">358 €</div><div class="sub">2 444 clics · 3 campagnes actives</div></div>
-    <div class="kpi bad"><div class="lbl">Lead Gen · J+6</div><div class="val" style="font-size:18px;">325 clics → 0 lead</div><div class="sub">159,79 € · CTR 2,58 % · décision dépassée</div></div>
-  </div>
+<header>
+<h1>DayOff Marketing Digital</h1>
+<div class="subtitle">Dashboard public — pilotage Google Ads + Meta Ads<span class="update-tag">Maj jeudi 4 juin 2026 — 23h00</span><span class="live-tag">LIVE</span></div>
+</header>
 
-  <div class="sec-h"><h2>Alerte prioritaire</h2></div>
-  <div class="alert-card">
-    <h3>🚨 Deux canaux à 0 conversion simultanément — présomption tracking / formulaire</h3>
-    <p>Google enchaîne 9 jours consécutifs à 0 conversion (30/05 → 07/06, ~472 €) et Meta Lead Gen totalise 325 clics → 0 lead depuis son activation le 02/06. Que les deux canaux soient à zéro en même temps, avec un trafic sain des deux côtés (CTR Google 2,5–10 %, Meta 2,6 %), pointe vers une cause commune plutôt qu'un hasard : suivi conversion cassé (Google Tag + pixel Meta event Lead) ou formulaire <code>dayoff.space/contact</code> non fonctionnel. À investiguer en priorité absolue avant toute optimisation : Tag Assistant en live, Meta Pixel Helper, test de soumission du formulaire, recoupement avec les leads CRM.</p>
-  </div>
-
-  <div class="sec-h"><h2>Actions recommandées du jour</h2><span class="sub">réagis ✅ / ❌ sur Slack #marketing-digital</span></div>
-
-  <div class="reco">
-    <div class="num">1</div>
-    <div>
-      <h3>Deux canaux à 0 simultanément — tester tracking &amp; formulaire <span class="badge b-high">high</span></h3>
-      <p>Google 9j à 0 conv + Meta Lead Gen 325 clics → 0 lead. Cause commune probable. Checks : Google Tag Assistant live · Meta Pixel Helper (event Lead) · soumission test <code>dayoff.space/contact</code> · recoupement leads CRM 30/05→07/06.</p>
-      <div class="meta">investigate · cross-canal · non réversible · en attente</div>
-    </div>
-  </div>
-  <div class="reco">
-    <div class="num">2</div>
-    <div>
-      <h3>Bascule Lead Gen Meta — J+6, 159 €/325 clics/0 lead <span class="badge b-high">high</span></h3>
-      <p>CPC sortant 0,60 € (10x le Trafic), click→lead 0 % sur 325 clics. Point de décision du 07/06 dépassé. Basculer <code>optimization_goal → LANDING_PAGE_VIEWS</code> OU élargir (Paris 25 km + 22-65) + 2e ad set Customer Match direct. Réversible. À traiter après la reco 1 (si tracking cassé, corriger d'abord).</p>
-      <div class="meta">optimize · meta · réversible · en attente</div>
-    </div>
-  </div>
-  <div class="reco">
-    <div class="num">3</div>
-    <div>
-      <h3>3ᵉ renvoi : pauser le PHRASE <code>salle séminaire Paris</code> (215 €/0 conv 30j) <span class="badge b-med">medium</span></h3>
-      <p>PHRASE = 352,90 €/30j → 0 conv (0 % CVR) vs EXACT 1,95 % / BROAD 0,79 %. Le pire : <code>salle séminaire Paris</code> = 91 clics, 1 944 imp, 214,98 €, QS 5, 0 conv. Action réversible.</p>
-      <div class="meta">pause_keyword · google · réversible · en attente</div>
-    </div>
-  </div>
-  <div class="reco">
-    <div class="num">4</div>
-    <div>
-      <h3>6ᵉ renvoi : 2 négatifs Google (196 €/0 conv) <span class="badge b-med">medium</span></h3>
-      <p>Bloquer en PHRASE <code>location salle conférence Paris</code> (EXACT, QS 1,5, 65,56 €) et <code>organiser team building Paris</code> (PHRASE, 130,59 €). <code>team building entreprise Paris</code> EXACT convertit → conservé. Réversible.</p>
-      <div class="meta">negative_keyword · google · réversible · en attente</div>
-    </div>
-  </div>
-  <div class="reco">
-    <div class="num">5</div>
-    <div>
-      <h3>Google : spend en chute -89 % en 7j — throttling ? <span class="badge b-low">low</span></h3>
-      <p>Spend quotidien 82,58 € (01/06) → 8,88 € (07/06), impressions 2 471 → 174. La campagne perd en éligibilité/volume. Causes possibles : budget/billing, bid strategy en réapprentissage après les négatifs, baisse de Quality Score. À vérifier en parallèle du tracking.</p>
-      <div class="meta">investigate · google · non réversible · en attente</div>
-    </div>
-  </div>
-
-  <div class="sec-h"><h2>Google Ads — perfs clés</h2><span class="sub">30j · 2 443 € · 12 conv · ROAS 3,48x</span></div>
-  <table>
-    <thead><tr><th>Ad group / mot-clé</th><th class="r">Clics</th><th class="r">Coût</th><th class="r">Conv</th><th class="r">CTR</th></tr></thead>
-    <tbody>
-      <tr><td>Day Off Brand (campagne)</td><td class="r">—</td><td class="r">—</td><td class="r">7</td><td class="r">9,0 %</td></tr>
-      <tr><td>day off l imprimerie (EXACT)</td><td class="r">55</td><td class="r">93,06 €</td><td class="r">3</td><td class="r">28,4 %</td></tr>
-      <tr><td>lieu événement entreprise Paris (BROAD)</td><td class="r">16</td><td class="r">42,68 €</td><td class="r">1</td><td class="r">3,3 %</td></tr>
-      <tr><td>Team building / cohésion</td><td class="r">18</td><td class="r">49,64 €</td><td class="r">1</td><td class="r">7,6 %</td></tr>
-      <tr><td>salle séminaire Paris (PHRASE)</td><td class="r">91</td><td class="r tag0">214,98 €</td><td class="r tag0">0</td><td class="r">4,7 %</td></tr>
-      <tr><td>organiser team building Paris (PHRASE)</td><td class="r">48</td><td class="r tag0">130,59 €</td><td class="r tag0">0</td><td class="r">9,0 %</td></tr>
-      <tr><td>location salle conférence Paris (EXACT)</td><td class="r">24</td><td class="r tag0">65,56 €</td><td class="r tag0">0</td><td class="r">7,9 %</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:#7A746A;margin-top:10px;">Match types 30j : <strong>EXACT</strong> 1,95 % CVR (6 conv / 651 €) · <strong>BROAD</strong> 0,79 % (4 conv / 875 €) · <strong>PHRASE</strong> 0 % (0 conv / 353 €).</p>
-
-  <div class="sec-h"><h2>Meta Ads — campagnes</h2><span class="sub">7j · 358 € · 0 conv pixel</span></div>
-  <table>
-    <thead><tr><th>Campagne</th><th>Objectif</th><th class="r">Imp.</th><th class="r">Clics</th><th class="r">Spend</th><th class="r">CTR</th></tr></thead>
-    <tbody>
-      <tr><td>Trafic Destinations</td><td>Trafic</td><td class="r">45 204</td><td class="r">2 052</td><td class="r">104,84 €</td><td class="r">4,54 %</td></tr>
-      <tr><td>Lead Gen Cold FR</td><td>Leads</td><td class="r">12 587</td><td class="r">325</td><td class="r tag0">159,79 €</td><td class="r">2,58 %</td></tr>
-      <tr><td>Vidéos Reels &amp; Stories</td><td>Awareness</td><td class="r">128 983</td><td class="r">67</td><td class="r">93,41 €</td><td class="r">0,05 %</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:#7A746A;margin-top:10px;">Lead Gen : CPC sortant 0,60 € (vs 0,06 € Trafic), 0 lead à J+6 → reco 2. Vidéos Reels &amp; Stories (notoriété, lancée 01/06) : 129 k imp pour 67 clics — diffusion normale pour un objectif Awareness, mais ~13 €/j à surveiller.</p>
-
-  <div class="foot">
-    DayOff Daily Brief · généré automatiquement le 08/06/2026 · lecture seule sur Google &amp; Meta (aucune action exécutée sans validation ✅).
-    Recos historisées dans <code>recos_history.json</code>. Canal : #marketing-digital.
-  </div>
+<h2>📊 Vue d'ensemble — 30 derniers jours</h2>
+<div class="kpi-grid">
+<div class="kpi-card">
+<div class="kpi-label">Spend total</div>
+<div class="kpi-value">3 100 €</div>
+<div class="kpi-detail">Google 2 714 € + Meta 386 €<br><span class="kpi-trend-up">↑</span> cible 3 000 € mensuel</div>
 </div>
+<div class="kpi-card">
+<div class="kpi-label">Conversions Google</div>
+<div class="kpi-value">16</div>
+<div class="kpi-detail">CPL moyen 170 €<br><span class="kpi-trend-up">ROAS 4,97x</span></div>
+</div>
+<div class="kpi-card">
+<div class="kpi-label">Clics total</div>
+<div class="kpi-value">10 647</div>
+<div class="kpi-detail">Google 4 765 + Meta 5 882<br><span class="kpi-trend-up">CTR Meta 4,06%</span></div>
+</div>
+<div class="kpi-card">
+<div class="kpi-label">Reach Meta</div>
+<div class="kpi-value">102 K</div>
+<div class="kpi-detail">unique users touchés<br><span class="kpi-trend-up">Fréquence 1,2x</span></div>
+</div>
+</div>
+
+<h2>⚡ Performance du jour — jeudi 4 juin</h2>
+<table>
+<thead><tr><th>Plateforme</th><th>Clics</th><th>Impressions</th><th>Spend</th><th>CTR</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td><strong>Meta</strong></td><td>366</td><td>36 844</td><td>69,86 €</td><td>0,99%</td><td>↓ CTR due à Awareness Reels (vues, pas clics)</td></tr>
+<tr><td><strong>Google</strong></td><td>44</td><td>413</td><td>88 €</td><td>10,65%</td><td>0 conv aujourd'hui (lag attribution probable)</td></tr>
+<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL JOUR</td><td>410</td><td>37 257</td><td>157,86 €</td><td>—</td><td>Projection 4 700 €/mois si tient rythme</td></tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>Note budget :</strong> on est temporairement au-dessus du 3 000 €/mois cible. C'est volontaire (Florian a validé l'investissement 15 jours pour faire scaler Meta). Arbitrage automatique programmé le 20/06.
+</div>
+
+<h2>📱 Meta Ads — 3 campagnes actives</h2>
+
+<div class="section-meta section-meta-blue">
+<h3>Trafic Destinations <span class="badge badge-active">ACTIVE</span></h3>
+<p style="color:#555;margin-bottom:8px"><strong>15 €/j</strong> · CBO · 3 ad sets · <strong>10 images + 5 vidéos = 15 ads</strong></p>
+<table style="margin-top:8px">
+<tbody>
+<tr><td>Spend 30j</td><td><strong>325 €</strong></td><td>CTR <strong>4,5%</strong> ✅</td><td>CPC 0,06 €</td></tr>
+<tr><td>Clics 30j</td><td>5 692</td><td>Reach 87 129</td><td>Conv 0 (objectif trafic)</td></tr>
+</tbody>
+</table>
+<p style="color:#0a8060;font-size:0.9rem;margin-top:10px">✅ Canal Meta le plus mature. Les 5 nouvelles vidéos Faten ajoutées le 04/06 vont être A/B testées vs les 10 images.</p>
+</div>
+
+<div class="section-meta section-meta-yellow">
+<h3>Lead Gen Cold FR <span class="badge badge-learning">LEARNING → SCALE</span></h3>
+<p style="color:#555;margin-bottom:8px"><strong>20 €/j</strong> · 1 ad set Advantage+ FR + Customer Match seeding · <strong>1 image + 5 vidéos = 6 ads</strong></p>
+<table style="margin-top:8px">
+<tbody>
+<tr><td>Spend 7j</td><td><strong>86 €</strong> (↑ vs 4 €/j la sem dernière)</td><td>CTR 2,9%</td><td>CPC 0,41 €</td></tr>
+<tr><td>Clics 7j</td><td>230</td><td>Reach 6 385</td><td>Leads trackés 0 (CRM à connecter)</td></tr>
+</tbody>
+</table>
+<p style="color:#a07a18;font-size:0.9rem;margin-top:10px">⚠️ Spend a explosé après densification vidéos. Surveillance qualité leads sur 7 jours.</p>
+</div>
+
+<div class="section-meta section-meta-green">
+<h3>Vidéos Reels & Stories Insta-only <span class="badge badge-active">ACTIVE J+1</span></h3>
+<p style="color:#555;margin-bottom:8px"><strong>15 €/j</strong> · Placement <strong>Instagram only</strong> (Feed + Reels + Stories + Explore + Reels in-stream) · <strong>5 vidéos</strong></p>
+<table style="margin-top:8px">
+<tbody>
+<tr><td>Spend 24h</td><td><strong>30 €</strong></td><td>Impressions 41 127</td><td>Reach 40 632</td></tr>
+<tr><td>CTR</td><td>0,06%</td><td>Outbound clicks 12</td><td>Objectif = vues, pas clics</td></tr>
+</tbody>
+</table>
+<p style="color:#0a8060;font-size:0.9rem;margin-top:10px">✅ Diffusion Insta explose comme prévu. Tu devrais voir tes Reels DayOff sur Insta dans 24-48h.</p>
+</div>
+
+<h2>🔍 Google Ads — 5 campagnes</h2>
+
+<table>
+<thead><tr><th>Campagne</th><th>Statut</th><th>Spend 30j</th><th>Conv</th><th>ROAS</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><strong>Day Off Brand</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>125 €</td><td>10</td><td><strong>7,77x</strong> 🏆</td><td>Garde sans toucher</td></tr>
+<tr><td><strong>Search Intentions Fortes</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>~700 €</td><td>4</td><td>~2x</td><td>7 négatifs appliqués</td></tr>
+<tr><td><strong>Search Remarketing</strong></td><td><span class="badge badge-warning">REVIEW</span></td><td>60 €</td><td>0</td><td>—</td><td>Pause si idem dans 14j</td></tr>
+<tr><td><strong>PMax DayOff Leads</strong></td><td><span class="badge badge-learning">LEARNING</span></td><td>0 €</td><td>0</td><td>—</td><td>J+1 — observe jusqu'au 07/06</td></tr>
+<tr><td>PMax DayOff (ancienne)</td><td><span class="badge badge-paused">PAUSED</span></td><td>—</td><td>—</td><td>—</td><td>Remplacée le 03/06</td></tr>
+</tbody>
+</table>
+
+<h2>🎬 Contenus Faten — état production</h2>
+
+<table>
+<thead><tr><th>Type</th><th>En diffusion</th><th>À produire (sprint 1-3)</th></tr></thead>
+<tbody>
+<tr><td>Photos Faten</td><td><strong>55 photos</strong> sur PMax Leads</td><td>20-30 photos lifestyle</td></tr>
+<tr><td>Vidéos Faten</td><td><strong>13 vidéos</strong> sur 3 campagnes Meta</td><td>10 Reels verticaux 15-25s + 2-3 vidéos longues 45-60s</td></tr>
+<tr><td>Carrousels Insta</td><td>0</td><td><strong>4 carrousels</strong> 7-8 cards : Les 6 lieux / Partenaires / Moments de la journée / Soirée</td></tr>
+</tbody>
+</table>
+
+<h2>🎯 Recos prioritaires</h2>
+
+<div class="recos-section">
+<div class="reco-item">
+<div class="reco-priority priority-quick">Quick</div>
+<div class="reco-content">
+<div class="reco-title">Switcher Lead Gen vers form natif Meta avec questions de qualification</div>
+<div class="reco-desc">4 questions : type événement / nb personnes / budget / date. Volume baisse, qualité explose.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-quick">Quick</div>
+<div class="reco-content">
+<div class="reco-title">Exclusions audiences Lead Gen</div>
+<div class="reco-desc">Exclure clients DayOff (CRM Diego), leads en cours, visiteurs /contact 30j. On enchéri contre nos propres clients sinon.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-quick">Quick</div>
+<div class="reco-content">
+<div class="reco-title">Accroches qualifiantes dès 1ère seconde</div>
+<div class="reco-desc">"Vous organisez un séminaire 30-100 personnes ?" → filtre les mauvais leads en amont.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-struct">Struct</div>
+<div class="reco-content">
+<div class="reco-title">Installer Conversions API (CAPI) + Offline Conversions</div>
+<div class="reco-desc">Owner Tom + Diego. Nourrit l'algo Meta avec les vrais leads transformés. Permet pivot KPI vers lead qualifié.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-struct">Struct</div>
+<div class="reco-content">
+<div class="reco-title">Définir "lead qualifié DayOff" par écrit</div>
+<div class="reco-desc">Email pro / ≥ 30 pers OU ≥ 5k€ / date ≤ 12 mois / rôle décisionnaire. Owner Diego.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-struct">Struct</div>
+<div class="reco-content">
+<div class="reco-title">Cookiebot + Consent Mode V2</div>
+<div class="reco-desc">Owner Tom. Impact tracking conversion + remarketing.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-strat">Strat</div>
+<div class="reco-content">
+<div class="reco-title">Campagne Meta "Engagement → Profile Visits Insta"</div>
+<div class="reco-desc">10 €/j ciblé Paris+Lyon LAL Clients. Objectif : passer 300 → 1 000+ followers Insta sous 30-45j.</div>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-priority priority-strat">Strat</div>
+<div class="reco-content">
+<div class="reco-title">KPI pivot CPL brut → CPL qualifié</div>
+<div class="reco-desc">Une fois CAPI + offline conv en place. Daily Brief évoluera dans cette direction.</div>
+</div>
+</div>
+</div>
+
+<h2>📅 Roadmap</h2>
+<table>
+<thead><tr><th>Date</th><th>Action</th><th>Owner</th></tr></thead>
+<tbody>
+<tr><td>Vendredi 5/6</td><td>1ères perfs PMax Leads J+1 + Awareness Reels Insta</td><td>Daily Brief auto</td></tr>
+<tr><td>Cette semaine</td><td>RDV Faten — production sprint 1 (4 Reels + 1 carrousel + photos lifestyle)</td><td>Florian + Faten</td></tr>
+<tr><td>Cette semaine</td><td>Validation Brand Language copies Meta</td><td>Tom</td></tr>
+<tr><td>Dimanche 7/6</td><td>Bilan hebdo auto Slack</td><td>Daily Brief auto</td></tr>
+<tr><td>Semaine prochaine</td><td>Install Cookiebot + Consent Mode V2 + CAPI Meta</td><td>Tom</td></tr>
+<tr><td>Semaine prochaine</td><td>Export CRM pour Custom Audiences exclusions</td><td>Diego</td></tr>
+<tr><td><strong>Vendredi 20/6 9h</strong></td><td><strong>Arbitrage budget auto Meta+Google → cible 1k€/2k€</strong></td><td>Scheduled task</td></tr>
+</tbody>
+</table>
+
+<h2>📂 Liens utiles</h2>
+<div class="links-grid">
+<a href="https://docs.google.com/document/d/1NrY3lW-E6N2RUV7F_07udqprhybZiFwuI2rsYvD72_k/edit" class="link-card">
+<span class="link-icon">📄</span>
+<div class="link-title">Récap hebdo & dispositif</div>
+<div class="link-desc">Vue 360° + recos + roadmap + leçons WAS</div>
+</a>
+<a href="https://docs.google.com/document/d/1BbsWRgEeSPSUxoXqqO-Ps6t5fa15_KE5Yzhm8Cxrp-4/edit" class="link-card">
+<span class="link-icon">🎬</span>
+<div class="link-title">Brief contenus Faten</div>
+<div class="link-desc">Reels + carrousels + vidéos longues à produire</div>
+</a>
+<a href="https://dayoffwork.slack.com/archives/C0ASJG8QKDK" class="link-card">
+<span class="link-icon">💬</span>
+<div class="link-title">Slack #marketing-digital</div>
+<div class="link-desc">Recos quotidiennes + Pulse auto + validation</div>
+</a>
+<a href="https://business.facebook.com/adsmanager" class="link-card">
+<span class="link-icon">📱</span>
+<div class="link-title">Meta Ads Manager</div>
+<div class="link-desc">Compte DayOff 1529405372099377</div>
+</a>
+<a href="https://ads.google.com/" class="link-card">
+<span class="link-icon">🔍</span>
+<div class="link-title">Google Ads</div>
+<div class="link-desc">Compte DayOff 4283535872</div>
+</a>
+<a href="https://drive.google.com/drive/folders/1bW5HHNu4kjg8uEb-Rr8UFXWCEcCK5u04" class="link-card">
+<span class="link-icon">📁</span>
+<div class="link-title">Drive Faten</div>
+<div class="link-desc">Photos + vidéos + assets PMax</div>
+</a>
+</div>
+
+<div class="footer">
+Dashboard DayOff Marketing Digital · refresh quotidien automatique 8h · maj manuelle 04/06/2026 23h00<br>
+Hébergement GitHub Pages · contact Florian
+</div>
+
 </body>
 </html>
