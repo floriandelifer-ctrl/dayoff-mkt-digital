@@ -442,10 +442,11 @@
         "cumulative_spend_eur": 403.37
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780666090.675509",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le week-end — ré-émise/escaladée dans le brief du 08/06/2026."
     },
     {
       "id": "2026-06-05-002",
@@ -465,10 +466,11 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780666090.675509",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le week-end — ré-émise/escaladée dans le brief du 08/06/2026."
     },
     {
       "id": "2026-06-05-003",
@@ -485,10 +487,11 @@
         "action": "pause"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780666090.675509",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le week-end — ré-émise/escaladée dans le brief du 08/06/2026."
     },
     {
       "id": "2026-06-05-004",
@@ -505,8 +508,123 @@
         "decision_date": "2026-06-07"
       },
       "severity": "low",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780666090.675509",
+      "validated_at": null,
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le week-end — ré-émise/escaladée dans le brief du 08/06/2026."
+    },
+    {
+      "id": "2026-06-08-001",
+      "date": "2026-06-08",
+      "type": "investigate",
+      "channel": "cross",
+      "title": "🚨 Deux canaux à 0 simultanément — présomption tracking/formulaire",
+      "why": "Google : 9 jours consécutifs à 0 conversion (30/05→07/06, ~472 €). Meta Lead Gen : 325 clics → 0 lead depuis l'activation (02/06). Que les DEUX canaux soient à zéro en même temps, avec un trafic sain des deux côtés, pointe vers une cause commune : tracking conversion cassé (Google Tag + pixel Meta event Lead) OU formulaire dayoff.space/contact non fonctionnel. Priorité absolue avant toute optim.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "cross_channel_zero_conversion",
+        "checks": [
+          "Google Tag Assistant live",
+          "Meta Pixel Helper event Lead",
+          "test soumission formulaire dayoff.space/contact",
+          "recoupement leads CRM 30/05→07/06"
+        ]
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-08-002",
+      "date": "2026-06-08",
+      "type": "optimize_campaign",
+      "channel": "meta",
+      "title": "🔧 Bascule Lead Gen Meta — J+6, 159 €/325 clics/0 lead",
+      "why": "La campagne Lead Gen (120244859896090784) est ACTIVE depuis le 02/06 : 159,79 € dépensés, 12 587 imp, 325 clics, CTR 2,58 %, CPC sortant 0,60 € (10x le Trafic), mais 0 lead. On a dépassé le point de décision du 07/06 (J+5) fixé vendredi. Click→lead = 0 % sur 325 clics : soit l'event pixel Lead ne remonte pas, soit le cold ne convertit pas sur le form. Action : basculer optimization_goal sur LANDING_PAGE_VIEWS OU élargir (Paris 25 km + 22-65) + ajouter un 2e ad set Customer Match direct.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "120244859896090784",
+        "ad_set_id": "120244859896320784",
+        "options": [
+          "optimization_goal→LANDING_PAGE_VIEWS",
+          "élargir geo Paris 25km + age 22-65",
+          "ajouter ad set Customer Match direct"
+        ],
+        "note": "Dépend du résultat de la reco 001 (si tracking cassé, corriger d'abord)"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-08-003",
+      "date": "2026-06-08",
+      "type": "pause_keyword",
+      "channel": "google",
+      "title": "📊 3e renvoi : pauser le PHRASE salle séminaire Paris (215 €/0 conv 30j)",
+      "why": "Sur 30j, les mots-clés PHRASE = 352,90 € → 0 conv (0 % CVR) vs EXACT 1,95 % / BROAD 0,79 %. Le pire : 'salle séminaire Paris' (PHRASE) = 91 clics, 1 944 imp, 214,98 €, 0 conv, QS 5. Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "keyword": "salle séminaire Paris",
+        "match_type": "PHRASE",
+        "action": "pause",
+        "campaign_id": "23749882446",
+        "cost_30d": 214.98
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-08-004",
+      "date": "2026-06-08",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 6e renvoi : 2 négatifs Google (location salle conférence Paris + organiser team building Paris)",
+      "why": "'location salle conférence Paris' EXACT (QS 1,5, 65,56 €/0 conv) et 'organiser team building Paris' PHRASE (130,59 €/0 conv) drainent du budget sans retour sur 30j. Bloquer en PHRASE. 'team building entreprise Paris' EXACT convertit → conservé. Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "location salle conférence Paris",
+          "organiser team building Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-08-005",
+      "date": "2026-06-08",
+      "type": "investigate",
+      "channel": "google",
+      "title": "⚠️ Google : spend en chute -89 % en 7j (82 €→8,9 €/j) — throttling ?",
+      "why": "Le spend quotidien Google s'effondre : 82,58 € (01/06) → 8,88 € (07/06), impressions 2 471 → 174 sur la même période. La campagne perd en éligibilité/volume — possibles causes : budget/billing, bid strategy en réapprentissage après les négatifs/pauses, ou baisse de Quality Score. À vérifier en parallèle du tracking.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "google_spend_collapse",
+        "spend_06_01": 82.58,
+        "spend_06_07": 8.88,
+        "imp_06_01": 2471,
+        "imp_06_07": 174
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
       "validated_at": null,
       "applied_at": null
     }
