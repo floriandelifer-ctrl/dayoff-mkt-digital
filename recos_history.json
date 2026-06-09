@@ -533,10 +533,11 @@
         ]
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780902979.828129",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le post du 08/06 (ts 1780902979.828129) — ré-émises/escaladées dans le brief du 09/06."
     },
     {
       "id": "2026-06-08-002",
@@ -557,10 +558,11 @@
         "note": "Dépend du résultat de la reco 001 (si tracking cassé, corriger d'abord)"
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780902979.828129",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le post du 08/06 (ts 1780902979.828129) — ré-émises/escaladées dans le brief du 09/06."
     },
     {
       "id": "2026-06-08-003",
@@ -578,10 +580,11 @@
         "cost_30d": 214.98
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780902979.828129",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le post du 08/06 (ts 1780902979.828129) — ré-émises/escaladées dans le brief du 09/06."
     },
     {
       "id": "2026-06-08-004",
@@ -601,10 +604,11 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780902979.828129",
       "validated_at": null,
-      "applied_at": null
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le post du 08/06 (ts 1780902979.828129) — ré-émises/escaladées dans le brief du 09/06."
     },
     {
       "id": "2026-06-08-005",
@@ -623,10 +627,122 @@
         "imp_06_07": 174
       },
       "severity": "low",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1780902979.828129",
+      "validated_at": null,
+      "applied_at": null,
+      "caduque_note": "Aucune réaction Slack sur le post du 08/06 (ts 1780902979.828129) — ré-émises/escaladées dans le brief du 09/06."
+    },
+    {
+      "id": "2026-06-09-001",
+      "date": "2026-06-09",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "🚨 Lead Gen Meta J+11 : 177€/0 lead sur 7j — basculer l'optimisation OU pauser MAINTENANT",
+      "why": "Campagne Lead Gen (120244859896090784) active depuis le 02/06. Sur 7 jours glissants : 177,38€ spend, 363 clics vers dayoff.space/contact, CTR sortant 2,16% — MAIS 0 lead tracké. CPC sortant 0,60€ = 10x le Trafic, et click→lead = 0%. Le point de décision (07/06) est dépassé de 2 jours. Reco 08/06-002 sans réaction. À ce rythme : ~25€/j brûlés sans signal.",
+      "reversible": true,
+      "action_payload": {
+        "manual": true,
+        "context": "lead_gen_switch_or_pause_escalation",
+        "campaign_id": "120244859896090784",
+        "options": [
+          "Basculer optimization_goal → LANDING_PAGE_VIEWS (mesurer au moins l'intention)",
+          "Élargir : Paris 25km + 22-65 + 2e ad set Customer Match direct",
+          "Pauser si pas de lead à J+14 (09/06 = J+11)"
+        ],
+        "days_active": 7,
+        "spend_7d": 177.38
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-08-002"
+    },
+    {
+      "id": "2026-06-09-002",
+      "date": "2026-06-09",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "🔧 Tracking : Google a reconverti (1 conv le 08/06) → isoler le pixel Lead Meta + tester le formulaire",
+      "why": "Update vs hier : Google a enregistré 1 conversion le 08/06 (111€ spend) — le Google Tag fonctionne, la thèse 'deux canaux cassés' tombe côté Google. Reste l'anomalie Meta : 363 clics vers /contact → 0 event Lead. Soit le pixel event Lead ne se déclenche pas, soit le formulaire ne capte pas. Checks ciblés : Meta Pixel Helper sur dayoff.space/contact, test de soumission réelle, recoupement CRM des leads entrants depuis Meta.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "meta_pixel_lead_tracking_check",
+        "url": "https://dayoff.space/contact"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-08-001"
+    },
+    {
+      "id": "2026-06-09-003",
+      "date": "2026-06-09",
+      "type": "pause_keyword",
+      "channel": "google",
+      "title": "📊 4e renvoi : pauser le PHRASE `salle séminaire Paris` (175€/0 conv sur 30j)",
+      "why": "PHRASE = 0% CVR pour 323€/30j vs EXACT 1,85% et BROAD 0,94%. Le pire : `salle séminaire Paris` PHRASE = 74 clics, 1 732 imp, 175,01€, QS 5, 0 conv. Renvoyée 3 fois sans réaction. Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "keyword": "salle séminaire Paris",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446",
+        "action": "PAUSE"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-08-003"
+    },
+    {
+      "id": "2026-06-09-004",
+      "date": "2026-06-09",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 7e renvoi : 2 négatifs Google (location salle conférence Paris + organiser team building Paris, 232€/0 conv)",
+      "why": "`location salle conférence Paris` EXACT (QS 1,6, 71,52€, 0 conv) et `organiser team building Paris` PHRASE (140,74€, 0 conv) cumulent 232€/30j sans conversion. `team building entreprise Paris` EXACT convertit → conservé. Bloquer les 2 en PHRASE. Réversible. 6 renvois précédents sans réaction.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "location salle conférence Paris",
+          "organiser team building Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-08-004"
+    },
+    {
+      "id": "2026-06-09-005",
+      "date": "2026-06-09",
+      "type": "info",
+      "channel": "google",
+      "title": "✅ Google a reconverti le 08/06 (1 conv, 111€) — fin de la série 0 conv (30/05→07/06) + spend rétabli",
+      "why": "Bonne nouvelle : après 9 jours sans conversion, Google a enregistré 1 conv le 08/06. Le spend quotidien est remonté de 8,88€ (07/06) à 111,12€ (08/06), CTR 7,91%. Le 'throttling -89%' signalé hier semble être un creux ponctuel (week-end), pas un blocage structurel. ROAS 30j 5,03x. À confirmer cette semaine — pas d'action requise.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "google_recovery_monitoring"
+      },
+      "severity": "low",
+      "status": "en_attente",
+      "slack_ts": null,
       "validated_at": null,
       "applied_at": null
     }
-  ]
+  ],
+  "last_updated": "2026-06-09T08:30:00+02:00"
 }
