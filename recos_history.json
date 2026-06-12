@@ -768,11 +768,12 @@
         "days_active": 8
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781077496.327429",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-09-001"
+      "escalation_of": "2026-06-09-001",
+      "caduque_note": "Aucune réaction Slack sur le post du 10/06 (ts 1781077496.327429) — ré-émises/escaladées dans le brief du 12/06."
     },
     {
       "id": "2026-06-10-002",
@@ -788,11 +789,12 @@
         "url": "https://dayoff.space/contact"
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781077496.327429",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-09-002"
+      "escalation_of": "2026-06-09-002",
+      "caduque_note": "Aucune réaction Slack sur le post du 10/06 (ts 1781077496.327429) — ré-émises/escaladées dans le brief du 12/06."
     },
     {
       "id": "2026-06-10-003",
@@ -810,11 +812,12 @@
         "cost_30d": 175.01
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781077496.327429",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-09-003"
+      "escalation_of": "2026-06-09-003",
+      "caduque_note": "Aucune réaction Slack sur le post du 10/06 (ts 1781077496.327429) — ré-émises/escaladées dans le brief du 12/06."
     },
     {
       "id": "2026-06-10-004",
@@ -834,12 +837,128 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781077496.327429",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-09-004"
+      "escalation_of": "2026-06-09-004",
+      "caduque_note": "Aucune réaction Slack sur le post du 10/06 (ts 1781077496.327429) — ré-émises/escaladées dans le brief du 12/06."
+    },
+    {
+      "id": "2026-06-12-001",
+      "date": "2026-06-12",
+      "type": "optimize_campaign",
+      "channel": "meta",
+      "title": "🚨 Lead Gen Meta J+10 actif : 130€/0 lead sur 7j — PAUSER maintenant",
+      "why": "Campagne Lead Gen (120244859896090784) active depuis le 02/06 = J+10. Sur 7j glissants : 130,53€ spend, CTR 2,68%, 0 lead tracké. ~230€ cumulés depuis activation. Le spend Lead Gen décroît (l'algo réduit la diffusion faute de signal Lead). Point de décision (07/06) dépassé de 5 jours, reco 10/06-001 sans réaction. Recommandation durcie : PAUSER (10 jours, pas un seul lead) — ou dernier essai optimization_goal → LANDING_PAGE_VIEWS pour au moins mesurer l'intention.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "120244859896090784",
+        "ad_set_id": "120244859896320784",
+        "options": [
+          "Pauser la campagne (0 lead à J+10)",
+          "Dernier essai : optimization_goal → LANDING_PAGE_VIEWS",
+          "Élargir Paris 25km + 22-65 + 2e ad set Customer Match direct"
+        ],
+        "spend_7d": 130.53,
+        "days_active": 10
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-10-001"
+    },
+    {
+      "id": "2026-06-12-002",
+      "date": "2026-06-12",
+      "type": "investigate",
+      "channel": "meta",
+      "title": "🔧 Tracking Meta : isoler le pixel event Lead + tester le formulaire",
+      "why": "Google convertit (2 conv le 08/06) → Google Tag OK, la thèse « deux canaux cassés » est écartée côté Google. Reste l'anomalie Meta : des centaines de clics sortants vers dayoff.space/contact depuis l'activation → 0 event Lead. Soit le pixel event Lead ne se déclenche pas, soit le formulaire ne capte pas. Checks : Meta Pixel Helper sur dayoff.space/contact, soumission test réelle, recoupement CRM des leads entrants.",
+      "reversible": false,
+      "action_payload": {
+        "manual": true,
+        "context": "meta_pixel_lead_tracking_check",
+        "url": "https://dayoff.space/contact"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-10-002"
+    },
+    {
+      "id": "2026-06-12-003",
+      "date": "2026-06-12",
+      "type": "budget",
+      "channel": "google",
+      "title": "🚀 Scaler Day Off Brand : +budget (11,22x ROAS, perd 19% d'impressions au budget)",
+      "why": "Lever le plus rentable du compte : Day Off Brand = 980,77€/30j, 9 conv, ROAS 11,22x (vs 4,97x compte) MAIS perd 19% de ses impressions faute de budget et ne capte que 22% d'impression share. Augmenter le budget quotidien de 25-50%, financé en réduisant 'Search Intentions Fortes' (827,99€/30j, ROAS 1,21x, 2 conv). Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "23535034243",
+        "campaign_name": "Day Off Brand",
+        "action": "raise_budget",
+        "increase_pct": "25-50",
+        "fund_from": "23749882446",
+        "roas": 11.22,
+        "budget_lost_is": 0.187
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null
+    },
+    {
+      "id": "2026-06-12-004",
+      "date": "2026-06-12",
+      "type": "pause_keyword",
+      "channel": "google",
+      "title": "📊 6ᵉ renvoi : pauser le PHRASE « salle séminaire Paris » (130€/0 conv 30j)",
+      "why": "PHRASE = 0% CVR pour 319,38€/30j (0 conv) vs EXACT (794,40€ → 6 conv) et BROAD (954,58€ → 6 conv). Le pire : 'salle séminaire Paris' PHRASE = 130,05€, QS 5, 0 conv. Renvoyée 5 fois sans réaction. Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "keyword": "salle séminaire Paris",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446",
+        "action": "PAUSE",
+        "cost_30d": 130.05
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-10-003"
+    },
+    {
+      "id": "2026-06-12-005",
+      "date": "2026-06-12",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 9ᵉ renvoi : 2 négatifs Google (256€/0 conv)",
+      "why": "'organiser team building Paris' PHRASE (167,31€, 0 conv) et 'location salle conférence Paris' EXACT (QS 1,8, 89,02€, 0 conv) cumulent 256€/30j sans conversion. 'team building entreprise Paris' EXACT convertit → conservé. Bloquer les 2 en PHRASE. Réversible. 8 renvois précédents sans réaction.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "organiser team building Paris",
+          "location salle conférence Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "validated_at": null,
+      "applied_at": null,
+      "escalation_of": "2026-06-10-004"
     }
   ],
-  "last_updated": "2026-06-10T08:30:00+02:00"
+  "last_updated": "2026-06-12T08:30:00+02:00"
 }
