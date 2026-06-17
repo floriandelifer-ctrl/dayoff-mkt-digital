@@ -1097,7 +1097,7 @@
       },
       "severity": "high",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
       "escalation_of": "2026-06-16-001"
@@ -1115,7 +1115,7 @@
       },
       "severity": "high",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
       "escalation_of": "2026-06-16-002"
@@ -1136,7 +1136,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
       "escalation_of": "2026-06-16-003"
@@ -1155,7 +1155,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
       "escalation_of": "2026-06-16-004"
@@ -1179,7 +1179,7 @@
       },
       "severity": "medium",
       "status": "en_attente",
-      "slack_ts": null,
+      "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
       "escalation_of": "2026-06-16-005"
