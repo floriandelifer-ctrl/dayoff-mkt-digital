@@ -1096,11 +1096,13 @@
         ]
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-16-001"
+      "escalation_of": "2026-06-16-001",
+      "caduque_at": "2026-06-18T08:30:00+02:00",
+      "caduque_reason": "Aucune réaction Slack sous 24h → caduque, ré-émise/escaladée le 18/06"
     },
     {
       "id": "2026-06-17-002",
@@ -1114,11 +1116,13 @@
         "manual_check": true
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-16-002"
+      "escalation_of": "2026-06-16-002",
+      "caduque_at": "2026-06-18T08:30:00+02:00",
+      "caduque_reason": "Aucune réaction Slack sous 24h → caduque, ré-émise/escaladée le 18/06"
     },
     {
       "id": "2026-06-17-003",
@@ -1135,11 +1139,13 @@
         "fund_from": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-16-003"
+      "escalation_of": "2026-06-16-003",
+      "caduque_at": "2026-06-18T08:30:00+02:00",
+      "caduque_reason": "Aucune réaction Slack sous 24h → caduque, ré-émise/escaladée le 18/06"
     },
     {
       "id": "2026-06-17-004",
@@ -1154,11 +1160,13 @@
         "keyword": "salle séminaire Paris"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-16-004"
+      "escalation_of": "2026-06-16-004",
+      "caduque_at": "2026-06-18T08:30:00+02:00",
+      "caduque_reason": "Aucune réaction Slack sous 24h → caduque, ré-émise/escaladée le 18/06"
     },
     {
       "id": "2026-06-17-005",
@@ -1178,12 +1186,122 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781678183.135469",
       "validated_at": null,
       "applied_at": null,
-      "escalation_of": "2026-06-16-005"
+      "escalation_of": "2026-06-16-005",
+      "caduque_at": "2026-06-18T08:30:00+02:00",
+      "caduque_reason": "Aucune réaction Slack sous 24h → caduque, ré-émise/escaladée le 18/06"
+    },
+    {
+      "id": "2026-06-18-001",
+      "date": "2026-06-18",
+      "type": "meta_pause_or_switch",
+      "channel": "meta",
+      "title": "🚨 Lead Gen Meta J+16 : 296€ cumulés / 0 lead — PAUSER maintenant",
+      "why": "16 jours de diffusion depuis activation (02/06), 0 lead. 90,21€/7j (296,59€ cumulés) brûlés sans aucun event Lead. Point de décision (07/06) dépassé de 11 jours. 3ᵉ émission.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "120244859896090784",
+        "adset_id": "120244859896320784",
+        "options": [
+          "pause",
+          "switch_optimization_goal:LANDING_PAGE_VIEWS"
+        ]
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "escalation_count": 3,
+      "prev_ids": [
+        "2026-06-17-001"
+      ]
+    },
+    {
+      "id": "2026-06-18-002",
+      "date": "2026-06-18",
+      "type": "meta_tracking_check",
+      "channel": "meta",
+      "title": "🔧 Tracking Meta : isoler le pixel event Lead + tester le formulaire",
+      "why": "Google convertit (ROAS 5,31x) → problème isolé côté Meta. 3 011 clics/7j → 0 event Lead. Checks : Meta Pixel Helper sur dayoff.space/contact, soumission test réelle, recoupement CRM.",
+      "reversible": true,
+      "action_payload": {
+        "manual_check": true
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": null,
+      "prev_ids": [
+        "2026-06-17-002"
+      ]
+    },
+    {
+      "id": "2026-06-18-003",
+      "date": "2026-06-18",
+      "type": "budget_scale",
+      "channel": "google",
+      "title": "🚀 Scaler Day Off Brand : +budget (10,40x ROAS, capé au budget)",
+      "why": "Levier le plus rentable : 1 057€/30j, 9 conv, ROAS 10,40x (vs 5,31x compte) mais perd 18% de ses impressions faute de budget. Augmenter 25-50%, financé en réduisant Search Intentions Fortes (826€/30j, ROAS 1,21x).",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "23535034243",
+        "action": "increase_budget",
+        "pct": "25-50",
+        "fund_from": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "prev_ids": [
+        "2026-06-17-003"
+      ]
+    },
+    {
+      "id": "2026-06-18-004",
+      "date": "2026-06-18",
+      "type": "pause_match_type",
+      "channel": "google",
+      "title": "📊 9ᵉ renvoi : pauser le PHRASE « salle séminaire Paris » (PHRASE 221€/0 conv 30j)",
+      "why": "PHRASE = 0% CVR pour 221€/30j vs BROAD (6,5 conv) / EXACT (5,5 conv). QS 5, 0 conv.",
+      "reversible": true,
+      "action_payload": {
+        "match_type": "PHRASE",
+        "keyword": "salle séminaire Paris"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "escalation_count": 9,
+      "prev_ids": [
+        "2026-06-17-004"
+      ]
+    },
+    {
+      "id": "2026-06-18-005",
+      "date": "2026-06-18",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 12ᵉ renvoi : 2 négatifs Google (286€/0 conv)",
+      "why": "Bloquer en PHRASE « organiser team building Paris » (183€) et « location salle conférence Paris » EXACT (QS 2,8, 103€). « team building entreprise Paris » convertit → conservé.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "organiser team building Paris",
+          "location salle conférence Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": null,
+      "escalation_count": 12,
+      "prev_ids": [
+        "2026-06-17-005"
+      ]
     }
   ],
-  "last_updated": "2026-06-17T08:30:00+02:00"
+  "last_updated": "2026-06-18T08:30:00+02:00"
 }
