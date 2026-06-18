@@ -56,7 +56,16 @@ td.strong{font-weight:600}
 .alert{padding:12px 14px;border-radius:6px;margin:12px 0;font-size:0.9rem;display:flex;gap:10px;align-items:start}
 .alert-good{background:#dff5ec;color:#1a4a3a;border-left:3px solid #0a8060}
 .alert-warn{background:#fdf3d4;color:#4a3a18;border-left:3px solid #a07a18}
+.alert-danger{background:#f5dada;color:#5a1a1a;border-left:3px solid #c75a3e}
 .alert-info{background:#e3eafe;color:#1a3a5a;border-left:3px solid #3a5cb4}
+
+.reco-list{margin-top:12px}
+.reco-item{background:#fff;border:1px solid #e8e6dc;border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.reco-item.high{border-left:4px solid #c75a3e}
+.reco-item.medium{border-left:4px solid #a07a18}
+.reco-head{font-weight:600;font-size:0.95rem;margin-bottom:4px}
+.reco-why{font-size:0.84rem;color:#555}
+.reco-meta{font-size:0.72rem;color:#999;margin-top:6px;text-transform:uppercase;letter-spacing:0.4px}
 
 .links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
 .link-card{background:#fff;border:1px solid #e8e6dc;border-radius:6px;padding:12px;text-decoration:none;color:#1a1a1a;font-size:0.88rem}
@@ -73,23 +82,39 @@ td.strong{font-weight:600}
 
 <header>
 <h1>DayOff Pouls</h1>
-<div class="subtitle">Dashboard hebdo Google + Meta · 30 derniers jours<span class="update-tag">Maj mer. 17/06 23h45</span><span class="live-tag">LIVE</span></div>
+<div class="subtitle">Dashboard hebdo Google + Meta · 30 derniers jours<span class="update-tag">Maj jeu. 18/06 08h30</span><span class="live-tag">LIVE</span></div>
 </header>
+
+<div class="alert alert-danger">
+<strong>⏳ Meta Lead Gen (créée 28/05) :</strong> ACTIVE depuis le 02/06 — <strong>16 jours, 296,59 € cumulés, 0 lead tracké</strong>. Point de décision (07/06) dépassé de 11 jours. Reco N°1 : pauser ou basculer l'optimization_goal sur LANDING_PAGE_VIEWS.
+</div>
 
 <h2>🩺 Pouls global — 30 derniers jours</h2>
 <div class="pouls-grid">
-<div class="pouls-card ok"><div class="pouls-label">ROAS Google</div><div class="pouls-value">5,22x</div><div class="pouls-detail"><span class="kpi-trend-up">↑ vs 4,18x (90j)</span></div></div>
-<div class="pouls-card ok"><div class="pouls-label">Brand ROAS 🏆</div><div class="pouls-value">10,59x</div><div class="pouls-detail">8 conv · 991€ spend</div></div>
-<div class="pouls-card info"><div class="pouls-label">Spend total</div><div class="pouls-value">3 332 €</div><div class="pouls-detail">Google 2 395 € + Meta 937 €</div></div>
-<div class="pouls-card info"><div class="pouls-label">Conv Google</div><div class="pouls-value">13</div><div class="pouls-detail">CPL 184 € · value ~9 200 €</div></div>
-<div class="pouls-card warn"><div class="pouls-label">Conv Meta</div><div class="pouls-value">0</div><div class="pouls-detail">EMQ 4,6/10 (Tom)</div></div>
-<div class="pouls-card info"><div class="pouls-label">Clics totaux</div><div class="pouls-value">15 406</div><div class="pouls-detail">Meta 10 829 + Google 4 577</div></div>
-<div class="pouls-card info"><div class="pouls-label">Impressions</div><div class="pouls-value">641 K</div><div class="pouls-detail">Meta 464K + Google 177K</div></div>
-<div class="pouls-card ok"><div class="pouls-label">CTR Meta</div><div class="pouls-value">2,33 %</div><div class="pouls-detail">Trafic 5,08 % ✅</div></div>
+<div class="pouls-card ok"><div class="pouls-label">ROAS Google</div><div class="pouls-value">5,31x</div><div class="pouls-detail"><span class="kpi-trend-up">↑ vs 5,22x (J-1)</span></div></div>
+<div class="pouls-card ok"><div class="pouls-label">Brand ROAS 🏆</div><div class="pouls-value">10,40x</div><div class="pouls-detail">9 conv · 1 057 € spend</div></div>
+<div class="pouls-card info"><div class="pouls-label">Spend total</div><div class="pouls-value">3 414 €</div><div class="pouls-detail">Google 2 446 € + Meta 968 €</div></div>
+<div class="pouls-card info"><div class="pouls-label">Conv Google</div><div class="pouls-value">14</div><div class="pouls-detail">CPL 175 € · 1 conv le 17/06 ✅</div></div>
+<div class="pouls-card danger"><div class="pouls-label">Conv Meta</div><div class="pouls-value">0</div><div class="pouls-detail">Lead Gen J+16, 0 lead 🔴</div></div>
+<div class="pouls-card info"><div class="pouls-label">Clics totaux</div><div class="pouls-value">15 346</div><div class="pouls-detail">Meta 11 335 + Google 4 011</div></div>
+<div class="pouls-card info"><div class="pouls-label">Impressions</div><div class="pouls-value">629 K</div><div class="pouls-detail">Meta 481K + Google 147K</div></div>
+<div class="pouls-card ok"><div class="pouls-label">CTR Meta</div><div class="pouls-value">2,36 %</div><div class="pouls-detail">Trafic 5,17 % ✅</div></div>
 </div>
 
 <div class="alert alert-good">
-<strong>🏆 Insight :</strong> Day Off Brand convertit à 10,59x ROAS mais perd 18 % d'impressions à cause du budget plafonné à 50 €/j. Scaling à 75 €/j projetterait +4 conv/mois supplémentaires (~3 000 € de valeur). À arbitrer le 20/6.
+<strong>🏆 Insight :</strong> Day Off Brand convertit à 10,40x ROAS mais perd 18 % d'impressions à cause du budget plafonné. Le scaling (+25-50 %, financé en réduisant Search Intentions Fortes à 1,21x) reste le levier le plus rentable du compte.
+</div>
+
+<h2>📋 Actions recommandées du jour — 18/06</h2>
+<div class="reco-list">
+<div class="reco-item high"><div class="reco-head">1. 🚨 Lead Gen Meta J+16 : 296 € cumulés / 0 lead — PAUSER maintenant</div><div class="reco-why">16 j de diffusion, 0 lead depuis l'activation (02/06). 90,21 €/7j brûlés sans signal. Point de décision (07/06) dépassé de 11 jours. Pauser la campagne, OU dernier essai <code>optimization_goal → LANDING_PAGE_VIEWS</code>. Réversible.</div><div class="reco-meta">Meta · high · réversible · 3ᵉ émission</div></div>
+<div class="reco-item high"><div class="reco-head">2. 🔧 Tracking Meta : isoler le pixel event Lead + tester le formulaire</div><div class="reco-why">Google convertit (ROAS 5,31x) → problème isolé côté Meta. 3 011 clics/7j → 0 event Lead. Checks : Meta Pixel Helper sur dayoff.space/contact, soumission test réelle, recoupement CRM.</div><div class="reco-meta">Meta · high · investigation</div></div>
+<div class="reco-item medium"><div class="reco-head">3. 🚀 Scaler Day Off Brand : +budget (10,40x ROAS, capé au budget)</div><div class="reco-why">Levier le plus rentable : 1 057 €/30j, 9 conv, ROAS 10,40x (vs 5,31x compte) mais perd 18 % de ses impressions faute de budget. Augmenter 25-50 %, financé en réduisant Search Intentions Fortes (826 €/30j, ROAS 1,21x). Réversible.</div><div class="reco-meta">Google · medium · réversible</div></div>
+<div class="reco-item medium"><div class="reco-head">4. 📊 9ᵉ renvoi : pauser le PHRASE « salle séminaire Paris » (221 €/0 conv 30j)</div><div class="reco-why">PHRASE = 0 % CVR pour 221 €/30j vs BROAD (6,5 conv) / EXACT (5,5 conv). QS 5, 0 conv. Réversible.</div><div class="reco-meta">Google · medium · réversible · 9ᵉ renvoi</div></div>
+<div class="reco-item medium"><div class="reco-head">5. 🚧 12ᵉ renvoi : 2 négatifs Google (286 €/0 conv)</div><div class="reco-why">Bloquer en PHRASE « organiser team building Paris » (183 €) et « location salle conférence Paris » EXACT (QS 2,8, 103 €). « team building entreprise Paris » convertit → conservé. Réversible.</div><div class="reco-meta">Google · medium · réversible · 12ᵉ renvoi</div></div>
+</div>
+<div class="alert alert-warn">
+<strong>↺ Recos closes :</strong> les 5 recos du 17/06 n'ont reçu aucune réaction → caduques, ré-émises/escaladées ci-dessus. Aucune action exécutée (lecture seule).
 </div>
 
 <h2>📈 Évolution hebdomadaire</h2>
@@ -107,7 +132,7 @@ td.strong{font-weight:600}
 <div class="chart-container"><canvas id="chartConvWeek"></canvas></div>
 </div>
 <div class="chart-card">
-<h3>Impressions Meta — explosion Awareness 🚀</h3>
+<h3>Impressions Meta</h3>
 <div class="chart-container"><canvas id="chartImpWeek"></canvas></div>
 </div>
 <div class="chart-card">
@@ -119,66 +144,60 @@ td.strong{font-weight:600}
 <table>
 <thead><tr><th>Semaine</th><th class="num">Spend Google</th><th class="num">Conv Google</th><th class="num">CPL</th><th class="num">Spend Meta</th><th class="num">Clics Meta</th><th class="num">CTR Meta</th></tr></thead>
 <tbody>
-<tr><td>S20 — 18-24/5</td><td class="num">781 €</td><td class="num strong">8</td><td class="num">98 €</td><td class="num">~123 €</td><td class="num">2 047</td><td class="num">4,72 %</td></tr>
+<tr><td>S20 — 18-24/5</td><td class="num">781 €</td><td class="num strong">8</td><td class="num">98 €</td><td class="num">~122 €</td><td class="num">2 051</td><td class="num">4,68 %</td></tr>
 <tr><td>S21 — 25-31/5</td><td class="num">488 €</td><td class="num">3</td><td class="num">163 €</td><td class="num">162 €</td><td class="num">2 841</td><td class="num">4,28 %</td></tr>
 <tr><td>S22 — 1-7/6</td><td class="num">398 €</td><td class="num">0</td><td class="num">—</td><td class="num">358 €</td><td class="num">2 445</td><td class="num">1,31 %</td></tr>
 <tr><td>S23 — 8-14/6</td><td class="num">468 €</td><td class="num">2</td><td class="num">234 €</td><td class="num">233 €</td><td class="num">2 576</td><td class="num">1,95 %</td></tr>
-<tr style="background:#fdf3d4"><td><strong>S24 — 15-16/6 (J-1)</strong></td><td class="num">166 €</td><td class="num">0</td><td class="num">—</td><td class="num">62 €</td><td class="num">916</td><td class="num">2,63 %</td></tr>
+<tr style="background:#fdf3d4"><td><strong>S24 — 15-17/6 (en cours)</strong></td><td class="num">312 €</td><td class="num">1</td><td class="num">312 €</td><td class="num">92 €</td><td class="num">1 422</td><td class="num">2,73 %</td></tr>
 </tbody>
 </table>
 
-<h2>📱 Détail des 7 campagnes Meta + 4 carrousels (nouvelle nuit du 17/06)</h2>
+<h2>📱 Détail des campagnes Meta</h2>
 <table>
-<thead><tr><th>Campagne</th><th>Statut</th><th>Format</th><th class="num">Budget</th><th class="num">Spend 30j</th><th class="num">CTR</th><th class="num">Clics</th></tr></thead>
+<thead><tr><th>Campagne</th><th>Statut</th><th>Objectif</th><th class="num">Spend 30j</th><th class="num">CTR</th></tr></thead>
 <tbody>
-<tr><td><strong>Trafic Destinations</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>10 images + 5 vidéos</td><td class="num">10 €/j</td><td class="num">482 €</td><td class="num strong">5,08 %</td><td class="num">9 750+</td></tr>
-<tr><td><strong>Lead Gen Cold FR</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>1 image + 5 vidéos</td><td class="num">13 €/j</td><td class="num">284 €</td><td class="num">2,81 %</td><td class="num">650+</td></tr>
-<tr><td><strong>Awareness Reels Insta-only</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>5 vidéos Insta</td><td class="num">8 €/j</td><td class="num">171 €</td><td class="num">0,06 %</td><td class="num">100+</td></tr>
-<tr><td><strong>Carrousel Collection Maisons</strong></td><td><span class="badge badge-new">J+0</span></td><td>6 cards</td><td class="num">4 €/j</td><td class="num">0 €</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><td><strong>Carrousel Une Journée DayOff</strong></td><td><span class="badge badge-new">J+0</span></td><td>9 cards</td><td class="num">4 €/j</td><td class="num">0 €</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><td><strong>Carrousel Services Partenaires</strong></td><td><span class="badge badge-new">J+0</span></td><td>10 cards</td><td class="num">4 €/j</td><td class="num">0 €</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><td><strong>Carrousel Soirée Entreprise</strong></td><td><span class="badge badge-new">J+0</span></td><td>7 cards</td><td class="num">4 €/j</td><td class="num">0 €</td><td class="num">—</td><td class="num">—</td></tr>
-<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL Meta</td><td>—</td><td>13 vidéos + 32 carrousel cards + 11 images</td><td class="num">47 €/j</td><td class="num">937 €</td><td class="num">2,33 %</td><td class="num">10 829</td></tr>
+<tr><td><strong>Trafic Destinations</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>OUTCOME_TRAFFIC</td><td class="num">493 €</td><td class="num strong">5,17 %</td></tr>
+<tr><td><strong>Lead Gen Cold FR</strong> 🔴</td><td><span class="badge badge-active">ACTIVE</span></td><td>OUTCOME_LEADS</td><td class="num">297 €</td><td class="num">2,82 %</td></tr>
+<tr><td><strong>Vidéos Reels & Stories</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td>OUTCOME_AWARENESS</td><td class="num">178 €</td><td class="num">0,05 %</td></tr>
+<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL Meta</td><td>—</td><td>—</td><td class="num">968 €</td><td class="num">2,36 %</td></tr>
 </tbody>
 </table>
+<div class="alert alert-danger">
+<strong>🔴 Lead Gen : 0 lead à J+16.</strong> 296,59 € cumulés depuis le 02/06, 0 event Lead tracké. Le problème est isolé côté Meta (Google convertit). Décision attendue : pause ou bascule LANDING_PAGE_VIEWS + audit pixel/formulaire.
+</div>
 
 <h2>🔍 Détail des 5 campagnes Google</h2>
 <table>
 <thead><tr><th>Campagne</th><th>Statut</th><th class="num">Spend 30j</th><th class="num">Conv</th><th class="num">CTR</th><th class="num">Imp Share</th><th class="num">ROAS</th></tr></thead>
 <tbody>
-<tr><td><strong>Day Off Brand</strong> 🏆</td><td><span class="badge badge-active">ACTIVE 50€/j</span></td><td class="num">991 €</td><td class="num strong">8</td><td class="num">10,32 %</td><td class="num">22,6 %</td><td class="num strong">10,59x</td></tr>
-<tr><td><strong>Search Intentions Fortes</strong></td><td><span class="badge badge-active">ACTIVE 40€/j</span></td><td class="num">755 €</td><td class="num">2</td><td class="num">10,07 %</td><td class="num">28,6 %</td><td class="num">1,32x</td></tr>
-<tr><td>PMax DayOff (ancienne)</td><td><span class="badge badge-paused">PAUSED</span></td><td class="num">471 €</td><td class="num">2</td><td class="num">2,16 %</td><td class="num">47,5 %</td><td class="num">2,12x</td></tr>
-<tr><td>PMax DayOff Leads</td><td><span class="badge badge-active">7€/j learning</span></td><td class="num">0 €</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><td>Search Remarketing RLSA</td><td><span class="badge badge-paused">PAUSED</span></td><td class="num">144 €</td><td class="num">1</td><td class="num">4,28 %</td><td class="num">10,5 %</td><td class="num">0,01x</td></tr>
-<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL Google</td><td>—</td><td class="num">2 395 €</td><td class="num">13</td><td class="num">2,58 %</td><td class="num">—</td><td class="num">5,22x</td></tr>
+<tr><td><strong>Day Off Brand</strong> 🏆</td><td><span class="badge badge-active">ACTIVE</span></td><td class="num">1 057 €</td><td class="num strong">9</td><td class="num">10,78 %</td><td class="num">22,4 %</td><td class="num strong">10,40x</td></tr>
+<tr><td><strong>Search Intentions Fortes</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td class="num">826 €</td><td class="num">2</td><td class="num">10,39 %</td><td class="num">28,8 %</td><td class="num">1,21x</td></tr>
+<tr><td>PMax DayOff</td><td><span class="badge badge-paused">PAUSED</span></td><td class="num">412 €</td><td class="num">2</td><td class="num">2,18 %</td><td class="num">49,5 %</td><td class="num">2,43x</td></tr>
+<tr><td>Search Remarketing RLSA</td><td><span class="badge badge-paused">PAUSED</span></td><td class="num">121 €</td><td class="num">1</td><td class="num">4,07 %</td><td class="num">10,4 %</td><td class="num">0,01x</td></tr>
+<tr><td>Search Brand</td><td><span class="badge badge-paused">PAUSED</span></td><td class="num">30 €</td><td class="num">0</td><td class="num">15,34 %</td><td class="num">12,0 %</td><td class="num">—</td></tr>
+<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL Google</td><td>—</td><td class="num">2 446 €</td><td class="num">14</td><td class="num">2,72 %</td><td class="num">—</td><td class="num">5,31x</td></tr>
 </tbody>
 </table>
 
-<h2>🎬 État des vidéos Faten — en diffusion sur Meta</h2>
+<h2>🔑 Mots-clés Google — par type de correspondance (30j)</h2>
 <table>
-<thead><tr><th>Vidéo</th><th>Campagne</th><th class="num">Spend 30j</th><th class="num">Clics</th><th class="num">CTR</th></tr></thead>
+<thead><tr><th>Match type</th><th class="num">Spend</th><th class="num">Conv</th><th class="num">Verdict</th></tr></thead>
 <tbody>
-<tr><td>5 vidéos Trafic (Maisons à vivre / Hospitalité / Séminaires / Preuve sociale / Souvenirs)</td><td>Trafic Destinations</td><td class="num">482 €</td><td class="num">9 750+</td><td class="num strong">5,08 %</td></tr>
-<tr><td>5 vidéos Lead Gen (Devis / Hospitalité / Expériences / Souvenirs / Adresses)</td><td>Lead Gen Cold FR</td><td class="num">284 €</td><td class="num">650+</td><td class="num">2,81 %</td></tr>
-<tr><td>5 vidéos Reels Insta-only (Awareness)</td><td>Awareness Reels Insta</td><td class="num">171 €</td><td class="num">100+</td><td class="num">0,06 %</td></tr>
-<tr style="font-weight:600;background:#f5f3ea"><td>TOTAL 13 vidéos</td><td>—</td><td class="num">937 €</td><td class="num">10 500+</td><td class="num">2,33 %</td></tr>
+<tr><td>BROAD</td><td class="num">923 €</td><td class="num strong">6,5</td><td class="num"><span class="badge badge-success">OK</span></td></tr>
+<tr><td>EXACT</td><td class="num">887 €</td><td class="num strong">5,5</td><td class="num"><span class="badge badge-success">OK</span></td></tr>
+<tr><td>PHRASE</td><td class="num">221 €</td><td class="num">0</td><td class="num"><span class="badge badge-danger">0 % CVR</span></td></tr>
 </tbody>
 </table>
-
-<div class="alert alert-good">
-<strong>✅ Les vidéos tournent bien :</strong> les 5 vidéos Trafic affichent un CTR remarquable de 5,08 % (industrie ~1,5 %). Les vidéos Lead Gen sont en learning à 2,81 %. Les vidéos Awareness Reels Insta diffusent en masse (464K impressions sur 30j) mais avec un CTR bas attendu pour ce format (objectif = vues).
-</div>
 
 <h2>🩺 Recommandations prioritaires</h2>
+<div class="alert alert-danger">
+<strong>🚨 Lead Gen Meta :</strong> 16 j sans lead, 296 € dépensés. Décision attendue aujourd'hui : pause ou bascule LANDING_PAGE_VIEWS.
+</div>
 <div class="alert alert-good">
-<strong>🏆 Scaling Brand Google :</strong> +25-50 % budget = +4 conv/mois. À arbitrer le 20/6.
+<strong>🏆 Scaling Brand Google :</strong> +25-50 % budget = levier le plus rentable (10,40x ROAS), financé sur Search Intentions Fortes.
 </div>
 <div class="alert alert-warn">
-<strong>⚠️ EMQ Meta 4,6/10 :</strong> bloque l'attribution Meta. Tom à pousser sur ce sujet, débloque 2-3x plus de conv attribuées.
-</div>
-<div class="alert alert-info">
-<strong>📊 Carrousels J+0 :</strong> 1ères impressions demain matin. Bilan crédible vendredi 21/6.
+<strong>⚠️ PHRASE Google 0 % CVR :</strong> 221 €/30j sans conversion. Pause du PHRASE + 2 négatifs (286 €) renvoyés pour la 9ᵉ/12ᵉ fois.
 </div>
 
 <h2>📂 Liens utiles</h2>
@@ -186,25 +205,25 @@ td.strong{font-weight:600}
 <a href="https://docs.google.com/document/d/1NrY3lW-E6N2RUV7F_07udqprhybZiFwuI2rsYvD72_k/edit" class="link-card"><div class="link-title">📄 Récap hebdo</div><div class="link-desc">Dispositif global</div></a>
 <a href="https://docs.google.com/document/d/1BbsWRgEeSPSUxoXqqO-Ps6t5fa15_KE5Yzhm8Cxrp-4/edit" class="link-card"><div class="link-title">🎬 Brief Faten</div><div class="link-desc">Contenus à produire</div></a>
 <a href="https://docs.google.com/document/d/1GLJe6II0peNisMc2QVLMEq7S4jmijCv8OX87wSTstvE/edit" class="link-card"><div class="link-title">🔧 Brief Tom — EMQ</div><div class="link-desc">Tracking + Consent</div></a>
-<a href="https://business.facebook.com/adsmanager" class="link-card"><div class="link-title">📱 Meta Ads</div><div class="link-desc">7 campagnes</div></a>
+<a href="https://business.facebook.com/adsmanager" class="link-card"><div class="link-title">📱 Meta Ads</div><div class="link-desc">3 campagnes actives</div></a>
 <a href="https://ads.google.com/" class="link-card"><div class="link-title">🔍 Google Ads</div><div class="link-desc">5 campagnes</div></a>
 <a href="https://dayoffwork.slack.com/archives/C0ASJG8QKDK" class="link-card"><div class="link-title">💬 Slack</div><div class="link-desc">#marketing-digital</div></a>
 </div>
 
 <div class="footer">
-DayOff Pouls · Refresh auto chaque matin 8h · maj manuelle 17/06/2026 23h45<br>
+DayOff Pouls · Refresh auto chaque matin 8h30 · maj 18/06/2026 08h30<br>
 GitHub Pages · Contact Florian
 </div>
 
 <script>
-const weekLabels = ['S20\n18-24/5', 'S21\n25-31/5', 'S22\n1-7/6', 'S23\n8-14/6', 'S24\n15-16/6*'];
-const googleSpend = [781, 488, 398, 468, 166];
-const metaSpend = [123, 162, 358, 233, 62];
-const googleClicks = [2437, 627, 297, 218, 85];
-const metaClicks = [2047, 2841, 2445, 2576, 916];
-const googleConv = [8, 3, 0, 2, 0];
-const metaImpressions = [55748, 66355, 186797, 131977, 34860];
-const googleCpl = [98, 163, null, 234, null];
+const weekLabels = ['S20\n18-24/5', 'S21\n25-31/5', 'S22\n1-7/6', 'S23\n8-14/6', 'S24\n15-17/6*'];
+const googleSpend = [781, 488, 398, 468, 312];
+const metaSpend = [122, 162, 358, 233, 92];
+const googleClicks = [2623, 707, 297, 228, 156];
+const metaClicks = [2051, 2841, 2445, 2576, 1422];
+const googleConv = [8, 3, 0, 2, 1];
+const metaImpressions = [43797, 66355, 186797, 131977, 52144];
+const googleCpl = [98, 163, null, 234, 312];
 
 Chart.defaults.font.family = '-apple-system,BlinkMacSystemFont,Inter,sans-serif';
 Chart.defaults.color = '#555';
