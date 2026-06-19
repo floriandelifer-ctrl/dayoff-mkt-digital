@@ -1211,7 +1211,7 @@
         ]
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781766197.913899",
       "escalation_count": 3,
       "prev_ids": [
@@ -1230,7 +1230,7 @@
         "manual_check": true
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781766197.913899",
       "prev_ids": [
         "2026-06-17-002"
@@ -1251,7 +1251,7 @@
         "fund_from": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781766197.913899",
       "prev_ids": [
         "2026-06-17-003"
@@ -1270,7 +1270,7 @@
         "keyword": "salle séminaire Paris"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781766197.913899",
       "escalation_count": 9,
       "prev_ids": [
@@ -1295,13 +1295,123 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781766197.913899",
       "escalation_count": 12,
       "prev_ids": [
         "2026-06-17-005"
       ]
+    },
+    {
+      "id": "2026-06-19-001",
+      "date": "2026-06-19",
+      "type": "meta_lead_gen_positive",
+      "channel": "meta",
+      "title": "💚 Premier signal Lead Gen : 1er lead tracké (valeur 1750€) à J+16 — NE PAS pauser",
+      "why": "Renversement vs hier : la campagne Lead Gen (qu'on voulait pauser) a tracké son 1er lead le 18/06 (valeur 1750€, 23 078 impressions / 591 clics ce jour). Le tracking fonctionne donc. CPL cumulé ~296€ pour un lead B2B à 1750€ = ratio sain. Laisser tourner, surveiller la confirmation d'un 2e lead avant de scaler.",
+      "reversible": true,
+      "action_payload": {
+        "campaign_id": "120244859896090784",
+        "action": "keep_running_monitor",
+        "note": "si 2e lead sous 5j → transférer budget Trafic 15→10€ / Lead Gen 20→25€"
+      },
+      "severity": "high",
+      "status": "en_attente",
+      "slack_ts": "1781852993.724489",
+      "escalation_count": 0,
+      "prev_ids": [
+        "2026-06-18-001"
+      ]
+    },
+    {
+      "id": "2026-06-19-002",
+      "date": "2026-06-19",
+      "type": "meta_tracking_check",
+      "channel": "meta",
+      "title": "🔧 Confirmer le lead Meta dans le CRM (vérifier qu'il est réel, pas un test)",
+      "why": "Le 1er lead Meta vient d'arriver après 16j de silence → recouper côté CRM/formulaire pour s'assurer qu'il est qualifié et non un doublon/test. Si réel, valide définitivement le pixel event Lead.",
+      "reversible": true,
+      "action_payload": {
+        "checks": [
+          "recoupement CRM du lead du 18/06",
+          "qualité du lead (vrai contact B2B ?)",
+          "Meta Pixel Helper sur dayoff.space/contact"
+        ]
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1781852993.724489",
+      "escalation_count": 1,
+      "prev_ids": [
+        "2026-06-18-002"
+      ]
+    },
+    {
+      "id": "2026-06-19-003",
+      "date": "2026-06-19",
+      "type": "budget_scale",
+      "channel": "google",
+      "title": "🚀 Scaler Day Off Brand : +budget (11,07x ROAS, capé au budget)",
+      "why": "Levier le plus rentable : 1 038€/30j, 10 conv, ROAS 11,07x (vs 5,72x compte) mais perd 18% de ses impressions faute de budget (22% d'IS). Augmenter 25-50%, financé en réduisant Search Intentions Fortes (837€/30j, ROAS 1,19x).",
+      "reversible": true,
+      "action_payload": {
+        "scale_campaign_id": "23535034243",
+        "increase_pct": "25-50",
+        "fund_from_campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1781852993.724489",
+      "escalation_count": 2,
+      "prev_ids": [
+        "2026-06-18-003"
+      ]
+    },
+    {
+      "id": "2026-06-19-004",
+      "date": "2026-06-19",
+      "type": "pause_match_type",
+      "channel": "google",
+      "title": "📊 10ᵉ renvoi : pauser le PHRASE « salle séminaire Paris » (227€/0 conv 30j)",
+      "why": "PHRASE = 0% CVR pour 226,68€/30j vs BROAD (6,5 conv) / EXACT (6,5 conv). QS 5, 0 conv. Réversible.",
+      "reversible": true,
+      "action_payload": {
+        "match_type": "PHRASE",
+        "keyword": "salle séminaire Paris"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1781852993.724489",
+      "escalation_count": 10,
+      "prev_ids": [
+        "2026-06-18-004"
+      ]
+    },
+    {
+      "id": "2026-06-19-005",
+      "date": "2026-06-19",
+      "type": "negative_keyword",
+      "channel": "google",
+      "title": "🚧 13ᵉ renvoi : 2 négatifs Google (304€/0 conv)",
+      "why": "Bloquer en PHRASE « organiser team building Paris » (189€) et « location salle conférence Paris » EXACT (QS 3, 115€). « team building entreprise Paris » convertit → conservé.",
+      "reversible": true,
+      "action_payload": {
+        "negatives": [
+          "organiser team building Paris",
+          "location salle conférence Paris"
+        ],
+        "level": "campaign",
+        "match_type": "PHRASE",
+        "campaign_id": "23749882446"
+      },
+      "severity": "medium",
+      "status": "en_attente",
+      "slack_ts": "1781852993.724489",
+      "escalation_count": 13,
+      "prev_ids": [
+        "2026-06-18-005"
+      ]
     }
   ],
-  "last_updated": "2026-06-18T08:30:00+02:00"
+  "last_updated": "2026-06-19T08:30:00+02:00"
 }
