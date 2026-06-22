@@ -1316,7 +1316,7 @@
         "note": "si 2e lead sous 5j → transférer budget Trafic 15→10€ / Lead Gen 20→25€"
       },
       "severity": "high",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781852993.724489",
       "escalation_count": 0,
       "prev_ids": [
@@ -1339,7 +1339,7 @@
         ]
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781852993.724489",
       "escalation_count": 1,
       "prev_ids": [
@@ -1360,7 +1360,7 @@
         "fund_from_campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781852993.724489",
       "escalation_count": 2,
       "prev_ids": [
@@ -1380,7 +1380,7 @@
         "keyword": "salle séminaire Paris"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781852993.724489",
       "escalation_count": 10,
       "prev_ids": [
@@ -1405,13 +1405,65 @@
         "campaign_id": "23749882446"
       },
       "severity": "medium",
-      "status": "en_attente",
+      "status": "caduque",
       "slack_ts": "1781852993.724489",
       "escalation_count": 13,
       "prev_ids": [
         "2026-06-18-005"
       ]
+    },
+    {
+      "date": "2026-06-22",
+      "status": "en_attente",
+      "slack_ts": "1782113080.623679",
+      "severity": "high",
+      "platform": "meta",
+      "title": "🔴 Lead Gen Meta en PAUSE — réactiver ou acter l'arrêt",
+      "reversible": true,
+      "why": "Campagne prioritaire passée en PAUSE ce week-end (ACTIVE le 19/06). 1 lead 1750€ le 18/06, 306€ cumulés, CPL ~307€. Options: réactiver / réactiver+élargir / acter l'arrêt+réallouer."
+    },
+    {
+      "date": "2026-06-22",
+      "status": "en_attente",
+      "slack_ts": "1782113080.623679",
+      "severity": "medium",
+      "platform": "meta",
+      "title": "🔧 Confirmer le lead Meta au CRM",
+      "reversible": false,
+      "why": "Recouper le 1er lead 1750€ côté CRM. Alimente la décision N°1. Valider pixel event Lead dayoff.space/contact."
+    },
+    {
+      "date": "2026-06-22",
+      "status": "en_attente",
+      "slack_ts": "1782113080.623679",
+      "severity": "medium",
+      "platform": "google",
+      "title": "🚀 Scaler Day Off Brand : +budget (7,05x ROAS, capé)",
+      "reversible": true,
+      "why": "993€/30j, 7 conv, ROAS 7,05x vs 3,70x compte, perd 19% impressions (IS 23%). +25-50% financé sur Search Intentions Fortes (708€, 0,71x)."
+    },
+    {
+      "date": "2026-06-22",
+      "status": "en_attente",
+      "slack_ts": "1782113080.623679",
+      "severity": "medium",
+      "platform": "google",
+      "title": "🚧 14ᵉ renvoi : couper 2 EXACT (360€/0 conv)",
+      "reversible": true,
+      "why": "EXACT 'lieu team building Paris' 259,73€/0 QS5 + EXACT 'location salle conférence Paris' 100,11€/0 QS3,4. Bloquer/pauser.",
+      "renvoi": 14
+    },
+    {
+      "date": "2026-06-22",
+      "status": "en_attente",
+      "slack_ts": "1782113080.623679",
+      "severity": "medium",
+      "platform": "google",
+      "title": "📊 11ᵉ renvoi : pauser bucket PHRASE (204€/0 conv)",
+      "reversible": true,
+      "why": "PHRASE 0 conv pour 203,54€/30j vs BROAD/EXACT 4,5 conv. Fautifs: 'organiser team building Paris' 157€, 'lieu insolite réunion Paris' 47€.",
+      "renvoi": 11
     }
   ],
-  "last_updated": "2026-06-19T08:30:00+02:00"
+  "last_updated": "2026-06-22T08:30:00+02:00"
 }
